@@ -175,3 +175,13 @@ Login Page Design | Icon       |
 * Custom content directory in `/content/` (cleaner, and also because it can't be in `/wp/`)
 * `wp-config.php` in the root (because it can't be in `/wp/`)
 * All writable directories are symlinked to similarly named locations under `/shared/`.
+
+# Theme Naming
+Is need change name of theme you can edit and run script __replace_string.zsh__
+
+1. Search for `'hashcore'` (inside single quotations) to capture the text domain.
+2. Search for `hashcore_` to capture all the function names.
+3. Search for `Text Domain: hashcore` in style.css.
+4. Search for ` Hashcore` (with a space before it) to capture DocBlocks.
+5. Search for `hashcore-` to capture prefixed handles.
+6. Search for `hashcore.pot` to change language file.
