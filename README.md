@@ -119,8 +119,6 @@ Login Page Design | Icon       |
   * [Icon List](https://wordpress.org/plugins/icon-list/)
   * [Easy Timer](http://www.kleor.com/easy-timer/en/)
   * [jetpack](http://jetpack.com/support/jetpack-for-developers/)
-  * [Cyclone Slider 2](https://wordpress.org/plugins/cyclone-slider-2/)
-  * [Meteor Slides](http://jleuze.com/plugins/meteor-slides/)
   * [Crelly Slider](http://fabiorino1.altervista.org/projects/crellyslider/)
   * [MediaElement.js](http://mediaelementjs.com/)
   * [Simple Twitter Tweets](https://wordpress.org/plugins/simple-twitter-tweets/)
