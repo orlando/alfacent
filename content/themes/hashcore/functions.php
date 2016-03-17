@@ -114,9 +114,7 @@ add_action( 'widgets_init', 'hashcore_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hashcore_scripts() {
-	wp_enqueue_style( 'hashcore-style', get_stylesheet_uri() );
-
-	wp_enqueue_style( 'hashcore-style-bootstrap', get_template_directory_uri() . '/assets/styles/bootstrap.min.css' );
+	wp_enqueue_style( 'hashcore-style', get_template_directory_uri() . '/assets/styles/main.css' );
 
 	wp_enqueue_style( 'hashcore-style-font-awesome', get_template_directory_uri() . '/assets/styles/font-awesome.min.css' );
 

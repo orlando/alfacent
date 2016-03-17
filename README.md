@@ -169,6 +169,10 @@ Login Page Design | Icon       |
 4. Implementation of plugin
 5. Implementation of menu option
 
+## Change-log
+  ### v0.01
+  - Use Bootstrap
+
 ## Assumptions
 
 * WordPress as a Git submodule in `/wp/`
@@ -185,3 +189,8 @@ Is need change name of theme you can edit and run script __replace_string.zsh__
 4. Search for ` Hashcore` (with a space before it) to capture DocBlocks.
 5. Search for `hashcore-` to capture prefixed handles.
 6. Search for `hashcore.pot` to change language file.
+
+## sass compiler
+To word more easy have include npm node-sass to build css  
+you need run in terminal `npm run build-css` to complile css first time  
+next you nedd run `npm run watch-css` to watch change in sass folder.
