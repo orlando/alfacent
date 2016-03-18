@@ -15,7 +15,7 @@ function hashcore_page_menu_tree() {
 	$menu_title = ' Hashcore';
 	$capability = 'manage_options';
 	$menu_slug = 'hashcore';
-	$function = 'hashcore_welcome';
+	$function = 'hashcore_welcome_page';
 	$icon_url = 'dashicons-welcome-view-site';
 	$position = 2;
 
@@ -26,7 +26,7 @@ function hashcore_page_menu_tree() {
 	$sub_menu_title = 'Support';
 	$capability = 'manage_options';
 	$menu_slug = 'hashcore-support';
-	$function = 'hashcore_welcome';
+	$function = 'hashcore_support_page';
 	$icon_url = '';
 	$position = 2;
 
@@ -37,8 +37,8 @@ function hashcore_page_menu_tree() {
 	$page_title = 'Install Demos';
 	$sub_menu_title = 'Install Demos';
 	$capability = 'manage_options';
-	$menu_slug = 'hashcore-demo';
-	$function = 'hashcore_welcome';
+	$menu_slug = 'hashcore-demos';
+	$function = 'hashcore_demos_page';
 	$icon_url = '';
 	$position = 3;
 
@@ -50,7 +50,7 @@ function hashcore_page_menu_tree() {
 	$sub_menu_title = 'Info';
 	$capability = 'manage_options';
 	$menu_slug = 'hashcore-info';
-	$function = 'hashcore_welcome';
+	$function = 'hashcore_info_page';
 	$icon_url = '';
 	$position = 4;
 
@@ -62,7 +62,7 @@ function hashcore_page_menu_tree() {
 	$sub_menu_title = 'Theme Settings';
 	$capability = 'manage_options';
 	$menu_slug = 'hashcore-settings';
-	$function = 'hashcore_welcome';
+	$function = 'hashcore_theme_settings_page';
 	$icon_url = '';
 	$position = 5;
 
@@ -73,8 +73,44 @@ function hashcore_page_menu_tree() {
 /**
  * Representation page menu
  */
-function hashcore_welcome() {
+function hashcore_welcome_page() {
 	?>
-		<h1>Hi, this is a sample</h1>
+		<h1>Hi, this is a Welcome</h1>
+	<?php
+}
+
+/**
+ * Representation page menu Support
+ */
+function hashcore_support_page() {
+	?>
+		<h1>Hi, this is a Support</h1>
+	<?php
+}
+
+/**
+ * Representation page menu Install Demos
+ */
+function hashcore_demos_page() {
+	?>
+		<h1>Hi, this is an Install Demos</h1>
+	<?php
+}
+
+/**
+ * Representation page menu Info
+ */
+function hashcore_info_page() {
+	?>
+		<h1>Hi, this is an Info</h1>
+	<?php
+}
+
+/**
+ * Representation page menu Theme Settings
+ */
+function hashcore_theme_settings_page() {
+	?>
+		<h1>Hi, this is a Theme Settings</h1>
 	<?php
 }
