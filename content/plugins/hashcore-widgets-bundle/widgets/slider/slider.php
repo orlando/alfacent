@@ -16,6 +16,8 @@ class HashCore_Widget_Slider_Widget extends HashCore_Widget_Base_Slider {
 			array(
 				'description' => __('A responsive slider widget that supports images and video.', 'hashcore-widgets-bundle'),
 				'help' => 'https:///widgets-bundle/slider-widget-documentation/',
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'panels_title' => false,
 			),
 			array(

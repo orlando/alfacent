@@ -18,6 +18,8 @@ class HashCore_Widget_Hero_Widget extends HashCore_Widget_Base_Slider {
 			__('HashCore Hero', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A big hero image with a few settings to make it your own.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/hero-image-widget/',
 				'panels_title' => false,
 			),

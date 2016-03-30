@@ -14,6 +14,8 @@ class HashCore_Widgets_Testimonials_Widget extends HashCore_Widget {
 			__('HashCore Testimonials', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('Share your product/service testimonials in a variety of different ways.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/testimonial-widget-documentation/'
 			),
 			array(

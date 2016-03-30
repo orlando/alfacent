@@ -25,7 +25,9 @@ class HashCore_Widget_SocialMediaButtons_Widget extends HashCore_Widget {
 			'sow-social-media-buttons',
 			__( 'HashCore Social Media Buttons', 'hashcore-widgets-bundle' ),
 			array(
-				'description' => __( 'A social media buttons widget.', 'hashcore-widgets-bundle' )
+				'description' => __( 'A social media buttons widget.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
 			array(

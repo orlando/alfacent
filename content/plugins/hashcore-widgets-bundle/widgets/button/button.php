@@ -14,6 +14,8 @@ class HashCore_Widget_Button_Widget extends HashCore_Widget {
 			__('HashCore Button', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A customizable button widget.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/button-widget-documentation/'
 			),
 			array(

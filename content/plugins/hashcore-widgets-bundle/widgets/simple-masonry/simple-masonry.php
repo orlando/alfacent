@@ -14,6 +14,8 @@ class HashCore_Widget_Simple_Masonry_Widget extends HashCore_Widget {
 			__('HashCore Simple Masonry', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A simple masonry layout widget.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 //				'help' => 'https:///widgets-bundle/simple-masonry-widget-documentation/'
 			),
 			array(),

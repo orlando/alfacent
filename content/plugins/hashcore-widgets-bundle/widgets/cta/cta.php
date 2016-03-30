@@ -15,6 +15,8 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 			__('HashCore Call-to-action', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A simple call-to-action widget with massive power.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/call-action-widget/'
 			),
 			array(

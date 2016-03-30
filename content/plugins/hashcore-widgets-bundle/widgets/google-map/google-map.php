@@ -16,6 +16,8 @@ class HashCore_Widget_GoogleMap_Widget extends HashCore_Widget {
 			__( 'HashCore Google Maps', 'hashcore-widgets-bundle' ),
 			array(
 				'description' => __( 'A Google Maps widget.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help'        => 'https:///widgets-bundle/google-maps-widget/'
 			),
 			array(),

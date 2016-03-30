@@ -44,6 +44,8 @@ class HashCore_Widget_PostCarousel_Widget extends HashCore_Widget {
 			__('HashCore Post Carousel', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('Display your posts as a carousel.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/post-carousel-widget/'
 			),
 			array(

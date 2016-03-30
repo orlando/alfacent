@@ -15,7 +15,9 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 			'sow-headline',
 			__( 'HashCore Headline', 'hashcore-widgets-bundle' ),
 			array(
-				'description' => __( 'A headline widget.', 'hashcore-widgets-bundle' )
+				'description' => __( 'A headline widget.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
 			array(

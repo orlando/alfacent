@@ -13,6 +13,8 @@ class HashCore_Widget_PriceTable_Widget extends HashCore_Widget {
 			__('HashCore Price Table', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A simple Price Table.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/price-table-widget/'
 			),
 			array(

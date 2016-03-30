@@ -16,6 +16,8 @@ class HashCore_Widget_Video_Widget extends HashCore_Widget {
 			__( 'HashCore Video Player', 'hashcore-widgets-bundle' ),
 			array(
 				'description' => __( 'A video player widget.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help'        => 'http:///widgets-bundle/video-widget-documentation/'
 			),
 			array(),

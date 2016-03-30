@@ -13,6 +13,8 @@ class HashCore_Widget_Features_Widget extends HashCore_Widget {
 			__( 'HashCore Features', 'hashcore-widgets-bundle' ),
 			array(
 				'description' => __( 'Displays a list of features.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help'        => 'https:///widgets-bundle/features-widget-documentation/'
 			),
 			array(),

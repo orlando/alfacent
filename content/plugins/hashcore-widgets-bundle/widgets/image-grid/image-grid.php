@@ -15,6 +15,8 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 			__('HashCore Image Grid', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('Display a grid of images.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
 			array(

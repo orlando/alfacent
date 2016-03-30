@@ -15,6 +15,8 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			__('HashCore Contact Form', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __( 'Create a simple contact form for your users to get hold of you.', 'hashcore-widgets-bundle' ),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
 			array(

@@ -16,6 +16,8 @@ class HashCore_Widget_Editor_Widget extends HashCore_Widget {
 			__('HashCore Editor', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A rich-text, text editor.', 'hashcore-widgets-bundle'),
+				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
+				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'help' => 'https:///widgets-bundle/editor-widget/'
 			),
 			array(),
