@@ -18,7 +18,8 @@ $hashcore_includes = [
 	'/inc/customizer.php',			// Customizer additions
 	'/inc/jetpack.php',					// Load Jetpack compatibility file.
 	'/inc/config-tgm.php',			// Config TGM plugins installer.
-	'inc/admin/menus-register.php', // Custom menu of Theme.
+	'/inc/admin/menus-register.php', // Custom menu of Theme.
+	'/inc/widgets-register.php',		 // Widgets path register.
 ];
 
 foreach ( $hashcore_includes as $file ) {

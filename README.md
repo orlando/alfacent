@@ -127,7 +127,8 @@ Login Page Design | Icon       |
 
 ## Road Map
 
-1. Basic Structure of Theme (name of theme, prefix, documentation)
+1. Basic Structure of Theme (name of theme, prefix, documentation)  
+
 2. Build Menu Tree
   * 01- Greeting Page
   * 02- Support Page
@@ -145,7 +146,8 @@ Login Page Design | Icon       |
   * 14- Background Setting
   * 15- Page config
   * 16- System status
-  * 17- Backup Setting
+  * 17- Backup Setting  
+  * 18- Install Demo
 3. Widget
   * 01- Title **3**
   * 02- Paragraph **5**
@@ -166,7 +168,8 @@ Login Page Design | Icon       |
   * 17- Price table **3**
   * 18- Youtube 2
   * 19- Quote 1
-4. Implementation of plugin
+4. Implementation of plugin  
+
 5. Implementation of menu option
 
 ## Change-log
