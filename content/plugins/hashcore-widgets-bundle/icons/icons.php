@@ -1,6 +1,6 @@
 <?php
 
-define( 'HASHCOREWIDGETS_ICONS', true );
+define( 'HASHCORE_WIDGETS_ICONS', true );
 
 function hashcore_widgets_icon_families_filter( $families ){
 	$bundled = array(

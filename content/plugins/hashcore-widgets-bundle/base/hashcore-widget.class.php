@@ -188,7 +188,7 @@ abstract class HashCore_Widget extends WP_Widget {
 					hashcore_widget_add_inline_css( $this->get_instance_css( $instance ) );
 				}
 				else {
-					if( !file_exists( $upload_dir['basedir'] . '/hashcore-widgets/' . $css_name .'.css' ) || ( defined('HASHCOREWIDGETS_DEBUG') && HASHCOREWIDGETS_DEBUG ) ) {
+					if( !file_exists( $upload_dir['basedir'] . '/hashcore-widgets/' . $css_name .'.css' ) || ( defined('HASHCORE_WIDGETS_DEBUG') && HASHCORE_WIDGETS_DEBUG ) ) {
 						// Attempt to recreate the CSS
 						$this->save_css( $instance );
 					}

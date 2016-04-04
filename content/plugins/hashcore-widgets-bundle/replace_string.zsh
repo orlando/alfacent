@@ -32,7 +32,7 @@ target_uri_names=""
 target_domain="Text Domain: hashcore-widgets"
 target_class_css=".hashcore"
 target_path="hashcore-"
-target_define="HASHCORE"
+target_define="HASHCORE_"
 target_prefixed="'hashcore-"
 #file of languaje
 target_languaje_file="hashcore-widgets.po"
