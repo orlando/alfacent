@@ -28,6 +28,15 @@ if ( ! function_exists( 'hashcore_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 
 		/*
+		 * Enable support for custom logo.
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 100,
+			'width'       => 255,
+			'flex-height' => false,
+		) );
+
+		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
 		 * hard-coded <title> tag in the document head, and expect WordPress to
@@ -123,6 +132,8 @@ function hashcore_scripts() {
 	wp_enqueue_script( 'hashcore-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'hashcore-js-bootstrap', get_template_directory_uri() . '/assets/scripts/bootstrap.min.js', array( 'jquery' ),'v3',true );
+
+	wp_enqueue_script( 'hashcore-js-main', get_template_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ),'v1',true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
