@@ -13,13 +13,14 @@ $mirage:                        #100F2A;
 $lime:                          #85C92A;
 $lily-white:                    #ECECEC;
 $red:                           #F7412D;
-$lust:                          #EC2811;
+$tall-poppy:                    #BE3128;
 $crayon-orange:                 #FF5C1F;
 $violet:                        #A100B7;
 $white:                         #FFFFFF;
+$deep-koamaru:                  #1C1A7E;
+$bright-sun:                    #F8D940;
+$armadillo:                     #4A4A4A;
 
-$yummly:                        #D36911;
-$real-scout:                    #488EDD;
 
 
 // -----------------------------------------------------------------------------
@@ -27,9 +28,9 @@ $real-scout:                    #488EDD;
 // -----------------------------------------------------------------------------
 
 $color--base:                   $white;
-$color--tertiary:               $mirage;
-$color--accent:                 $crayon-orange;
-$color--text:                   $black;
+$color--tertiary:               $bright-sun;
+$color--accent:                 $deep-koamaru;
+$color--text:                   $armadillo;
 
-$color--error:                  $lust;
-$color--success:                $lime;
+$color--error:                  $tall-poppy;
+$color--success:                $kelly-green;

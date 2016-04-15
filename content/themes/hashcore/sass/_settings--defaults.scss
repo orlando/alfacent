@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// animations defaults
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// space
+// -----------------------------------------------------------------------------
+  $space:                         1rem;
+  $space-and-half:                $space*1.5;
+  $space-double:                  $space*2;
+  $space-triple:                  $space*3;
+  $space-half:                    $space/2;
+  $space-quarter:                 $space/4;
+
+  $pad:                           10px;
+  $half-pad:                      ceil($pad/2);
+  $three-quarter-pad:             ceil($pad*0.75);
+  $pad-and-half:                  ceil($pad*1.5);
+  $pad-double:                    ceil($pad*2);
+  $pad-triple:                    ceil($pad*3);
+  $pad-half:                      ceil($pad/2);
+  $pad-quarter:                   ceil($pad/4);
+
+// -----------------------------------------------------------------------------
+// defaults
+// -----------------------------------------------------------------------------
+
+  $container-fluid-gutter:                       $space*4; // used just form medium resolutions
+
+  $default-speed-transition:                     .216s;
+  $modernizr-no-touch-class:                     '.no-touch';
+  $modernizr-touch-class:                        '.touch';
+
+  $size--header-height:                          $space*7.5;
+
+
+// -----------------------------------------------------------------------------
+// media queries
+// -----------------------------------------------------------------------------
+
+  $minimun-screen-resolution:     320px;
+
+  $bootstrap-sm:                  768px;
+  $bootstrap-md:                  992px;
+  $bootstrap-lg:                  1200px;
+  $screens-fhd:                   1920px;
+  $tablet-landscape:              1024px;
+
+  $just-small-resolutions:                  "only screen and (max-width: #{$bootstrap-sm})";
+  $just-medium-resolutions:                 "only screen and (max-width: #{$bootstrap-md})";
+
+  $from-small-resolutions:                  "only screen and (min-width: #{$bootstrap-sm})";
+  $from-medium-resolutions:                 "only screen and (min-width: #{$bootstrap-md})";
+  $from-large-resolutions:                  "only screen and (min-width: #{$bootstrap-lg})";
+  $from-fhd-resolutions:                    "only screen and (min-width: 1920px)";
+
+
+  $from-small-to-medium-resolutions:        "only screen and (min-width: #{$bootstrap-sm}) and (max-width: #{$bootstrap-md})";
