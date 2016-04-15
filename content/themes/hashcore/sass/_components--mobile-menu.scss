@@ -59,11 +59,11 @@ body.no_scroll {
   -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
   -moz-transition: -moz-transform .4s, height .3s, background .4s;
   transition: transform .4s, height .3s, background .4s;
-
+/*
   -webkit-animation: firstFadeInAndDrop .5s;
   -moz-animation: firstFadeInAndDrop .5s;
   animation: firstFadeInAndDrop .5s;
-
+*/
   // when hidden it goes up
   &.invisible {
     -webkit-transform: translate(0,-64px);
@@ -71,10 +71,10 @@ body.no_scroll {
     -o-transform: translate(0,-64px);
     transform: translate(0,-64px);
 
-    -webkit-transition: -webkit-transform .2s;
-    -moz-transition: -moz-transform .2s;
-    -o-transition: -o-transform .2s;
-    transition: transform .2s;
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    -o-transition: -o-transform .3s;
+    transition: transform .3s;
 
     opacity: 0;
   }

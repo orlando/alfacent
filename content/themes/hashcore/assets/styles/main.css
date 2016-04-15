@@ -6039,7 +6039,7 @@ button.close {
     display: none !important; } }
 
 /*--------------------------------------------------------------
-# Typography
+# Tools
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Elements & objects
@@ -6145,22 +6145,53 @@ button.close {
     height: 7rem;
     width: auto; }
 
-.header-links {
-  float: right;
+.bottom-aligner {
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  width: 0; }
+
+.header-search-toggle {
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+  transition: all ease-out 0.216s; }
+  .header-search-toggle-icon:hover {
+    color: #1C1A7E; }
+  .header-search-toggle:hover {
+    border-bottom: 4px solid #1C1A7E; }
+
+.header-search-wrapper {
   height: 7rem;
+  text-align: right; }
+
+.header-menu-wrapper {
+  margin: 0 -15px; }
+
+#menu-desktop {
+  height: 7rem;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0; }
-  .header-links .header-link {
+  #menu-desktop .menu-item {
     display: table;
     font-size: 100%;
+    font-weight: lighter;
     float: left;
-    height: 100%; }
-    .header-links .header-link + .header-link {
-      padding-left: 4rem; }
-    .header-links .header-link > a {
+    height: 100%;
+    border-bottom: 4px solid transparent;
+    transition: all ease-out 0.216s; }
+    #menu-desktop .menu-item + .menu-item {
+      margin-left: 2rem; }
+    #menu-desktop .menu-item > a {
       display: table-cell;
       vertical-align: bottom; }
+      #menu-desktop .menu-item > a:hover {
+        color: #1C1A7E; }
+    #menu-desktop .menu-item:hover {
+      border-bottom: 4px solid #1C1A7E; }
+  #menu-desktop .current-menu-item {
+    border-bottom: 4px solid #1C1A7E; }
 
 body.no_scroll {
   overflow: hidden;
@@ -6207,18 +6238,20 @@ body.no_scroll {
   -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
   -moz-transition: -moz-transform .4s, height .3s, background .4s;
   transition: transform .4s, height .3s, background .4s;
+  /*
   -webkit-animation: firstFadeInAndDrop .5s;
   -moz-animation: firstFadeInAndDrop .5s;
-  animation: firstFadeInAndDrop .5s; }
+  animation: firstFadeInAndDrop .5s;
+*/ }
   #site-nav.invisible {
     -webkit-transform: translate(0, -64px);
     -moz-transform: translate(0, -64px);
     -o-transform: translate(0, -64px);
     transform: translate(0, -64px);
-    -webkit-transition: -webkit-transform .2s;
-    -moz-transition: -moz-transform .2s;
-    -o-transition: -o-transform .2s;
-    transition: transform .2s;
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    -o-transition: -o-transform .3s;
+    transition: transform .3s;
     opacity: 0; }
   #site-nav.detached {
     position: fixed;

@@ -2,7 +2,7 @@
   <header class="site-header">
   	<div class="container">
   		<div class="row">
-  			<div class="col-xs-12 col-sm-4">
+  			<div class="col-xs-12 col-sm-3">
 
   				<div class="header-branding">
             <?php if ( hashcore_the_custom_logo() ) : ?>
@@ -20,8 +20,19 @@
 
   			</div>
   			<div class="col-sm-8 hidden-xs">
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu-desktop' ) ); ?>
+          <div class="header-menu-wrapper">
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu-desktop' ) ); ?>
+          </div>
   			</div>
+
+        <div class="col-sm-1 hidden-xs">
+          <div class="header-search-wrapper pull-right">
+            <div class="bottom-aligner"></div>
+            <div class="header-search-toggle">
+              <a class="header-search-toggle-icon" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
 
   		</div>
   	</div>
