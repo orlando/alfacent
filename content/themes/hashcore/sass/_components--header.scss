@@ -10,36 +10,23 @@ $size--strip-margin-left:                        $size--strip-width-step;
 .site-header {
   font-size: $size--header-font;
   left: 0;
+  top: 0;
   padding-bottom: $grid-gutter-width;
   padding-top: $grid-gutter-width;
   position: absolute;
-  top: 0;
   width: 100%;
   z-index: 1;
-
-  body.alternative & {
-    background-color: $color--tertiary;
-  }
 }
 
 .header-branding {
   display: inline-block;
   position: relative;
   white-space: nowrap;
+  transition: all ease-out .216s;
 
   img {
     height: $size--header-height;
     width: auto;
-  }
-
-  .branding-text {
-    font-size: 120%;
-    bottom: 0;
-    color: $color--branding-text;
-    margin: 0;
-    line-height: 1;
-    left: $size--header-height + 2rem;
-    position: absolute;
   }
 }
 

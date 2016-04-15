@@ -30,47 +30,55 @@
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Bootstrap
+# Bootstrap and setting
 --------------------------------------------------------------*/
 @import "settings--palette";
+@import 'settings--fonts';
+@import 'settings--bootstrap';
 @import "bootstrap/stylesheets/bootstrap";
+@import 'settings--defaults';
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+//@import "typography/typography";
 
 /*--------------------------------------------------------------
-# Elements
+# Elements & objects
 --------------------------------------------------------------*/
-@import "elements/elements";
+//@import "elements/elements";
+@import "objects--button-menu";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
 @import "components--header";
 @import "components--mobile-menu";
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-@import "forms/forms";
+//@import "forms/forms";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+//@import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+//@import "modules/accessibility";
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-@import "modules/alignments";
+//@import "modules/alignments";
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-@import "modules/clearings";
+//@import "modules/clearings";
 
 /*--------------------------------------------------------------
 # Widgets

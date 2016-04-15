@@ -1,7 +1,9 @@
-$size--site-nav-height:                                12rem;
-$color--branding-text:                                 white;
-$color--branding-text-hover:                           #d9d9d9;
+$size--site-nav-height:                                10rem;
+$deep-koamaru:                                         #1C1A7E;
+$white:                                                #FFF;
 
+$color--branding-text:                                 $white;
+$color--site-nav-background:                           $deep-koamaru;
 // when navigation is shown, don’t allow scrolling of content
 body.no_scroll {
   overflow: hidden;
@@ -12,11 +14,12 @@ body.no_scroll {
 @-moz-document url-prefix() {
   body.no_scroll {
     /*margin-right: 23px;*/
+
   }
 
   body.no_scroll .expanded {
     /*padding-right: 7px;*/
-    background: rgba(255,88,36,.98); /* because FF no blur, reduce bg transparency */
+    background: $deep-koamaru; /* because FF no blur, reduce bg transparency */
   }
 }
 
@@ -79,7 +82,7 @@ body.no_scroll {
   // when shown & detached position is fixed
   &.detached {
     position: fixed;
-    background: rgba(255,88,36,.80);
+    background: $white;
 
     -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
     -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
@@ -98,7 +101,12 @@ body.no_scroll {
     height: 100%;
     position: fixed;
     cursor: default;
-    background: rgba(255,88,36,.90);
+    background: $deep-koamaru;
+
+  // hide logo in menu-mobile
+    & .header-branding {
+      opacity: 0;
+    }
   }
 }
 
@@ -145,34 +153,21 @@ body.no_scroll {
   margin-right: -20px;
   padding-right: 20px;
   overflow: auto;
+}
 
-  &-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+#menu-mobile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-  &-link {
+  & .menu-item {
     display: block;
-    padding:  0;
+    padding: 0;
 
     & > a {
-      display: inline-block;
-    }
-
-    & > a:hover &__text,
-    & > a:hover &__info {
-      color: $color--branding-text-hover;
-    }
-
-    &__text,
-    &__info {
       color: $color--branding-text;
-      //@include simple-transition();
-    }
-
-    &__text {
-      margin: 0;
+      display: inline-block;
+      padding-bottom: $space;
     }
   }
 }
