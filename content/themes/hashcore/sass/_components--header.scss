@@ -44,7 +44,8 @@ $color--menu-item-border-bottom:                 $deep-koamaru;
   border-bottom: 4px solid transparent;
   @include simple-transition();
 
-  &-icon:hover {
+  &-icon:hover,
+  &-icon:focus {
     color: $color--menu-item-border-bottom;
   }
 
