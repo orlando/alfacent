@@ -33,15 +33,20 @@
 # Bootstrap and setting
 --------------------------------------------------------------*/
 @import "settings--palette";
-@import 'settings--fonts';
-@import 'settings--bootstrap';
+@import "settings--fonts";
+@import "settings--bootstrap";
 @import "bootstrap/stylesheets/bootstrap";
-@import 'settings--defaults';
+@import "settings--defaults";
 
 /*--------------------------------------------------------------
 # Tools
 --------------------------------------------------------------*/
-@import 'tools--mixins';
+@import "tools--mixins";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layout--front-page";
 
 /*--------------------------------------------------------------
 # Elements & objects
