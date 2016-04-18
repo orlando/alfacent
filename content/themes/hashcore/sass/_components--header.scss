@@ -38,6 +38,7 @@ $color--menu-item-border-bottom:                 $deep-koamaru;
   vertical-align: bottom;
   width: 0;
 }
+
 .header-search-toggle{
   display: inline-block;
   border-bottom: 4px solid transparent;
@@ -46,7 +47,7 @@ $color--menu-item-border-bottom:                 $deep-koamaru;
   &-icon:hover {
     color: $color--menu-item-border-bottom;
   }
-  
+
   &:hover {
     border-bottom: 4px solid $color--menu-item-border-bottom;
   }
