@@ -13,6 +13,7 @@
  */
 
 get_header(); ?>
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-9 col-xs-12">
 			<div id="primary" class="content-area">
@@ -53,6 +54,11 @@ get_header(); ?>
 			</div><!-- #primary -->
 		</div><!--col-md-9 col-xs-12 -->
 
+
+	<?php
+	get_sidebar();
+	?>
+	</div><!-- .row -->
+</div><!-- container-->
 <?php
-get_sidebar();
 get_footer();

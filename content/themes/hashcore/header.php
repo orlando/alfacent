@@ -21,7 +21,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container-fluid">
-	<?php get_template_part( 'template-parts/header', 'nav' ); ?>
-	<div id="page" class="site">
-	<div id="content" class="site-content">
+
+<?php get_template_part( 'template-parts/header', 'nav' );
