@@ -13,13 +13,35 @@
 
 <footer class="site-footer" role="contentinfo">
 	<div class="container">
-		<div class="site-footer-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hashcore' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'hashcore' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hashcore' ), 'hashcore', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="site-footer-logo">
+					<!-- for now ask for the same header logo -->
+					<?php if ( hashcore_the_custom_logo() ) : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php hashcore_the_custom_logo(); ?>
+					</a>
+					<?php endif; // End logo image check. ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-offset-2 col-xs-8 col-xs-8 hidden-xs">
+				<div class="site-footer-menu-wrapper">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'site-footer-menu' ) ); ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<span class="site-footer-copy"><?php echo date('Y'); ?><i class="fa fa-copyright" aria-hidden="true"></i>  Alfacent By Hash Labs </span>
+			</div>
+		</div>
+
 	</div> <!-- .container footer-->
-</footer><!-- #colophon -->
+</footer>
 <?php wp_footer(); ?>
 
 
