@@ -15,100 +15,101 @@ class HashCore_Widget_Image_Widget extends HashCore_Widget {
 				'description' => __('A simple image widget with massive power.', 'hashcore-widgets-bundle'),
 				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
-				'help' => 'https:///widgets-bundle/image-widget-documentation/'
 			),
 			array(
 
 			),
-			array(
-				'image' => array(
-					'type' => 'media',
-					'label' => __('Image file', 'hashcore-widgets-bundle'),
-					'library' => 'image',
-					'fallback' => true,
-				),
-
-				'size' => array(
-					'type' => 'select',
-					'label' => __('Image size', 'hashcore-widgets-bundle'),
-					'options' => array(
-						'full' => __('Full', 'hashcore-widgets-bundle'),
-						'large' => __('Large', 'hashcore-widgets-bundle'),
-						'medium' => __('Medium', 'hashcore-widgets-bundle'),
-						'thumb' => __('Thumbnail', 'hashcore-widgets-bundle'),
-					),
-				),
-
-				'align' => array(
-					'type' => 'select',
-					'label' => __('Image alignment', 'hashcore-widgets-bundle'),
-					'default' => 'default',
-					'options' => array(
-						'default' => __('Default', 'hashcore-widgets-bundle'),
-						'left' => __('Left', 'hashcore-widgets-bundle'),
-						'right' => __('Right', 'hashcore-widgets-bundle'),
-						'center' => __('Center', 'hashcore-widgets-bundle'),
-					),
-				),
-
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title text', 'hashcore-widgets-bundle'),
-				),
-
-				'title_position' => array(
-					'type' => 'select',
-					'label' => __('Title position', 'hashcore-widgets-bundle'),
-					'default' => 'hidden',
-					'options' => array(
-						'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
-						'above' => __( 'Above', 'hashcore-widgets-bundle' ),
-						'below' => __( 'Below', 'hashcore-widgets-bundle' ),
-					),
-				),
-
-				'alt' => array(
-					'type' => 'text',
-					'label' => __('Alt text', 'hashcore-widgets-bundle'),
-				),
-
-				'url' => array(
-					'type' => 'link',
-					'label' => __('Destination URL', 'hashcore-widgets-bundle'),
-				),
-				'new_window' => array(
-					'type' => 'checkbox',
-					'default' => false,
-					'label' => __('Open in new window', 'hashcore-widgets-bundle'),
-				),
-
-				'bound' => array(
-					'type' => 'checkbox',
-					'default' => true,
-					'label' => __('Bound', 'hashcore-widgets-bundle'),
-					'description' => __("Make sure the image doesn't extend beyond its container.", 'hashcore-widgets-bundle'),
-				),
-				'full_width' => array(
-					'type' => 'checkbox',
-					'default' => false,
-					'label' => __('Full Width', 'hashcore-widgets-bundle'),
-					'description' => __("Resize image to fit its container.", 'hashcore-widgets-bundle'),
-				),
-
-			),
-			plugin_dir_path(__FILE__).'../'
+			false,
+			plugin_dir_path(__FILE__)
 		);
 	}
 
-	function modify_form($form){
+	function initialize_form(){
+
 		global $_wp_additional_image_sizes;
+		$sizes = array(
+			'full' => __('Full', 'hashcore-widgets-bundle'),
+			'large' => __('Large', 'hashcore-widgets-bundle'),
+			'medium' => __('Medium', 'hashcore-widgets-bundle'),
+			'thumb' => __('Thumbnail', 'hashcore-widgets-bundle'),
+		);
 		if( !empty($_wp_additional_image_sizes) ) {
 			foreach($_wp_additional_image_sizes as $i => $s) {
-				$form['size']['options'][$i] = $i;
+				$sizes[$i] = $i;
 			}
 		}
 
-		return $form;
+		return array(
+			'image' => array(
+				'type' => 'media',
+				'label' => __('Image file', 'hashcore-widgets-bundle'),
+				'library' => 'image',
+				'fallback' => true,
+			),
+
+			'size' => array(
+				'type' => 'select',
+				'label' => __('Image size', 'hashcore-widgets-bundle'),
+				'options' => $sizes,
+			),
+
+			'align' => array(
+				'type' => 'select',
+				'label' => __('Image alignment', 'hashcore-widgets-bundle'),
+				'default' => 'default',
+				'options' => array(
+					'default' => __('Default', 'hashcore-widgets-bundle'),
+					'left' => __('Left', 'hashcore-widgets-bundle'),
+					'right' => __('Right', 'hashcore-widgets-bundle'),
+					'center' => __('Center', 'hashcore-widgets-bundle'),
+				),
+			),
+
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title text', 'hashcore-widgets-bundle'),
+			),
+
+			'title_position' => array(
+				'type' => 'select',
+				'label' => __('Title position', 'hashcore-widgets-bundle'),
+				'default' => 'hidden',
+				'options' => array(
+					'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
+					'above' => __( 'Above', 'hashcore-widgets-bundle' ),
+					'below' => __( 'Below', 'hashcore-widgets-bundle' ),
+				),
+			),
+
+			'alt' => array(
+				'type' => 'text',
+				'label' => __('Alt text', 'hashcore-widgets-bundle'),
+			),
+
+			'url' => array(
+				'type' => 'link',
+				'label' => __('Destination URL', 'hashcore-widgets-bundle'),
+			),
+			'new_window' => array(
+				'type' => 'checkbox',
+				'default' => false,
+				'label' => __('Open in new window', 'hashcore-widgets-bundle'),
+			),
+
+			'bound' => array(
+				'type' => 'checkbox',
+				'default' => true,
+				'label' => __('Bound', 'hashcore-widgets-bundle'),
+				'description' => __("Make sure the image doesn't extend beyond its container.", 'hashcore-widgets-bundle'),
+			),
+			'full_width' => array(
+				'type' => 'checkbox',
+				'default' => false,
+				'label' => __('Full Width', 'hashcore-widgets-bundle'),
+				'description' => __("Resize image to fit its container.", 'hashcore-widgets-bundle'),
+			),
+
+		);
 	}
 
 	function get_style_hash($instance) {

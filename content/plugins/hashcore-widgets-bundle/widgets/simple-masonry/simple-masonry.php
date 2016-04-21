@@ -16,144 +16,9 @@ class HashCore_Widget_Simple_Masonry_Widget extends HashCore_Widget {
 				'description' => __('A simple masonry layout widget.', 'hashcore-widgets-bundle'),
 				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
-//				'help' => 'https:///widgets-bundle/simple-masonry-widget-documentation/'
 			),
 			array(),
-			array(
-				'widget_title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-				),
-				'items' => array(
-					'type' => 'repeater',
-					'label' => __( 'Images', 'hashcore-widgets-bundle' ),
-					'item_label' => array(
-						'selector'     => "[id*='title']"
-					),
-					'fields' => array(
-						'image' => array(
-							'type' => 'media',
-							'label' => __( 'Image', 'hashcore-widgets-bundle')
-						),
-						'column_span' => array(
-							'type' => 'slider',
-							'label' => __( 'Column span', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Number of columns this item should span. (Limited to number of columns selected in Layout section below.)', 'hashcore-widgets-bundle' ),
-							'min' => 1,
-							'max' => 10,
-							'default' => 1
-						),
-						'row_span' => array(
-							'type' => 'slider',
-							'label' => __( 'Row span', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Number of rows this item should span. (Limited to number of columns selected in Layout section below.)', 'hashcore-widgets-bundle' ),
-							'min' => 1,
-							'max' => 10,
-							'default' => 1
-						),
-						'title' => array(
-							'type' => 'text',
-							'label' => __('Title', 'hashcore-widgets-bundle'),
-						),
-						'url' => array(
-							'type' => 'link',
-							'label' => __('Destination URL', 'hashcore-widgets-bundle'),
-						),
-						'new_window' => array(
-							'type' => 'checkbox',
-							'default' => false,
-							'label' => __('Open in a new window', 'hashcore-widgets-bundle'),
-						),
-					)
-				),
-				'desktop_layout' => array(
-					'type' => 'section',
-					'label' => __( 'Desktop Layout', 'hashcore-widgets-bundle' ),
-					'fields' => array(
-						'columns' => array(
-							'type' => 'slider',
-							'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
-							'min' => 1,
-							'max' => 10,
-							'default' => 4
-						),
-						'row_height' => array(
-							'type' => 'number',
-							'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						),
-						'gutter' => array(
-							'type' => 'number',
-							'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
-							'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						)
-					)
-				),
-				'tablet_layout' => array(
-					'type' => 'section',
-					'label' => __( 'Tablet Layout', 'hashcore-widgets-bundle' ),
-					'hide' => true,
-					'fields' => array(
-						'break_point' => array(
-							'type' => 'number',
-							'lanel' => __( 'Break point', 'hashcore-widgets-bundle' ),
-							'default' => 768
-						),
-						'columns' => array(
-							'type' => 'slider',
-							'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
-							'min' => 1,
-							'max' => 10,
-							'default' => 2
-						),
-						'row_height' => array(
-							'type' => 'number',
-							'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						),
-						'gutter' => array(
-							'type' => 'number',
-							'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
-							'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						)
-					)
-				),
-				'mobile_layout' => array(
-					'type' => 'section',
-					'label' => __( 'Mobile Layout', 'hashcore-widgets-bundle' ),
-					'hide' => true,
-					'fields' => array(
-						'break_point' => array(
-							'type' => 'number',
-							'lanel' => __( 'Break point', 'hashcore-widgets-bundle' ),
-							'default' => 480
-						),
-						'columns' => array(
-							'type' => 'slider',
-							'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
-							'min' => 1,
-							'max' => 10,
-							'default' => 1
-						),
-						'row_height' => array(
-							'type' => 'number',
-							'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						),
-						'gutter' => array(
-							'type' => 'number',
-							'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
-							'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
-							'default' => 0
-						)
-					)
-				)
-			),
+			false,
 			plugin_dir_path(__FILE__)
 		);
 
@@ -180,6 +45,144 @@ class HashCore_Widget_Simple_Masonry_Widget extends HashCore_Widget {
 					array( 'jquery', 'dessandro-imagesLoaded', 'dessandro-packery' ),
 					SOW_BUNDLE_VERSION
 				),
+			)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'widget_title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+			),
+			'items' => array(
+				'type' => 'repeater',
+				'label' => __( 'Images', 'hashcore-widgets-bundle' ),
+				'item_label' => array(
+					'selector'     => "[id*='title']"
+				),
+				'fields' => array(
+					'image' => array(
+						'type' => 'media',
+						'label' => __( 'Image', 'hashcore-widgets-bundle')
+					),
+					'column_span' => array(
+						'type' => 'slider',
+						'label' => __( 'Column span', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Number of columns this item should span. (Limited to number of columns selected in Layout section below.)', 'hashcore-widgets-bundle' ),
+						'min' => 1,
+						'max' => 10,
+						'default' => 1
+					),
+					'row_span' => array(
+						'type' => 'slider',
+						'label' => __( 'Row span', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Number of rows this item should span. (Limited to number of columns selected in Layout section below.)', 'hashcore-widgets-bundle' ),
+						'min' => 1,
+						'max' => 10,
+						'default' => 1
+					),
+					'title' => array(
+						'type' => 'text',
+						'label' => __('Title', 'hashcore-widgets-bundle'),
+					),
+					'url' => array(
+						'type' => 'link',
+						'label' => __('Destination URL', 'hashcore-widgets-bundle'),
+					),
+					'new_window' => array(
+						'type' => 'checkbox',
+						'default' => false,
+						'label' => __('Open in a new window', 'hashcore-widgets-bundle'),
+					),
+				)
+			),
+			'desktop_layout' => array(
+				'type' => 'section',
+				'label' => __( 'Desktop Layout', 'hashcore-widgets-bundle' ),
+				'fields' => array(
+					'columns' => array(
+						'type' => 'slider',
+						'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
+						'min' => 1,
+						'max' => 10,
+						'default' => 4
+					),
+					'row_height' => array(
+						'type' => 'number',
+						'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					),
+					'gutter' => array(
+						'type' => 'number',
+						'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
+						'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					)
+				)
+			),
+			'tablet_layout' => array(
+				'type' => 'section',
+				'label' => __( 'Tablet Layout', 'hashcore-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+					'break_point' => array(
+						'type' => 'number',
+						'lanel' => __( 'Break point', 'hashcore-widgets-bundle' ),
+						'default' => 768
+					),
+					'columns' => array(
+						'type' => 'slider',
+						'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
+						'min' => 1,
+						'max' => 10,
+						'default' => 2
+					),
+					'row_height' => array(
+						'type' => 'number',
+						'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					),
+					'gutter' => array(
+						'type' => 'number',
+						'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
+						'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					)
+				)
+			),
+			'mobile_layout' => array(
+				'type' => 'section',
+				'label' => __( 'Mobile Layout', 'hashcore-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+					'break_point' => array(
+						'type' => 'number',
+						'lanel' => __( 'Break point', 'hashcore-widgets-bundle' ),
+						'default' => 480
+					),
+					'columns' => array(
+						'type' => 'slider',
+						'label' => __( 'Number of columns', 'hashcore-widgets-bundle' ),
+						'min' => 1,
+						'max' => 10,
+						'default' => 1
+					),
+					'row_height' => array(
+						'type' => 'number',
+						'label' => __( 'Row height', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Leave blank to match calculated column width.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					),
+					'gutter' => array(
+						'type' => 'number',
+						'label' => __( 'Gutter', 'hashcore-widgets-bundle'),
+						'description' => __( 'Space between masonry items.', 'hashcore-widgets-bundle' ),
+						'default' => 0
+					)
+				)
 			)
 		);
 	}

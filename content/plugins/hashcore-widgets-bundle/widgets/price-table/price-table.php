@@ -15,135 +15,11 @@ class HashCore_Widget_PriceTable_Widget extends HashCore_Widget {
 				'description' => __('A simple Price Table.', 'hashcore-widgets-bundle'),
 				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
-				'help' => 'https:///widgets-bundle/price-table-widget/'
 			),
 			array(
 
 			),
-			array(
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-				),
-
-				'columns' => array(
-					'type' => 'repeater',
-					'label' => __('Columns', 'hashcore-widgets-bundle'),
-					'item_name' => __('Column', 'hashcore-widgets-bundle'),
-					'item_label' => array(
-						'selector' => "[id*='columns-title']",
-						'update_event' => 'change',
-						'value_method' => 'val'
-					),
-					'fields' => array(
-						'featured' => array(
-							'type' => 'checkbox',
-							'label' => __('Featured', 'hashcore-widgets-bundle'),
-						),
-						'title' => array(
-							'type' => 'text',
-							'label' => __('Title', 'hashcore-widgets-bundle'),
-						),
-						'subtitle' => array(
-							'type' => 'text',
-							'label' => __('Subtitle', 'hashcore-widgets-bundle'),
-						),
-
-						'image' => array(
-							'type' => 'media',
-							'label' => __('Image', 'hashcore-widgets-bundle'),
-						),
-
-						'image_title' => array(
-							'type' => 'text',
-							'label' => __('Image title', 'hashcore-widgets-bundle'),
-						),
-
-						'image_alt' => array(
-							'type' => 'text',
-							'label' => __('Image alt text', 'hashcore-widgets-bundle'),
-						),
-
-						'price' => array(
-							'type' => 'text',
-							'label' => __('Price', 'hashcore-widgets-bundle'),
-						),
-						'per' => array(
-							'type' => 'text',
-							'label' => __('Per', 'hashcore-widgets-bundle'),
-						),
-						'button' => array(
-							'type' => 'text',
-							'label' => __('Button text', 'hashcore-widgets-bundle'),
-						),
-						'url' => array(
-							'type' => 'link',
-							'label' => __('Button URL', 'hashcore-widgets-bundle'),
-						),
-						'features' => array(
-							'type' => 'repeater',
-							'label' => __('Features', 'hashcore-widgets-bundle'),
-							'item_name' => __('Feature', 'hashcore-widgets-bundle'),
-							'item_label' => array(
-								'selector' => "[id*='columns-features-text']",
-								'update_event' => 'change',
-								'value_method' => 'val'
-							),
-							'fields' => array(
-								'text' => array(
-									'type' => 'text',
-									'label' => __('Text', 'hashcore-widgets-bundle'),
-								),
-								'hover' => array(
-									'type' => 'text',
-									'label' => __('Hover text', 'hashcore-widgets-bundle'),
-								),
-								'icon_new' => array(
-									'type' => 'icon',
-									'label' => __('Icon', 'hashcore-widgets-bundle'),
-								),
-								'icon_color' => array(
-									'type' => 'color',
-									'label' => __('Icon color', 'hashcore-widgets-bundle'),
-								),
-							),
-						),
-					),
-				),
-
-				'theme' => array(
-					'type' => 'select',
-					'label' => __('Price table theme', 'hashcore-widgets-bundle'),
-					'options' => array(
-						'atom' => __('Atom', 'hashcore-widgets-bundle'),
-					),
-				),
-
-				'header_color' => array(
-					'type' => 'color',
-					'label' => __('Header color', 'hashcore-widgets-bundle'),
-				),
-
-				'featured_header_color' => array(
-					'type' => 'color',
-					'label' => __('Featured header color', 'hashcore-widgets-bundle'),
-				),
-
-				'button_color' => array(
-					'type' => 'color',
-					'label' => __('Button color', 'hashcore-widgets-bundle'),
-				),
-
-				'featured_button_color' => array(
-					'type' => 'color',
-					'label' => __('Featured button color', 'hashcore-widgets-bundle'),
-				),
-
-				'button_new_window' => array(
-					'type' => 'checkbox',
-					'label' => __('Open Button URL in a new window', 'hashcore-widgets-bundle'),
-				),
-			),
+			false,
 			plugin_dir_path(__FILE__).'../'
 		);
 	}
@@ -157,6 +33,133 @@ class HashCore_Widget_PriceTable_Widget extends HashCore_Widget {
 					array( 'jquery' )
 				)
 			)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+			),
+
+			'columns' => array(
+				'type' => 'repeater',
+				'label' => __('Columns', 'hashcore-widgets-bundle'),
+				'item_name' => __('Column', 'hashcore-widgets-bundle'),
+				'item_label' => array(
+					'selector' => "[id*='columns-title']",
+					'update_event' => 'change',
+					'value_method' => 'val'
+				),
+				'fields' => array(
+					'featured' => array(
+						'type' => 'checkbox',
+						'label' => __('Featured', 'hashcore-widgets-bundle'),
+					),
+					'title' => array(
+						'type' => 'text',
+						'label' => __('Title', 'hashcore-widgets-bundle'),
+					),
+					'subtitle' => array(
+						'type' => 'text',
+						'label' => __('Subtitle', 'hashcore-widgets-bundle'),
+					),
+
+					'image' => array(
+						'type' => 'media',
+						'label' => __('Image', 'hashcore-widgets-bundle'),
+					),
+
+					'image_title' => array(
+						'type' => 'text',
+						'label' => __('Image title', 'hashcore-widgets-bundle'),
+					),
+
+					'image_alt' => array(
+						'type' => 'text',
+						'label' => __('Image alt text', 'hashcore-widgets-bundle'),
+					),
+
+					'price' => array(
+						'type' => 'text',
+						'label' => __('Price', 'hashcore-widgets-bundle'),
+					),
+					'per' => array(
+						'type' => 'text',
+						'label' => __('Per', 'hashcore-widgets-bundle'),
+					),
+					'button' => array(
+						'type' => 'text',
+						'label' => __('Button text', 'hashcore-widgets-bundle'),
+					),
+					'url' => array(
+						'type' => 'link',
+						'label' => __('Button URL', 'hashcore-widgets-bundle'),
+					),
+					'features' => array(
+						'type' => 'repeater',
+						'label' => __('Features', 'hashcore-widgets-bundle'),
+						'item_name' => __('Feature', 'hashcore-widgets-bundle'),
+						'item_label' => array(
+							'selector' => "[id*='columns-features-text']",
+							'update_event' => 'change',
+							'value_method' => 'val'
+						),
+						'fields' => array(
+							'text' => array(
+								'type' => 'text',
+								'label' => __('Text', 'hashcore-widgets-bundle'),
+							),
+							'hover' => array(
+								'type' => 'text',
+								'label' => __('Hover text', 'hashcore-widgets-bundle'),
+							),
+							'icon_new' => array(
+								'type' => 'icon',
+								'label' => __('Icon', 'hashcore-widgets-bundle'),
+							),
+							'icon_color' => array(
+								'type' => 'color',
+								'label' => __('Icon color', 'hashcore-widgets-bundle'),
+							),
+						),
+					),
+				),
+			),
+
+			'theme' => array(
+				'type' => 'select',
+				'label' => __('Price table theme', 'hashcore-widgets-bundle'),
+				'options' => array(
+					'atom' => __('Atom', 'hashcore-widgets-bundle'),
+				),
+			),
+
+			'header_color' => array(
+				'type' => 'color',
+				'label' => __('Header color', 'hashcore-widgets-bundle'),
+			),
+
+			'featured_header_color' => array(
+				'type' => 'color',
+				'label' => __('Featured header color', 'hashcore-widgets-bundle'),
+			),
+
+			'button_color' => array(
+				'type' => 'color',
+				'label' => __('Button color', 'hashcore-widgets-bundle'),
+			),
+
+			'featured_button_color' => array(
+				'type' => 'color',
+				'label' => __('Featured button color', 'hashcore-widgets-bundle'),
+			),
+
+			'button_new_window' => array(
+				'type' => 'checkbox',
+				'label' => __('Open Button URL in a new window', 'hashcore-widgets-bundle'),
+			),
 		);
 	}
 

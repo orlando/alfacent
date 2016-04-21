@@ -19,64 +19,8 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
-			array(
-
-				'images' => array(
-					'type' => 'repeater',
-					'label' => __('Images', 'hashcore-widgets-bundle'),
-					'item_name'  => __( 'Image', 'hashcore-widgets-bundle' ),
-					'item_label' => array(
-						'selector'     => "[name*='title']",
-						'update_event' => 'change',
-						'value_method' => 'val'
-					),
-					'fields' => array(
-						'image' => array(
-							'type' => 'media',
-							'label' => __('Image', 'hashcore-widgets-bundle')
-						),
-						'title' => array(
-							'type' => 'text',
-							'label' => __('Image title', 'hashcore-widgets-bundle')
-						),
-						'url' => array(
-							'type' => 'link',
-							'label' => __('URL', 'hashcore-widgets-bundle')
-						),
-					)
-				),
-
-				'display' => array(
-					'type' => 'section',
-					'label' => __('Display', 'hashcore-widgets-bundle'),
-					'fields' => array(
-						'attachment_size' => array(
-							'label' => __('Image size', 'hashcore-widgets-bundle'),
-							'type' => 'select',
-							'options' => array(),
-							'default' => 'full',
-						),
-
-						'max_height' => array(
-							'label' => __('Maximum image height', 'hashcore-widgets-bundle'),
-							'type' => 'number',
-						),
-
-						'max_width' => array(
-							'label' => __('Maximum image width', 'hashcore-widgets-bundle'),
-							'type' => 'number',
-						),
-
-						'spacing' => array(
-							'label' => __('Spacing', 'hashcore-widgets-bundle'),
-							'description' => __('Amount of spacing between images.', 'hashcore-widgets-bundle'),
-							'type' => 'number',
-							'default' => 10,
-						),
-					)
-				)
-
-			)
+			false,
+			plugin_dir_path( __FILE__ )
 		);
 	}
 
@@ -100,22 +44,71 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 		) );
 	}
 
-	/**
-	 * Modify the form widget
-	 *
-	 * @param $form
-	 *
-	 * @return mixed
-	 */
-	function modify_form( $form ){
+	function initialize_form(){
 		$intermediate = get_intermediate_image_sizes();
 		$sizes = array();
 		foreach( $intermediate as $name ) {
 			$sizes[$name] = ucwords(preg_replace('/[-_]/', ' ', $name));
 		}
 		$sizes = array_merge( array( 'full' => __('Full', 'hashcore-widgets-bundle') ), $sizes );
-		$form['display']['fields']['attachment_size']['options'] = $sizes;
-		return $form;
+
+		return array(
+
+			'images' => array(
+				'type' => 'repeater',
+				'label' => __('Images', 'hashcore-widgets-bundle'),
+				'item_name'  => __( 'Image', 'hashcore-widgets-bundle' ),
+				'item_label' => array(
+					'selector'     => "[name*='title']",
+					'update_event' => 'change',
+					'value_method' => 'val'
+				),
+				'fields' => array(
+					'image' => array(
+						'type' => 'media',
+						'label' => __('Image', 'hashcore-widgets-bundle')
+					),
+					'title' => array(
+						'type' => 'text',
+						'label' => __('Image title', 'hashcore-widgets-bundle')
+					),
+					'url' => array(
+						'type' => 'link',
+						'label' => __('URL', 'hashcore-widgets-bundle')
+					),
+				)
+			),
+
+			'display' => array(
+				'type' => 'section',
+				'label' => __('Display', 'hashcore-widgets-bundle'),
+				'fields' => array(
+					'attachment_size' => array(
+						'label' => __('Image size', 'hashcore-widgets-bundle'),
+						'type' => 'select',
+						'options' => $sizes,
+						'default' => 'full',
+					),
+
+					'max_height' => array(
+						'label' => __('Maximum image height', 'hashcore-widgets-bundle'),
+						'type' => 'number',
+					),
+
+					'max_width' => array(
+						'label' => __('Maximum image width', 'hashcore-widgets-bundle'),
+						'type' => 'number',
+					),
+
+					'spacing' => array(
+						'label' => __('Spacing', 'hashcore-widgets-bundle'),
+						'description' => __('Amount of spacing between images.', 'hashcore-widgets-bundle'),
+						'type' => 'number',
+						'default' => 10,
+					),
+				)
+			)
+		);
 	}
 
 	/**

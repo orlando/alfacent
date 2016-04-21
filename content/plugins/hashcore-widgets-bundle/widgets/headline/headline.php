@@ -20,141 +20,146 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
-			array(
-				'headline' => array(
-					'type' => 'section',
-					'label'  => __( 'Headline', 'hashcore-widgets-bundle' ),
-					'hide'   => false,
-					'fields' => array(
-						'text' => array(
-							'type' => 'text',
-							'label' => __( 'Text', 'hashcore-widgets-bundle' ),
-						),
-						'tag' => array(
-							'type' => 'select',
-							'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
-							'default' => 'h1',
-							'options' => array(
-								'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
-								'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
-								'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
-								'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
-								'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
-								'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
-							)
-						),
-						'font' => array(
-							'type' => 'font',
-							'label' => __( 'Font', 'hashcore-widgets-bundle' ),
-							'default' => 'default'
-						),
-						'color' => array(
-							'type' => 'color',
-							'label' => __('Color', 'hashcore-widgets-bundle'),
-						),
-						'align' => array(
-							'type' => 'select',
-							'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-							'default' => 'center',
-							'options' => array(
-								'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-								'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-								'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-								'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
-							)
+			false,
+			plugin_dir_path(__FILE__)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'headline' => array(
+				'type' => 'section',
+				'label'  => __( 'Headline', 'hashcore-widgets-bundle' ),
+				'hide'   => false,
+				'fields' => array(
+					'text' => array(
+						'type' => 'text',
+						'label' => __( 'Text', 'hashcore-widgets-bundle' ),
+					),
+					'tag' => array(
+						'type' => 'select',
+						'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
+						'default' => 'h1',
+						'options' => array(
+							'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
+							'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
+							'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
+							'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
+							'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
+							'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
+						)
+					),
+					'font' => array(
+						'type' => 'font',
+						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
+						'default' => 'default'
+					),
+					'color' => array(
+						'type' => 'color',
+						'label' => __('Color', 'hashcore-widgets-bundle'),
+					),
+					'align' => array(
+						'type' => 'select',
+						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
+						'default' => 'center',
+						'options' => array(
+							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
+							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
+							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
+							'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
 						)
 					)
-				),
-				'sub_headline' => array(
-					'type' => 'section',
-					'label'  => __( 'Sub headline', 'hashcore-widgets-bundle' ),
-					'hide'   => true,
-					'fields' => array(
-						'text' => array(
-							'type' => 'text',
-							'label' => __('Text', 'hashcore-widgets-bundle')
-						),
-						'tag' => array(
-							'type' => 'select',
-							'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
-							'default' => 'h3',
-							'options' => array(
-								'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
-								'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
-								'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
-								'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
-								'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
-								'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
-							)
-						),
-						'font' => array(
-							'type' => 'font',
-							'label' => __( 'Font', 'hashcore-widgets-bundle' ),
-							'default' => 'default'
-						),
-						'color' => array(
-							'type' => 'color',
-							'label' => __('Color', 'hashcore-widgets-bundle'),
-						),
-						'align' => array(
-							'type' => 'select',
-							'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-							'default' => 'center',
-							'options' => array(
-								'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-								'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-								'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-								'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
-							)
+				)
+			),
+			'sub_headline' => array(
+				'type' => 'section',
+				'label'  => __( 'Sub headline', 'hashcore-widgets-bundle' ),
+				'hide'   => true,
+				'fields' => array(
+					'text' => array(
+						'type' => 'text',
+						'label' => __('Text', 'hashcore-widgets-bundle')
+					),
+					'tag' => array(
+						'type' => 'select',
+						'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
+						'default' => 'h3',
+						'options' => array(
+							'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
+							'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
+							'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
+							'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
+							'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
+							'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
+						)
+					),
+					'font' => array(
+						'type' => 'font',
+						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
+						'default' => 'default'
+					),
+					'color' => array(
+						'type' => 'color',
+						'label' => __('Color', 'hashcore-widgets-bundle'),
+					),
+					'align' => array(
+						'type' => 'select',
+						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
+						'default' => 'center',
+						'options' => array(
+							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
+							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
+							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
+							'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
 						)
 					)
-				),
-				'divider' => array(
-					'type' => 'section',
-					'label' => __( 'Divider', 'hashcore-widgets-bundle' ),
-					'hide' => true,
-					'fields' => array(
-						'style' => array(
-							'type' => 'select',
-							'label' => __( 'Style', 'hashcore-widgets-bundle' ),
-							'default' => 'solid',
-							'options' => array(
-								'none' => __('None', 'hashcore-widgets-bundle'),
-								'solid' => __('Solid', 'hashcore-widgets-bundle'),
-								'dotted' => __('Dotted', 'hashcore-widgets-bundle'),
-								'dashed' => __('Dashed', 'hashcore-widgets-bundle'),
-								'double' => __('Double', 'hashcore-widgets-bundle'),
-								'groove' => __('Groove', 'hashcore-widgets-bundle'),
-								'ridge' => __('Ridge', 'hashcore-widgets-bundle'),
-								'inset' => __('Inset', 'hashcore-widgets-bundle'),
-								'outset' => __('Outset', 'hashcore-widgets-bundle'),
-							)
-						),
-						'weight' => array(
-							'type' => 'select',
-							'label' => __( 'Weight', 'hashcore-widgets-bundle' ),
-							'default' => 'thin',
-							'options' => array(
-								'thin' => __( 'Thin', 'hashcore-widgets-bundle' ),
-								'medium' => __( 'Medium', 'hashcore-widgets-bundle' ),
-								'thick' => __( 'Thick', 'hashcore-widgets-bundle' ),
-							)
-						),
-						'color' => array(
-							'type' => 'color',
-							'label' => __('Color', 'hashcore-widgets-bundle'),
-							'default' => '#EEEEEE'
-						),
-						'side_margin' => array(
-							'type' => 'measurement',
-							'label' => __('Side Margin', 'hashcore-widgets-bundle'),
-							'default' => '60px',
-						),
-						'top_margin' => array(
-							'type' => 'measurement',
-							'label' => __('Top/Bottom Margin', 'hashcore-widgets-bundle'),
-							'default' => '20px',
+				)
+			),
+			'divider' => array(
+				'type' => 'section',
+				'label' => __( 'Divider', 'hashcore-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+					'style' => array(
+						'type' => 'select',
+						'label' => __( 'Style', 'hashcore-widgets-bundle' ),
+						'default' => 'solid',
+						'options' => array(
+							'none' => __('None', 'hashcore-widgets-bundle'),
+							'solid' => __('Solid', 'hashcore-widgets-bundle'),
+							'dotted' => __('Dotted', 'hashcore-widgets-bundle'),
+							'dashed' => __('Dashed', 'hashcore-widgets-bundle'),
+							'double' => __('Double', 'hashcore-widgets-bundle'),
+							'groove' => __('Groove', 'hashcore-widgets-bundle'),
+							'ridge' => __('Ridge', 'hashcore-widgets-bundle'),
+							'inset' => __('Inset', 'hashcore-widgets-bundle'),
+							'outset' => __('Outset', 'hashcore-widgets-bundle'),
 						)
+					),
+					'weight' => array(
+						'type' => 'select',
+						'label' => __( 'Weight', 'hashcore-widgets-bundle' ),
+						'default' => 'thin',
+						'options' => array(
+							'thin' => __( 'Thin', 'hashcore-widgets-bundle' ),
+							'medium' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'thick' => __( 'Thick', 'hashcore-widgets-bundle' ),
+						)
+					),
+					'color' => array(
+						'type' => 'color',
+						'label' => __('Color', 'hashcore-widgets-bundle'),
+						'default' => '#EEEEEE'
+					),
+					'side_margin' => array(
+						'type' => 'measurement',
+						'label' => __('Side Margin', 'hashcore-widgets-bundle'),
+						'default' => '60px',
+					),
+					'top_margin' => array(
+						'type' => 'measurement',
+						'label' => __('Top/Bottom Margin', 'hashcore-widgets-bundle'),
+						'default' => '20px',
 					)
 				)
 			)
