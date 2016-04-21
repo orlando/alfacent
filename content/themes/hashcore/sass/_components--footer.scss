@@ -58,6 +58,10 @@ $color--site-footer-background:                 $deep-koamaru;
     }
   }
 
+  &-social {
+    font-size: 14px;
+  }
+
   &-copy {
     font-weight: lighter;
     font-size: $size--site-footer-copy-font;

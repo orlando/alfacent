@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-offset-2 col-xs-8 col-xs-8 hidden-xs">
+			<div class="col-xs-offset-2 col-xs-8 hidden-xs">
 				<div class="site-footer-menu-wrapper">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'site-footer-menu' ) ); ?>
 				</div>
@@ -35,8 +35,14 @@
 		</div>
 
 		<div class="row">
+			<div class="col-xs-offset-2 col-xs-8">
+				<?php dynamic_sidebar( 'footer-social' ); ?>
+			</div>
+		</div>
+
+		<div class="row">
 			<div class="col-xs-12 text-center">
-				<span class="site-footer-copy"><?php echo date('Y'); ?><i class="fa fa-copyright" aria-hidden="true"></i>  Alfacent By Hash Labs </span>
+				<span class="site-footer-copy"><?php echo date('Y');?><i class="fa fa-copyright" aria-hidden="true"></i>  Alfacent By Hash Labs </span>
 			</div>
 		</div>
 

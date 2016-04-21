@@ -110,11 +110,21 @@ function hashcore_widgets_init() {
 	register_sidebar( array(
 		'name'					=> esc_html__( 'Sidebar', 'hashcore' ),
 		'id'						=> 'sidebar-1',
-		'description'	 => '',
+		'description'	  => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'	=> '</section>',
 		'before_title'	=> '<h2 class="widget-title">',
-		'after_title'	 => '</h2>',
+		'after_title'	  => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'					=> esc_html__( 'footer Sidebar', 'hashcore' ),
+		'id'						=> 'footer-social',
+		'description'	  => '',
+		'before_widget' => '<section id="%1$s" class="site-footer-social %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'	=> '',
+		'after_title'	  => '',
 	) );
 }
 add_action( 'widgets_init', 'hashcore_widgets_init' );
