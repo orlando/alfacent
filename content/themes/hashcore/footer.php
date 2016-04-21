@@ -13,15 +13,19 @@
 
 <footer class="site-footer" role="contentinfo">
 	<div class="container">
+		
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="site-footer-logo">
-					<!-- for now ask for the same header logo -->
-					<?php if ( hashcore_the_custom_logo() ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php hashcore_the_custom_logo(); ?>
+						<?php if ( get_theme_mod( 'hashcore_alt_logo' ) ) : ?>
+							<img src="<?php echo get_theme_mod( 'hashcore_alt_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						<?php elseif ( hashcore_the_custom_logo() ) :
+							hashcore_the_custom_logo();
+						else :
+							echo esc_attr( get_bloginfo( 'name', 'display' ) );
+						endif;?>
 					</a>
-					<?php endif; // End logo image check. ?>
 				</div>
 			</div>
 		</div>
@@ -48,9 +52,6 @@
 
 	</div> <!-- .container footer-->
 </footer>
-<?php wp_footer(); ?>
-
-
 <?php wp_footer(); ?>
 
 </body>
