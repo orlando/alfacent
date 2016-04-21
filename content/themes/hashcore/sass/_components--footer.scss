@@ -1,6 +1,8 @@
 $size--site-footer-logo-height:                  7rem;
 $size--item-menu-font:                           70%;
 $size--site-footer-copy-font:                    60%;
+$size--site-footer-height-mobile:                $size--site-footer-height-mobile;
+$size--site-footer-height-desktop:               $size--site-footer-height-desktop;
 $color--item-menu-text:                          rgba(255, 255, 255, .6);
 $size--strip-margin-top:                         6px;
 $size--strip-height:                             4px;
@@ -19,8 +21,13 @@ $color--site-footer-background:                 $deep-koamaru;
 
 .site-footer {
   background-color: $color--site-footer-background;
-
   padding-top: $grid-gutter-width-half;
+  height: $size--site-footer-height-mobile;
+  clear: both;
+  
+  @media screen and (min-width: $bootstrap-sm) {
+    height: $size--site-footer-height-desktop;
+  }
 
   &-logo {
     text-align: center;

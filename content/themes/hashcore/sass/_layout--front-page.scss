@@ -1,3 +1,19 @@
+$size--site-footer-height-mobile:                $size--site-footer-height-mobile;
+$size--site-footer-height-desktop:               $size--site-footer-height-desktop;
+
+html,
+body {
+	height: 100%;
+}
+
 .site-wrapper {
 	padding-top: 12rem;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto (-$size--site-footer-height-mobile);
+
+	@media screen and (min-width: $bootstrap-sm) {
+    margin-bottom: (-$size--site-footer-height-desktop);
+  }
 }
