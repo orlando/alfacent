@@ -528,6 +528,7 @@ function hashcore_widgets_icons_fontawesome_filter( $icons ){
 		'sliders' => '&#xf1de;',
 		'slideshare' => '&#xf1e7;',
 		'smile-o' => '&#xf118;',
+		'snapchat' => '&#xf2ac;',
 		'soccer-ball-o' => '&#xf1e3;',
 		'sort' => '&#xf0dc;',
 		'sort-alpha-asc' => '&#xf15d;',
