@@ -13,7 +13,7 @@
 
 <footer class="site-footer" role="contentinfo">
 	<div class="container">
-		
+
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="site-footer-logo">
@@ -39,7 +39,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-offset-2 col-xs-8">
+			<div class="col-xs-12 col-sm-offset-2 col-sm-8">
 				<?php dynamic_sidebar( 'footer-social' ); ?>
 			</div>
 		</div>
