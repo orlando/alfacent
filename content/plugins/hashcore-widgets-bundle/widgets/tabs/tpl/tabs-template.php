@@ -5,7 +5,7 @@ $tabs_selection =  wp_kses_post($instance['tabs_selection']);
 
 
 <?php if ($widget_title) { ?>
-    <h3 class="widget-title">
+    <h3 class="soua-tab-title">
         <span><?php echo $widget_title ?></span>
     </h3>
 <?php } ?>

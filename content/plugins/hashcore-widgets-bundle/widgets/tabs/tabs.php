@@ -77,6 +77,17 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'hide' => true,
 					'fields' => array(
 
+						'align'      => array(
+							'type'    => 'select',
+							'label'   => __( 'Align', 'hashcore-widgets-bundle' ),
+							'default' => 'center',
+							'options' => array(
+								'left'    => __( 'Left', 'hashcore-widgets-bundle' ),
+								'right'   => __( 'Right', 'hashcore-widgets-bundle' ),
+								'center'  => __( 'Center', 'hashcore-widgets-bundle' ),
+							),
+						),
+
 						'bg_color' => array(
 							'type' => 'color',
 							'label' => __( 'Background Color', 'hashcore-widgets-bundle' ),
@@ -117,6 +128,7 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 
 	function get_less_variables( $instance ) {
 		return array(
+			'align' => $instance['tabs_styling']['align'],
 			'bg_color' => $instance['tabs_styling']['bg_color'],
 			'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],
 			'active_tab_color' => $instance['tabs_styling']['active_tab_color'],
