@@ -32,7 +32,7 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'label' => __( 'Tabs' , 'hashcore-widgets-bundle' ),
 					'item_name'	=> __( 'Tab', 'hashcore-widgets-bundle' ),
 					'item_label' => array(
-							'selector'		 => "[id*='repeat_text']",
+							'selector'		 => "[id*='repeater-tab_title']",
 							'update_event' => 'change',
 							'value_method' => 'val',
 					),
