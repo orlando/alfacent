@@ -30,11 +30,24 @@ class HashCore_Widgets_Bundle {
 	 */
 	static $default_active_widgets = array(
 		'button' => true,
-		'google-map' => true,
-		'image' => true,
-		'slider' => true,
-		'post-carousel' => true,
+		'contact' => true,
+		'cta' => true,
 		'editor' => true,
+		'features' => true,
+		'google-map' => true,
+		'headline' => true,
+		'hero' => true,
+		'image' => true,
+		'image-button' => true,
+		'image-grid' => true,
+		'post-carousel' => true,
+		'price-table' => true,
+		'simple-masonry' => true,
+		'slider' => true,
+		'social-media-buttons' => true,
+		'tabs' => true,
+		'testimonial' => true,
+		'video' => true,
 	);
 
 	function __construct(){

@@ -7,3 +7,5 @@ Build time: 2016-03-05T10:52:59+02:00
 License: GPLv3 or later
 Contributors: hashlabs
 Based: SiteOrigin Widgets Bundle v 1.5.9
+
+Widget tabs as based: Ultimate Addons for SiteOrigin
