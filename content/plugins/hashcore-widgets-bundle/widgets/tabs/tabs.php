@@ -77,38 +77,82 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'hide' => true,
 					'fields' => array(
 
-						'align'      => array(
-							'type'    => 'select',
-							'label'   => __( 'Align', 'hashcore-widgets-bundle' ),
-							'default' => 'center',
-							'options' => array(
+						'align'     	=> array(
+							'type'    	=> 'select',
+							'label'   	=> __( 'Align', 'hashcore-widgets-bundle' ),
+							'default' 	=> 'center',
+							'options' 	=> array(
 								'left'    => __( 'Left', 'hashcore-widgets-bundle' ),
 								'right'   => __( 'Right', 'hashcore-widgets-bundle' ),
-								'center'  => __( 'Center', 'hashcore-widgets-bundle' ),
+								'center'	=> __( 'Center', 'hashcore-widgets-bundle' ),
 							),
 						),
 
-						'bg_color' => array(
-							'type' => 'color',
-							'label' => __( 'Background Color', 'hashcore-widgets-bundle' ),
-							'default' => '',
+						'tab_content_height' => array(
+							'type'    => 'select',
+							'label'   => __( 'Height of tab', 'hashcore-widgets-bundle' ),
+							'default' => '400px',
+							'options' => array(
+								'200px'	=> __( '200 Px', 'hashcore-widgets-bundle' ),
+								'300px'	=> __( '300 Px', 'hashcore-widgets-bundle' ),
+								'400px'	=> __( '400 Px', 'hashcore-widgets-bundle' ),
+								'500px'	=> __( '500 Px', 'hashcore-widgets-bundle' ),
+								'600px'	=> __( '600 Px', 'hashcore-widgets-bundle' ),
+							),
 						),
 
-						'inactive_tab_color' => array(
-							'type' => 'color',
-							'label' => __( 'Inactive Tab Font Color', 'hashcore-widgets-bundle' ),
+						'tab_content_margin_bottom' => array(
+							'type'    => 'select',
+							'label'   => __( 'Margin Bottom of Content', 'hashcore-widgets-bundle' ),
+							'default' => '30px',
+							'options' => array(
+								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
+								'10px'	=> __( 'Low', 'hashcore-widgets-bundle' ),
+								'20px'	=> __( 'Medium', 'hashcore-widgets-bundle' ),
+								'30px'	=> __( 'High', 'hashcore-widgets-bundle' ),
+								'40px'	=> __( 'Very high', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						'title_color' 	=> array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Title Color', 'hashcore-widgets-bundle' ),
 							'default' => '',
 						),
 
 						'active_tab_color' => array(
-							'type' => 'color',
-							'label' => __( 'Active Tab Font Color', 'hashcore-widgets-bundle' ),
+							'type' 		=> 'color',
+							'label' 	=> __( 'Active Tab Font Color', 'hashcore-widgets-bundle' ),
+							'default' => '',
+						),
+
+						'inactive_tab_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Inactive Tab Font Color', 'hashcore-widgets-bundle' ),
+							'default' => '',
+						),
+
+						'active_tab_rounding'   => array(
+							'type'    => 'select',
+							'label'   => __( 'Rounding', 'hashcore-widgets-bundle' ),
+							'default' => '0.25em',
+							'options' => array(
+								'0'    	=> __( 'None', 'hashcore-widgets-bundle' ),
+								'0.25em' => __( 'Slightly rounded', 'hashcore-widgets-bundle' ),
+								'0.5em'  => __( 'Very rounded', 'hashcore-widgets-bundle' ),
+								'1.5em'  => __( 'Completely rounded', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						'bg_color' 	=> array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Background Color', 'hashcore-widgets-bundle' ),
 							'default' => '',
 						),
 
 						'tab_content_color' => array(
-							'type' => 'color',
-							'label' => __( 'Tab Content Color', 'hashcore-widgets-bundle' ),
+							'type' 		=> 'color',
+							'label' 	=> __( 'Tab Content Color', 'hashcore-widgets-bundle' ),
 							'default' => '',
 						),
 					),
@@ -129,9 +173,13 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 	function get_less_variables( $instance ) {
 		return array(
 			'align' => $instance['tabs_styling']['align'],
-			'bg_color' => $instance['tabs_styling']['bg_color'],
-			'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],
+			'tab_content_height' => $instance['tabs_styling']['tab_content_height'],
+			'tab_content_margin_bottom' => $instance['tabs_styling']['tab_content_margin_bottom'],
+			'title_color' => $instance['tabs_styling']['title_color'],
 			'active_tab_color' => $instance['tabs_styling']['active_tab_color'],
+			'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],
+			'active_tab_rounding' => $instance['tabs_styling']['active_tab_rounding'],
+			'bg_color' => $instance['tabs_styling']['bg_color'],
 			'tab_content_color' => $instance['tabs_styling']['tab_content_color'],
 		);
 	}
