@@ -9,6 +9,8 @@
 @active_tab_color: #888888 ;
 @tab_content_color: #888888 ;
 
+@tablets: ~"only screen and (min-width: 768px)";
+
 .soua-tab-title {
   text-align: @align;
   color: @title_color;
@@ -77,8 +79,6 @@
   background: #ffffff;
 }
 
-
-
 //verticle tabs
 
 .vertical {
@@ -94,14 +94,19 @@
 }
 
 .vertical .soua-tabs {
-  display: table-cell;
-  vertical-align: top;
+
   position: relative;
   overflow: hidden;
   margin: 0;
-  width: auto ;
+  width: auto;
   padding: 0;
-  width: 25%;
+  width: 100%;
+
+  @media @tablets {
+    width: 25%;
+    float: left;
+  }
+
 
   li {
     float: none;
@@ -111,6 +116,11 @@
     position: relative;
     margin: 0 !important;
     list-style-type: none !important;
+    display: block;
+
+    @media @tablets {
+      display: inline-block;
+    }
   }
 
   a {
@@ -128,10 +138,13 @@
 }
 
 .vertical .tab_content {
-  display: table-cell;
-  vertical-align: top;
-  width: 75%;
+  width: 100%;
   background: #ffffff;
+
+  @media @tablets {
+    float: right;
+    width: 75%;
+  }
 }
 
 .vertical .tabs_item {
