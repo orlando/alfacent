@@ -77,20 +77,20 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'hide' => true,
 					'fields' => array(
 
-						'align'     	=> array(
-							'type'    	=> 'select',
-							'label'   	=> __( 'Align', 'hashcore-widgets-bundle' ),
+						'align'		 	=> array(
+							'type'			=> 'select',
+							'label'	 	=> __( 'Align', 'hashcore-widgets-bundle' ),
 							'default' 	=> 'center',
 							'options' 	=> array(
-								'left'    => __( 'Left', 'hashcore-widgets-bundle' ),
-								'right'   => __( 'Right', 'hashcore-widgets-bundle' ),
+								'left'		=> __( 'Left', 'hashcore-widgets-bundle' ),
+								'right'	 => __( 'Right', 'hashcore-widgets-bundle' ),
 								'center'	=> __( 'Center', 'hashcore-widgets-bundle' ),
 							),
 						),
 
 						'tab_content_height' => array(
-							'type'    => 'select',
-							'label'   => __( 'Height of tab', 'hashcore-widgets-bundle' ),
+							'type'		=> 'select',
+							'label'	 => __( 'Height of tab', 'hashcore-widgets-bundle' ),
 							'default' => '400px',
 							'options' => array(
 								'200px'	=> __( '200 Px', 'hashcore-widgets-bundle' ),
@@ -102,8 +102,8 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 						),
 
 						'tab_content_margin_bottom' => array(
-							'type'    => 'select',
-							'label'   => __( 'Margin Bottom of Content', 'hashcore-widgets-bundle' ),
+							'type'		=> 'select',
+							'label'	 => __( 'Margin Bottom of Content', 'hashcore-widgets-bundle' ),
 							'default' => '30px',
 							'options' => array(
 								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
@@ -132,15 +132,15 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 							'default' => '',
 						),
 
-						'active_tab_rounding'   => array(
-							'type'    => 'select',
-							'label'   => __( 'Rounding', 'hashcore-widgets-bundle' ),
+						'active_tab_rounding'	 => array(
+							'type'		=> 'select',
+							'label'	 => __( 'Rounding', 'hashcore-widgets-bundle' ),
 							'default' => '0.25em',
 							'options' => array(
-								'0'    	=> __( 'None', 'hashcore-widgets-bundle' ),
+								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
 								'0.25em' => __( 'Slightly rounded', 'hashcore-widgets-bundle' ),
-								'0.5em'  => __( 'Very rounded', 'hashcore-widgets-bundle' ),
-								'1.5em'  => __( 'Completely rounded', 'hashcore-widgets-bundle' ),
+								'0.5em'	=> __( 'Very rounded', 'hashcore-widgets-bundle' ),
+								'1.5em'	=> __( 'Completely rounded', 'hashcore-widgets-bundle' ),
 							),
 						),
 
@@ -159,6 +159,14 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 				),
 			),
 			plugin_dir_path( __FILE__ )
+		);
+	}
+
+	function initialize() {
+		$this->register_frontend_scripts(
+			array(
+				array( 'hashcore-tabs', plugin_dir_url( __FILE__ ) . 'js/js-tabs.js', array( 'jquery' ), '1.0' ),
+			)
 		);
 	}
 
