@@ -101,9 +101,9 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 							),
 						),
 
-						'tab_content_margin_bottom' => array(
+						'tab_content_padding_bottom' => array(
 							'type'		=> 'select',
-							'label'	 => __( 'Margin Bottom of Content', 'hashcore-widgets-bundle' ),
+							'label'	 => __( 'Padding Bottom of Content', 'hashcore-widgets-bundle' ),
 							'default' => '30px',
 							'options' => array(
 								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
@@ -182,7 +182,7 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 		return array(
 			'align' => $instance['tabs_styling']['align'],
 			'tab_content_height' => $instance['tabs_styling']['tab_content_height'],
-			'tab_content_margin_bottom' => $instance['tabs_styling']['tab_content_margin_bottom'],
+			'tab_content_padding_bottom' => $instance['tabs_styling']['tab_content_padding_bottom'],
 			'title_color' => $instance['tabs_styling']['title_color'],
 			'active_tab_color' => $instance['tabs_styling']['active_tab_color'],
 			'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],

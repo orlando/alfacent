@@ -1,6 +1,6 @@
 @align: center;
 @tab_content_height: 400px;
-@tab_content_margin_bottom: 30px;
+@tab_content_padding_bottom: 30px;
 @active_tab_rounding: 0.25em;
 @title_color: #000000;
 
@@ -26,6 +26,7 @@
   color: #888;
   -webkit-font-smoothing: antialiased;
   padding: 3px;
+  padding-bottom: @tab_content_padding_bottom;
 }
 
 .soua-tabs {
@@ -36,15 +37,26 @@
   width: 100%;
   padding: 0;
   text-align: @align;
+  font-size: 80%;
+  padding-bottom: (@tab_content_padding_bottom / 2);
+
+  @media @tablets {
+    padding-bottom: @tab_content_padding_bottom;
+    font-size: 100%;
+  }
 
   li {
-    display: inline-block;
+    display: block;
     line-height: 38px;
     overflow: hidden;
     padding: 0 !important;
     position: relative;
     margin: 0 !important;
     list-style-type: none !important;
+
+    @media @tablets {
+      display: inline-block;
+    }
   }
 
   a {
@@ -65,12 +77,24 @@
   overflow: auto;
   background: #ffffff;
   height: @tab_content_height;
-  margin-bottom: @tab_content_margin_bottom;
 }
 
 .tabs_item {
   display: none;
-  padding: 15px;
+  padding: 0;
+  & p:first-child,
+  & p:last-child,
+  & p:nth-last-of-type(2) {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 70%;
+
+    @media @tablets {
+      font-size: 100%;
+    }
+  }
 
   &:first-child {display: block;}
 }
@@ -94,7 +118,6 @@
 }
 
 .vertical .soua-tabs {
-
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -106,7 +129,6 @@
     width: 25%;
     float: left;
   }
-
 
   li {
     float: none;
