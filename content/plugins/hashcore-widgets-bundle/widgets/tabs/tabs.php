@@ -27,6 +27,20 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'default' => '',
 				),
 
+				'widget_tag' => array(
+					'type' => 'select',
+					'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
+					'default' => 'h3',
+					'options' => array(
+						'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
+						'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
+						'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
+						'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
+						'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
+						'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
+					),
+				),
+
 				'repeater' => array(
 					'type' => 'repeater',
 					'label' => __( 'Tabs' , 'hashcore-widgets-bundle' ),

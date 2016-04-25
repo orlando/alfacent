@@ -1,17 +1,17 @@
 <?php
-$widget_title =  wp_kses_post($instance['widget_title']);
-$tabs_selection =  wp_kses_post($instance['tabs_selection']);
+$widget_title = wp_kses_post( $instance['widget_title'] );
+$tabs_selection = wp_kses_post( $instance['tabs_selection'] );
+$widget_tag = wp_kses_post( $instance['widget_tag'] );
 ?>
 
 
-<?php if ($widget_title) { ?>
-    <h3 class="soua-tab-title">
-        <span><?php echo $widget_title ?></span>
-    </h3>
+<?php if ( $widget_title ) { ?>
+  <<?php echo $widget_tag . ' class="soua-tab-title"' ?>>
+    <span><?php echo $widget_title ?></span>
+  </<?php echo $widget_tag ?>>
 <?php } ?>
 
-
-<?php if($tabs_selection == 'horizontal'): ?>
+<?php if ( $tabs_selection == 'horizontal' ) : ?>
 
 <div class="soua-tab">
 
