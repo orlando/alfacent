@@ -100,9 +100,22 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 						'type' => 'number',
 					),
 
+					'spacing_item' => array(
+						'type' => 'select',
+						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
+						'default' => 'space-around',
+						'options' => array(
+							'flex-start' => __( 'Begin of container', 'hashcore-widgets-bundle' ),
+							'flex-end' => __( 'End of container', 'hashcore-widgets-bundle' ),
+							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
+							'space-between' => __( 'Space Between', 'hashcore-widgets-bundle' ),
+							'space-around' => __( 'Space Around', 'hashcore-widgets-bundle' ),
+						),
+					),
+
 					'spacing' => array(
-						'label' => __('Spacing', 'hashcore-widgets-bundle'),
-						'description' => __('Amount of spacing between images.', 'hashcore-widgets-bundle'),
+						'label' => __( 'Spacing', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Amount of spacing between images.', 'hashcore-widgets-bundle' ),
 						'type' => 'number',
 						'default' => 10,
 					),
@@ -119,12 +132,10 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 	 * @return mixed
 	 */
 	function get_less_variables( $instance ) {
-		$less = array();
-		if( !empty( $instance['display']['spacing'] ) ) {
-			$less['spacing'] = intval($instance['display']['spacing']) . 'px';
-		}
-
-		return $less;
+		return array(
+			'spacing' => $instance['display']['spacing'] . 'px',
+			'spacing_item' => $instance['display']['spacing_item'],
+		);
 	}
 }
 
