@@ -1,8 +1,9 @@
-@spacing: 10px;
+@spacing_x: 10px;
+@spacing_y: 20px;
 @spacing_item: space-around;
 
 .sow-image-grid-wrapper {
-	padding-top: @spacing;
+	padding-top: @spacing_y;
 	margin: 0;
 
 	display: -webkit-box;
@@ -15,6 +16,6 @@
   justify-content: @spacing_item;
 
 	.sow-image-grid-image {
-		padding: 0 @spacing @spacing @spacing;
+		padding: 0 @spacing_x @spacing_y @spacing_x;
 	}
 }

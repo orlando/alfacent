@@ -113,11 +113,18 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 						),
 					),
 
-					'spacing' => array(
+					'spacing_x' => array(
 						'label' => __( 'Spacing', 'hashcore-widgets-bundle' ),
-						'description' => __( 'Amount of spacing between images.', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Amount of spacing horizontally between images .', 'hashcore-widgets-bundle' ),
 						'type' => 'number',
 						'default' => 10,
+					),
+
+					'spacing_y' => array(
+						'label' => __( 'Spacing', 'hashcore-widgets-bundle' ),
+						'description' => __( 'Amount of spacing vertically between images.', 'hashcore-widgets-bundle' ),
+						'type' => 'number',
+						'default' => 20,
 					),
 				)
 			)
@@ -133,7 +140,8 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 	 */
 	function get_less_variables( $instance ) {
 		return array(
-			'spacing' => $instance['display']['spacing'] . 'px',
+			'spacing_x' => $instance['display']['spacing_x'] . 'px',
+			'spacing_y' => $instance['display']['spacing_y'] . 'px',
 			'spacing_item' => $instance['display']['spacing_item'],
 		);
 	}
