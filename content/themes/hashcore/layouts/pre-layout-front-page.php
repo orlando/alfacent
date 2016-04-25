@@ -19,6 +19,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 		'widgets' => array(
 			0 => array(
 				'widget_title' => 'Nosotros',
+	      'widget_tag' => 'h1',
 				'repeater' => array(
 					0 => array(
 						'tab_title' => 'Nosotros',
