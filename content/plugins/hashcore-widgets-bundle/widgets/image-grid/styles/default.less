@@ -1,11 +1,21 @@
-@spacing: 20px;
+@spacing_x: 10px;
+@spacing_y: 20px;
+@spacing_item: space-around;
 
 .sow-image-grid-wrapper {
-	padding-top: @spacing;
-	margin: 0 -@spacing;
+	padding-top: @spacing_y;
+	margin: 0;
+
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: @spacing_item;
 
 	.sow-image-grid-image {
-		padding: 0 @spacing @spacing @spacing;
+		padding: 0 @spacing_x @spacing_y @spacing_x;
 	}
-
 }

@@ -43,6 +43,7 @@ class HashCore_Widgets_Bundle {
 		'image-grid' => true,
 		'post-carousel' => true,
 		'price-table' => true,
+		'spacer' => true,
 		'simple-masonry' => true,
 		'slider' => true,
 		'social-media-buttons' => true,
