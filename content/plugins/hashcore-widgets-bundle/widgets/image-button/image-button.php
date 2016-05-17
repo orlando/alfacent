@@ -55,18 +55,43 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 
 						'title' => array(
 							'type' => 'text',
-							'label' => __( 'Title text', 'hashcore-widgets-bundle' ),
+							'label' => __( 'Title text button', 'hashcore-widgets-bundle' ),
 						),
 
 						'title_position' => array(
 							'type' => 'select',
-							'label' => __( 'Title position', 'hashcore-widgets-bundle' ),
+							'label' => __( 'Title position button', 'hashcore-widgets-bundle' ),
 							'default' => 'hidden',
 							'options' => array(
 								'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
 								'above' => __( 'Above', 'hashcore-widgets-bundle' ),
 								'below' => __( 'Below', 'hashcore-widgets-bundle' ),
 							),
+						),
+
+						'title_check' => array(
+							'type' => 'checkbox',
+							'default' => true,
+							'label' => __( 'Title', 'hashcore-widgets-bundle' ),
+							'description' => __( 'Is you wanna a title inside image.', 'hashcore-widgets-bundle' ),
+						),
+
+						'title_color' => array(
+							'type' => 'color',
+							'label' => __( 'Title text color', 'hashcore-widgets-bundle' ),
+						),
+
+						'background_color' => array(
+							'type' => 'color',
+							'label' => __( 'Title background color', 'hashcore-widgets-bundle' ),
+						),
+
+						'opacity' => array(
+							'label' => __( 'Background image opacity', 'hashcore-widgets-bundle' ),
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 100,
+							'default' => 100,
 						),
 
 						'alt' => array(
@@ -78,6 +103,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'type' => 'link',
 							'label' => __( 'Destination URL', 'hashcore-widgets-bundle' ),
 						),
+
 						'new_window' => array(
 							'type' => 'checkbox',
 							'default' => false,
@@ -90,22 +116,12 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'label' => __( 'Bound', 'hashcore-widgets-bundle' ),
 							'description' => __( "Make sure the image doesn't extend beyond its container.", 'hashcore-widgets-bundle' ),
 						),
+
 						'full_width' => array(
 							'type' => 'checkbox',
 							'default' => false,
 							'label' => __( 'Full Width', 'hashcore-widgets-bundle' ),
 							'description' => __( 'Resize image to fit its container.', 'hashcore-widgets-bundle' ),
-						),
-					),
-				),
-				'button' => array(
-					'type' => 'section',
-					'label'  => __( 'Button', 'hashcore-widgets-bundle' ),
-					'hide'   => true,
-					'fields' => array(
-						'text' => array(
-							'type' => 'text',
-							'label' => __('Text', 'hashcore-widgets-bundle')
 						),
 					),
 				),
@@ -137,6 +153,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 		return array(
 			'title' => $instance['image']['title'],
 			'title_position' => $instance['image']['title_position'],
+			'title_check' => $instance['image']['title_check'],
 			'image' => $instance['image']['image'],
 			'size' => $instance['image']['size'],
 			'image_fallback' => ! empty( $instance['image']['image_fallback'] ) ? $instance['image']['image_fallback'] : false,
@@ -157,6 +174,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			'image_max_width' => ! empty( $instance['image']['bound'] ) ? '100%' : '',
 			'image_height' => ! empty( $instance['image']['bound'] ) ? 'auto' : '',
 			'image_width' => ! empty( $instance['image']['full_width'] ) ? '100%' : '',
+			'title_position' => $instance['image']['title_position'],
 		);
 	}
 }
