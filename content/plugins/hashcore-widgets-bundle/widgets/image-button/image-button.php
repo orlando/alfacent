@@ -18,7 +18,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			),
 			array(),
 			array(
-				'Image' => array(
+				'image' => array(
 					'type' => 'section',
 					'label'  => __( 'Image', 'hashcore-widgets-bundle' ),
 					'hide'   => false,
@@ -135,28 +135,28 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 
 	public function get_template_variables( $instance, $args ) {
 		return array(
-			'title' => $instance['title'],
-			'title_position' => $instance['title_position'],
-			'image' => $instance['image'],
-			'size' => $instance['size'],
-			'image_fallback' => ! empty( $instance['image_fallback'] ) ? $instance['image_fallback'] : false,
-			'alt' => $instance['alt'],
-			'url' => $instance['url'],
-			'new_window' => $instance['new_window'],
+			'title' => $instance['image']['title'],
+			'title_position' => $instance['image']['title_position'],
+			'image' => $instance['image']['image'],
+			'size' => $instance['image']['size'],
+			'image_fallback' => ! empty( $instance['image']['image_fallback'] ) ? $instance['image']['image_fallback'] : false,
+			'alt' => $instance['image']['alt'],
+			'url' => $instance['image']['url'],
+			'new_window' => $instance['image']['new_window'],
 		);
 	}
 
 	function get_style_name( $instance) {
-		return 'hashcore-image-button';
+		return 'image-button';
 	}
 
 	function get_less_variables( $instance) {
 		return array(
-			'image_alignment' => $instance['align'],
-			'image_display' => $instance['align'] === 'default' ? 'block' : 'inline-block',
-			'image_max_width' => ! empty( $instance['bound'] ) ? '100%' : '',
-			'image_height' => ! empty( $instance['bound'] ) ? 'auto' : '',
-			'image_width' => ! empty( $instance['full_width'] ) ? '100%' : '',
+			'image_alignment' => $instance['image']['align'],
+			'image_display' => $instance['image']['align'] === 'default' ? 'block' : 'inline-block',
+			'image_max_width' => ! empty( $instance['image']['bound'] ) ? '100%' : '',
+			'image_height' => ! empty( $instance['image']['bound'] ) ? 'auto' : '',
+			'image_width' => ! empty( $instance['image']['full_width'] ) ? '100%' : '',
 		);
 	}
 }
