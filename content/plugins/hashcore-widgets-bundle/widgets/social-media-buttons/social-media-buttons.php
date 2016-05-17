@@ -112,6 +112,7 @@ class HashCore_Widget_SocialMediaButtons_Widget extends HashCore_Widget {
 							'label'   => __( 'Padding', 'hashcore-widgets-bundle' ),
 							'default' => '1',
 							'options' => array(
+								'0.3' => __( 'Tiny', 'hashcore-widgets-bundle' ),
 								'0.5' => __( 'Low', 'hashcore-widgets-bundle' ),
 								'1'   => __( 'Medium', 'hashcore-widgets-bundle' ),
 								'1.4' => __( 'High', 'hashcore-widgets-bundle' ),
@@ -138,6 +139,7 @@ class HashCore_Widget_SocialMediaButtons_Widget extends HashCore_Widget {
 								'0.2' => __( 'Medium', 'hashcore-widgets-bundle' ),
 								'0.3' => __( 'High', 'hashcore-widgets-bundle' ),
 								'0.4' => __( 'Very high', 'hashcore-widgets-bundle' ),
+								'0.6' => __( 'Wide', 'hashcore-widgets-bundle' ),
 							),
 						),
 					)
@@ -193,7 +195,7 @@ class HashCore_Widget_SocialMediaButtons_Widget extends HashCore_Widget {
 				$right = '0';
 				break;
 			case 'center':
-				$left = $right = ( $m * 0.5 ) . 'em';
+				$left = $right = ( $m * 2.5 ) . 'em';
 				break;
 		}
 		$margin = $top . ' ' . $right . ' ' . $bottom . ' ' . $left;

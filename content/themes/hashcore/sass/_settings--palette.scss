@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// $COLOR-VARIABLES
+// -----------------------------------------------------------------------------
+
+$aluminium:                     #989898;
+$black:                         #000000;
+$concrete:                      #F2F2F2;
+$custom-black:                  #333333;
+$hint-of-red:                   #FAFAFA;
+$gray:                          #CFD8DC;
+$kelly-green:                   #46B300;
+$mirage:                        #100F2A;
+$lime:                          #85C92A;
+$lily-white:                    #ECECEC;
+$red:                           #F7412D;
+$tall-poppy:                    #BE3128;
+$crayon-orange:                 #FF5C1F;
+$violet:                        #A100B7;
+$white:                         #FFFFFF;
+$deep-koamaru:                  #1C1A7E;
+$bright-sun:                    #F8D940;
+$armadillo:                     #4A4A4A;
+
+
+
+// -----------------------------------------------------------------------------
+// $USABLE-COLORS
+// -----------------------------------------------------------------------------
+
+$color--base:                   $white;
+$color--tertiary:               $bright-sun;
+$color--accent:                 $deep-koamaru;
+$color--text:                   $armadillo;
+
+$color--error:                  $tall-poppy;
+$color--success:                $kelly-green;

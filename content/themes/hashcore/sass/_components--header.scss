@@ -1,0 +1,103 @@
+$size--header-height:                            7rem;
+$size--header-font:                              85%;
+$color--branding-text:                           white;
+$size--strip-margin-top:                         6px;
+$size--strip-height:                             4px;
+$size--strip-width-base:                         32px;
+$size--strip-width-step:                         6px;
+$size--strip-margin-left:                        $size--strip-width-step;
+$deep-koamaru:                                   #1C1A7E;
+$color--menu-item-border-bottom:                 $deep-koamaru;
+
+.site-header {
+  font-size: $size--header-font;
+  left: 0;
+  top: 0;
+  padding-bottom: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-branding {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  transition: all ease-out .216s;
+
+  img {
+    height: $size--header-height;
+    width: auto;
+  }
+}
+
+.bottom-aligner {
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  width: 0;
+}
+
+.header-search-toggle{
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+  @include simple-transition();
+
+  &-icon:hover,
+  &-icon:focus {
+    color: $color--menu-item-border-bottom;
+  }
+
+  &:hover {
+    border-bottom: 4px solid $color--menu-item-border-bottom;
+  }
+}
+
+.header-search-wrapper {
+  height: $size--header-height;
+  text-align: right;
+}
+
+.header-menu-wrapper {
+  margin: 0 (- $grid-gutter-width-half);
+}
+
+#menu-desktop {
+  height: $size--header-height;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & .menu-item {
+    display: table;
+    font-size: 100%;
+    font-weight: lighter;
+    float: left;
+    height: 100%;
+    border-bottom: 4px solid transparent;
+    @include simple-transition();
+
+    & + .menu-item {
+      margin-left: 2rem;
+    }
+
+    > a {
+      display: table-cell;
+      vertical-align: bottom;
+
+      &:hover {
+        color: $color--menu-item-border-bottom;
+      }
+    }
+
+    &:hover {
+      border-bottom: 4px solid $color--menu-item-border-bottom;
+    }
+  }
+
+  & .current-menu-item {
+    border-bottom: 4px solid $color--menu-item-border-bottom;
+  }
+}

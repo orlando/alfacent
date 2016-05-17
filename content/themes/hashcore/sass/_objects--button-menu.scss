@@ -1,0 +1,118 @@
+$size--mobile-toggle-height:                    7.5rem;
+$color--branding-text:                          $white;
+$deep-koamaru:                                  #1C1A7E;
+$size--mobile-toggle-strip-height:              4px;
+$size--mobile-toggle-strip-margin-top:          6px + $size--mobile-toggle-strip-height;
+$size--mobile-toggle-strip-width-base:          36px;
+$size--mobile-toggle-strip-width-step:          6px;
+$color--mobile-toggle-strip-background:         $deep-koamaru;
+
+.mobile-toggle {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: $size--mobile-toggle-strip-width-base;
+  height: $size--mobile-toggle-height;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.3s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.mobile-toggle-strip,
+.mobile-toggle-strip::before,
+.mobile-toggle-strip::after {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: $size--mobile-toggle-strip-height;
+  background: $color--mobile-toggle-strip-background;
+  transition: background 0.3s;
+  width: $size--mobile-toggle-strip-width-base;
+  border-radius: 10px;
+}
+
+.mobile-toggle-strip {
+  top: 3.5rem;
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  // Top
+  &::before {
+    top: -$size--mobile-toggle-strip-margin-top;
+  }
+
+  // Bottom
+  &::after {
+    bottom: -$size--mobile-toggle-strip-margin-top;
+  }
+}
+
+/**
+ *
+ * Hamburger to "x".Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+
+.mobile-toggle-strip {
+  -webkit-transition: background 0s 0.3s;
+          transition: background 0s 0.3s;
+
+  &::before {
+    -webkit-transition-property: top, -webkit-transform;
+            transition-property: top, transform;
+  }
+
+  &::after {
+    -webkit-transition-property: bottom, -webkit-transform;
+            transition-property: bottom, transform;
+  }
+
+  &::before,
+  &::after {
+    -webkit-transition-duration: 0.3s, 0.3s;
+            transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0.3s, 0s;
+            transition-delay: 0.3s, 0s;
+  }
+}
+
+.mobile-toggle.is-active .mobile-toggle-strip {
+  background: none;
+
+  &::before,
+  &::after {
+    background: $white;
+    -webkit-transition-delay: 0s, 0.3s;
+            transition-delay: 0s, 0.3s;
+  }
+
+  &::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: 0;
+    width: $size--mobile-toggle-strip-width-base;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}

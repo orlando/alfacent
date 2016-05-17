@@ -5,8 +5,9 @@
 /content/upgrade/
 .DS_Store
 /node_modules
-content/plugins/crelly-slider/
-content/plugins/fakerpress/
-content/plugins/siteorigin-panels/
-content/plugins/so-widgets-bundle/
-content/uploads/*
+/content/plugins/crelly-slider/
+/content/plugins/fakerpress/
+/content/plugins/siteorigin-panels/
+/content/plugins/so-widgets-bundle/
+/content/uploads/*
+/content/themes/hashcore/assets/styles/main.css

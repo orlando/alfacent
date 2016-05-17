@@ -1,0 +1,67 @@
+/**
+ * Check Bootstrap 3 Documentation for further
+ * explanation of some vasriables used below
+ * http://getbootstrap.com/customize/#less-variables
+ *
+ * keep in mind that all variables set to null are going to
+ * be set further by bootstrap defaults
+ */
+
+ // -----------------------------------------------------------------------------
+ // font-import
+ // -----------------------------------------------------------------------------
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+// -----------------------------------------------------------------------------
+// font-colors
+// -----------------------------------------------------------------------------
+
+  $text-color:                  $color--text;
+
+// -----------------------------------------------------------------------------
+// fonts-families
+// -----------------------------------------------------------------------------
+
+  $primary-font:                'Lato', sans-serif;
+  $secondary-font:              null;
+  $headings-font-family:        $secondary-font;
+
+  $font-family-sans-serif:      $primary-font;
+  $font-family-serif:           $secondary-font;
+  $font-family-monospace:       null;
+
+  $font-family-base:            $primary-font;
+  $font-size-base:              22px;
+  $font-size-slightly-large:    ceil($font-size-base*1.125);
+  $font-size-large:             ceil($font-size-base*1.25);
+  $font-size-small:             ceil($font-size-base*0.85);
+
+  $font-size-h1:                floor($font-size-base*2.6);
+  $font-size-h2:                floor($font-size-base*2.15);
+  $font-size-h3:                ceil($font-size-base*1.7);
+  $font-size-h4:                ceil($font-size-base*1.25);
+  $font-size-h5:                $font-size-base;
+  $font-size-h6:                ceil($font-size-base*0.85);
+
+// -----------------------------------------------------------------------------
+// font-weight
+// -----------------------------------------------------------------------------
+  $font-weight-regular:           400;
+  $font-weight-bold:              600;
+
+// -----------------------------------------------------------------------------
+// headings
+// -----------------------------------------------------------------------------
+
+  $headings-font-family:        null;
+  $headings-font-weight:        $font-weight-regular;
+  $headings-color:              $black;
+
+// -----------------------------------------------------------------------------
+// line-height
+// -----------------------------------------------------------------------------
+
+  $line-height-base:            1.6; //1.428571429;
+  $line-height-computed:        floor($font-size-base * $line-height-base);
+  $headings-line-height:        1.1;

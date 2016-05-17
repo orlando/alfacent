@@ -55,6 +55,12 @@ return array(
 		'icon_color' => '#FFFFFF',
 		'button_color' => '#3D739C'
 	),
+	'snapchat' => array(
+		'label'    => __( 'Snapchat', 'hashcore-widgets-bundle' ),
+		'base_url' => 'https://snapchat.com/',
+		'icon_color' => '#FFFFFF',
+		'button_color' => '#FFFC00'
+	),
 	'vk'   => array(
 		'label'    => __( 'VK', 'hashcore-widgets-bundle' ),
 		'base_url' => 'https://vk.com/',

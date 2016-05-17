@@ -119,3 +119,14 @@ function hashcore_category_transient_flusher() {
 }
 add_action( 'edit_category', 'hashcore_category_transient_flusher' );
 add_action( 'save_post',     'hashcore_category_transient_flusher' );
+
+if ( ! function_exists( 'hashcore_the_custom_logo' ) ) :
+	/**
+	 * Displays the optional custom logo.
+	 */
+	function hashcore_the_custom_logo() {
+		if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		}
+	}
+endif;
