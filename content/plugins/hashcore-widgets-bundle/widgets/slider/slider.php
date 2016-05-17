@@ -15,7 +15,6 @@ class HashCore_Widget_Slider_Widget extends HashCore_Widget_Base_Slider {
 			__('HashCore Slider', 'hashcore-widgets-bundle'),
 			array(
 				'description' => __('A responsive slider widget that supports images and video.', 'hashcore-widgets-bundle'),
-				'help' => 'https:///widgets-bundle/slider-widget-documentation/',
 				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 				'panels_title' => false,
@@ -23,77 +22,81 @@ class HashCore_Widget_Slider_Widget extends HashCore_Widget_Base_Slider {
 			array(
 
 			),
-			array(
-				'frames' => array(
-					'type' => 'repeater',
-					'label' => __('Slider frames', 'hashcore-widgets-bundle'),
-					'item_name' => __('Frame', 'hashcore-widgets-bundle'),
-					'item_label' => array(
-						'selector' => "[id*='frames-url']",
-						'update_event' => 'change',
-						'value_method' => 'val'
+			false,
+			plugin_dir_path( __FILE__ )
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'frames' => array(
+				'type' => 'repeater',
+				'label' => __('Slider frames', 'hashcore-widgets-bundle'),
+				'item_name' => __('Frame', 'hashcore-widgets-bundle'),
+				'item_label' => array(
+					'selector' => "[id*='frames-url']",
+					'update_event' => 'change',
+					'value_method' => 'val'
+				),
+				'fields' => array(
+					'background_videos' => array(
+						'type' => 'repeater',
+						'item_name' => __('Video', 'hashcore-widgets-bundle'),
+						'label' => __('Background videos', 'hashcore-widgets-bundle'),
+						'item_label' => array(
+							'selector' => "[id*='frames-background_videos-url']",
+							'update_event' => 'change',
+							'value_method' => 'val'
+						),
+						'fields' => $this->video_form_fields(),
 					),
-					'fields' => array(
-						'background_videos' => array(
-							'type' => 'repeater',
-							'item_name' => __('Video', 'hashcore-widgets-bundle'),
-							'label' => __('Background videos', 'hashcore-widgets-bundle'),
-							'item_label' => array(
-								'selector' => "[id*='frames-background_videos-url']",
-								'update_event' => 'change',
-								'value_method' => 'val'
-							),
-							'fields' => $this->video_form_fields(),
-						),
 
-						'background_image' => array(
-							'type' => 'media',
-							'library' => 'image',
-							'label' => __('Background image', 'hashcore-widgets-bundle'),
-							'fallback' => true,
-						),
+					'background_image' => array(
+						'type' => 'media',
+						'library' => 'image',
+						'label' => __('Background image', 'hashcore-widgets-bundle'),
+						'fallback' => true,
+					),
 
-						'background_color' => array(
-							'type' => 'color',
-							'label' => __('Background Color', 'hashcore-widgets-bundle'),
-						),
+					'background_color' => array(
+						'type' => 'color',
+						'label' => __('Background Color', 'hashcore-widgets-bundle'),
+					),
 
-						'background_image_type' => array(
-							'type' => 'select',
-							'label' => __('Background image type', 'hashcore-widgets-bundle'),
-							'options' => array(
-								'cover' => __('Cover', 'hashcore-widgets-bundle'),
-								'tile' => __('Tile', 'hashcore-widgets-bundle'),
-							),
-							'default' => 'cover',
+					'background_image_type' => array(
+						'type' => 'select',
+						'label' => __('Background image type', 'hashcore-widgets-bundle'),
+						'options' => array(
+							'cover' => __('Cover', 'hashcore-widgets-bundle'),
+							'tile' => __('Tile', 'hashcore-widgets-bundle'),
 						),
+						'default' => 'cover',
+					),
 
-						'foreground_image' => array(
-							'type' => 'media',
-							'library' => 'image',
-							'label' => __('Foreground image', 'hashcore-widgets-bundle'),
-							'fallback' => true,
-						),
+					'foreground_image' => array(
+						'type' => 'media',
+						'library' => 'image',
+						'label' => __('Foreground image', 'hashcore-widgets-bundle'),
+						'fallback' => true,
+					),
 
-						'url' => array(
-							'type' => 'link',
-							'label' => __('Destination URL', 'hashcore-widgets-bundle'),
-						),
+					'url' => array(
+						'type' => 'link',
+						'label' => __('Destination URL', 'hashcore-widgets-bundle'),
+					),
 
-						'new_window' => array(
-							'type' => 'checkbox',
-							'label' => __('Open in new window', 'hashcore-widgets-bundle'),
-							'default' => false,
-						),
+					'new_window' => array(
+						'type' => 'checkbox',
+						'label' => __('Open in new window', 'hashcore-widgets-bundle'),
+						'default' => false,
 					),
 				),
-				'controls' => array(
-					'type' => 'section',
-					'label' => __('Controls', 'hashcore-widgets-bundle'),
-					'fields' => $this->control_form_fields()
-				)
 			),
-			plugin_dir_path(__FILE__).'../'
+			'controls' => array(
+				'type' => 'section',
+				'label' => __('Controls', 'hashcore-widgets-bundle'),
+				'fields' => $this->control_form_fields()
+			)
 		);
 	}
 
@@ -108,9 +111,11 @@ class HashCore_Widget_Slider_Widget extends HashCore_Widget_Base_Slider {
 			'color' => !empty( $frame['background_color'] ) ? $frame['background_color'] : false,
 			'image' => !empty( $background_image ) ? $background_image[0] : false,
 			'opacity' => 1,
-			'image-sizing' => 'cover',
+			'image-sizing' => $frame['background_image_type'],
 			'videos' => $frame['background_videos'],
 			'video-sizing' => empty($frame['foreground_image']) ? 'full' : 'background',
+			'url' => ! empty( $frame['url'] ) ? $frame['url'] : false,
+			'new_window' => ! empty( $frame['new_window'] ) ? $frame['new_window'] : false,
 		);
 	}
 

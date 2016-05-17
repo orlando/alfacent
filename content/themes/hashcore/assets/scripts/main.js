@@ -71,4 +71,5 @@
     $('#site-nav').removeClass('expanded');
     $('.mobile-toggle').removeClass('is-active'); // menu toggle animation to burger icon
   }
+
 })(jQuery);

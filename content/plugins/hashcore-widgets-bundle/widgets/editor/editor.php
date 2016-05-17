@@ -21,22 +21,26 @@ class HashCore_Widget_Editor_Widget extends HashCore_Widget {
 				'help' => 'https:///widgets-bundle/editor-widget/'
 			),
 			array(),
-			array(
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-				),
-				'text' => array(
-					'type' => 'tinymce',
-					'rows' => 20
-				),
-				'autop' => array(
-					'type' => 'checkbox',
-					'default' => true,
-					'label' => __('Automatically add paragraphs', 'hashcore-widgets-bundle'),
-				),
-			),
+			false,
 			plugin_dir_path(__FILE__)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+			),
+			'text' => array(
+				'type' => 'tinymce',
+				'rows' => 20
+			),
+			'autop' => array(
+				'type' => 'checkbox',
+				'default' => true,
+				'label' => __('Automatically add paragraphs', 'hashcore-widgets-bundle'),
+			),
 		);
 	}
 

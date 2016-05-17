@@ -24,167 +24,8 @@ class HashCore_Widget_Hero_Widget extends HashCore_Widget_Base_Slider {
 				'panels_title' => false,
 			),
 			array( ),
-			array(
-				'frames' => array(
-					'type' => 'repeater',
-					'label' => __('Hero frames', 'hashcore-widgets-bundle'),
-					'item_name' => __('Frame', 'hashcore-widgets-bundle'),
-					'item_label' => array(
-						'selector' => "[id*='frames-title']",
-						'update_event' => 'change',
-						'value_method' => 'val'
-					),
-
-					'fields' => array(
-
-						'content' => array(
-							'type' => 'tinymce',
-							'label' => __( 'Content', 'hashcore-widgets-bundle' ),
-						),
-
-						'buttons' => array(
-							'type' => 'repeater',
-							'label' => __('Buttons', 'hashcore-widgets-bundle'),
-							'item_name' => __('Button', 'hashcore-widgets-bundle'),
-							'description' => __('Add [buttons] shortcode to the content to insert these buttons.', 'hashcore-widgets-bundle'),
-
-							'item_label' => array(
-								'selector' => "[id*='buttons-button-text']",
-								'update_event' => 'change',
-								'value_method' => 'val'
-							),
-							'fields' => array(
-								'button' => array(
-									'type' => 'widget',
-									'class' => 'HashCore_Widget_Button_Widget',
-									'label' => __('Button', 'hashcore-widgets-bundle'),
-									'collapsible' => false,
-								)
-							)
-						),
-
-						'background' => array(
-							'type' => 'section',
-							'label' => __('Background', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'image' => array(
-									'type' => 'media',
-									'label' => __( 'Background image', 'hashcore-widgets-bundle' ),
-									'library' => 'image',
-									'fallback' => true,
-								),
-
-								'opacity' => array(
-									'label' => __( 'Background image opacity', 'hashcore-widgets-bundle' ),
-									'type' => 'slider',
-									'min' => 0,
-									'max' => 100,
-									'default' => 100,
-								),
-
-								'color' => array(
-									'type' => 'color',
-									'label' => __( 'Background color', 'hashcore-widgets-bundle' ),
-									'default' => '#333333',
-								),
-
-								'url' => array(
-									'type' => 'link',
-									'label' => __( 'Destination URL', 'hashcore-widgets-bundle' ),
-								),
-
-								'new_window' => array(
-									'type' => 'checkbox',
-									'label' => __( 'Open URL in a new window', 'hashcore-widgets-bundle' ),
-								),
-
-								'videos' => array(
-									'type' => 'repeater',
-									'item_name' => __('Video', 'hashcore-widgets-bundle'),
-									'label' => __('Background videos', 'hashcore-widgets-bundle'),
-									'item_label' => array(
-										'selector' => "[id*='frames-background_videos-url']",
-										'update_event' => 'change',
-										'value_method' => 'val'
-									),
-									'fields' => $this->video_form_fields(),
-								),
-							)
-						),
-					),
-				),
-
-				'controls' => array(
-					'type' => 'section',
-					'label' => __('Slider Controls', 'hashcore-widgets-bundle'),
-					'fields' => $this->control_form_fields()
-				),
-
-				'design' => array(
-					'type' => 'section',
-					'label' => __('Design and Layout', 'hashcore-widgets-bundle'),
-					'fields' => array(
-
-						'height' => array(
-							'type' => 'measurement',
-							'label' => __( 'Height', 'hashcore-widgets-bundle' ),
-							'default' => 'default',
-						),
-
-						'padding' => array(
-							'type' => 'measurement',
-							'label' => __('Top and bottom padding', 'hashcore-widgets-bundle'),
-							'default' => '50px',
-						),
-
-						'extra_top_padding' => array(
-							'type' => 'measurement',
-							'label' => __('Extra top padding', 'hashcore-widgets-bundle'),
-							'description' => __('Additional padding added to the top of the slider', 'hashcore-widgets-bundle'),
-							'default' => '0px',
-						),
-
-						'padding_sides' => array(
-							'type' => 'measurement',
-							'label' => __('Side padding', 'hashcore-widgets-bundle'),
-							'default' => '20px',
-						),
-
-						'width' => array(
-							'type' => 'measurement',
-							'label' => __('Maximum container width', 'hashcore-widgets-bundle'),
-							'default' => '1280px',
-						),
-
-						'heading_font' => array(
-							'type' => 'font',
-							'label' => __('Heading font', 'hashcore-widgets-bundle'),
-							'default' => '',
-						),
-
-						'heading_size' => array(
-							'type' => 'measurement',
-							'label' => __('Heading size', 'hashcore-widgets-bundle'),
-							'default' => '38px',
-						),
-
-						'heading_shadow' => array(
-							'type' => 'slider',
-							'label' => __('Heading shadow intensity', 'hashcore-widgets-bundle'),
-							'max' => 100,
-							'min' => 0,
-							'default' => 50,
-						),
-
-						'text_size' => array(
-							'type' => 'measurement',
-							'label' => __('Text size', 'hashcore-widgets-bundle'),
-							'default' => '16px',
-						),
-
-					)
-				),
-			)
+			false,
+			plugin_dir_path(__FILE__)
 		);
 	}
 
@@ -196,6 +37,182 @@ class HashCore_Widget_Hero_Widget extends HashCore_Widget_Base_Slider {
 
 		// Let the slider base class do its initialization
 		parent::initialize();
+	}
+
+	function initialize_form(){
+		return array(
+			'frames' => array(
+				'type' => 'repeater',
+				'label' => __('Hero frames', 'hashcore-widgets-bundle'),
+				'item_name' => __('Frame', 'hashcore-widgets-bundle'),
+				'item_label' => array(
+					'selector' => "[id*='frames-title']",
+					'update_event' => 'change',
+					'value_method' => 'val'
+				),
+
+				'fields' => array(
+
+					'content' => array(
+						'type' => 'tinymce',
+						'label' => __( 'Content', 'hashcore-widgets-bundle' ),
+					),
+
+					'buttons' => array(
+						'type' => 'repeater',
+						'label' => __('Buttons', 'hashcore-widgets-bundle'),
+						'item_name' => __('Button', 'hashcore-widgets-bundle'),
+						'description' => __('Add [buttons] shortcode to the content to insert these buttons.', 'hashcore-widgets-bundle'),
+
+						'item_label' => array(
+							'selector' => "[id*='buttons-button-text']",
+							'update_event' => 'change',
+							'value_method' => 'val'
+						),
+						'fields' => array(
+							'button' => array(
+								'type' => 'widget',
+								'class' => 'HashCore_Widget_Button_Widget',
+								'label' => __('Button', 'hashcore-widgets-bundle'),
+								'collapsible' => false,
+							)
+						)
+					),
+
+					'background' => array(
+						'type' => 'section',
+						'label' => __('Background', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'image' => array(
+								'type' => 'media',
+								'label' => __( 'Background image', 'hashcore-widgets-bundle' ),
+								'library' => 'image',
+								'fallback' => true,
+							),
+
+							'opacity' => array(
+								'label' => __( 'Background image opacity', 'hashcore-widgets-bundle' ),
+								'type' => 'slider',
+								'min' => 0,
+								'max' => 100,
+								'default' => 100,
+							),
+
+							'color' => array(
+								'type' => 'color',
+								'label' => __( 'Background color', 'hashcore-widgets-bundle' ),
+								'default' => '#333333',
+							),
+
+							'url' => array(
+								'type' => 'link',
+								'label' => __( 'Destination URL', 'hashcore-widgets-bundle' ),
+							),
+
+							'new_window' => array(
+								'type' => 'checkbox',
+								'label' => __( 'Open URL in a new window', 'hashcore-widgets-bundle' ),
+							),
+
+							'videos' => array(
+								'type' => 'repeater',
+								'item_name' => __('Video', 'hashcore-widgets-bundle'),
+								'label' => __('Background videos', 'hashcore-widgets-bundle'),
+								'item_label' => array(
+									'selector' => "[id*='frames-background_videos-url']",
+									'update_event' => 'change',
+									'value_method' => 'val'
+								),
+								'fields' => $this->video_form_fields(),
+							),
+						)
+					),
+				),
+			),
+
+			'controls' => array(
+				'type' => 'section',
+				'label' => __('Slider Controls', 'hashcore-widgets-bundle'),
+				'fields' => $this->control_form_fields()
+			),
+
+			'design' => array(
+				'type' => 'section',
+				'label' => __('Design and Layout', 'hashcore-widgets-bundle'),
+				'fields' => array(
+
+					'height' => array(
+						'type' => 'measurement',
+						'label' => __( 'Height', 'hashcore-widgets-bundle' ),
+						'default' => 'default',
+					),
+
+					'padding' => array(
+						'type' => 'measurement',
+						'label' => __('Top and bottom padding', 'hashcore-widgets-bundle'),
+						'default' => '50px',
+					),
+
+					'extra_top_padding' => array(
+						'type' => 'measurement',
+						'label' => __('Extra top padding', 'hashcore-widgets-bundle'),
+						'description' => __('Additional padding added to the top of the slider', 'hashcore-widgets-bundle'),
+						'default' => '0px',
+					),
+
+					'padding_sides' => array(
+						'type' => 'measurement',
+						'label' => __('Side padding', 'hashcore-widgets-bundle'),
+						'default' => '20px',
+					),
+
+					'width' => array(
+						'type' => 'measurement',
+						'label' => __('Maximum container width', 'hashcore-widgets-bundle'),
+						'default' => '1280px',
+					),
+
+					'heading_font' => array(
+						'type' => 'font',
+						'label' => __('Heading font', 'hashcore-widgets-bundle'),
+						'default' => '',
+					),
+
+					'heading_color' => array(
+						'type' => 'color',
+						'label' => __('Heading color', 'hashcore-widgets-bundle'),
+						'default' => '#FFFFFF',
+					),
+
+					'heading_size' => array(
+						'type' => 'measurement',
+						'label' => __('Heading size', 'hashcore-widgets-bundle'),
+						'default' => '38px',
+					),
+
+					'heading_shadow' => array(
+						'type' => 'slider',
+						'label' => __('Heading shadow intensity', 'hashcore-widgets-bundle'),
+						'max' => 100,
+						'min' => 0,
+						'default' => 50,
+					),
+
+					'text_size' => array(
+						'type' => 'measurement',
+						'label' => __('Text size', 'hashcore-widgets-bundle'),
+						'default' => '16px',
+					),
+
+					'text_color' => array(
+						'type' => 'color',
+						'label' => __('Text color', 'hashcore-widgets-bundle'),
+						'default' => '#F6F6F6',
+					),
+
+				)
+			),
+		);
 	}
 
 	/**
@@ -293,6 +310,9 @@ class HashCore_Widget_Hero_Widget extends HashCore_Widget_Base_Slider {
 		}
 
 		$less['heading_shadow'] = intval( $instance['design']['heading_shadow'] );
+
+		$less['heading_color'] = $instance['design']['heading_color'];
+		$less['text_color'] = $instance['design']['text_color'];
 
 		$font = hashcore_widget_get_font( $instance['design']['heading_font'] );
 		$less['heading_font'] = $font['family'];

@@ -22,49 +22,7 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 			array(
 
 			),
-			array(
-
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-				),
-
-				'sub_title' => array(
-					'type' => 'text',
-					'label' => __('Subtitle', 'hashcore-widgets-bundle')
-				),
-
-				'design' => array(
-					'type' => 'section',
-					'label' => __('Design', 'hashcore-widgets-bundle'),
-					'fields' => array(
-						'background_color' => array(
-							'type' => 'color',
-							'label' => __('Background color', 'hashcore-widgets-bundle'),
-						),
-						'border_color' => array(
-							'type' => 'color',
-							'label' => __('Border color', 'hashcore-widgets-bundle'),
-						),
-						'button_align' => array(
-							'type' => 'select',
-							'label' => __( 'Button align', 'hashcore-widgets-bundle' ),
-							'default' => 'right',
-							'options' => array(
-								'left' => __( 'Left', 'hashcore-widgets-bundle'),
-								'right' => __( 'Right', 'hashcore-widgets-bundle'),
-							)
-						)
-					)
-				),
-
-				'button' => array(
-					'type' => 'widget',
-					'class' => 'HashCore_Widget_Button_Widget',
-					'label' => __('Button', 'hashcore-widgets-bundle'),
-				),
-
-			),
+			false ,
 			plugin_dir_path(__FILE__)
 		);
 	}
@@ -96,6 +54,52 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 					SOW_BUNDLE_VERSION
 				)
 			)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+			),
+
+			'sub_title' => array(
+				'type' => 'text',
+				'label' => __('Subtitle', 'hashcore-widgets-bundle')
+			),
+
+			'design' => array(
+				'type' => 'section',
+				'label' => __('Design', 'hashcore-widgets-bundle'),
+				'fields' => array(
+					'background_color' => array(
+						'type' => 'color',
+						'label' => __('Background color', 'hashcore-widgets-bundle'),
+					),
+					'border_color' => array(
+						'type' => 'color',
+						'label' => __('Border color', 'hashcore-widgets-bundle'),
+					),
+					'button_align' => array(
+						'type' => 'select',
+						'label' => __( 'Button align', 'hashcore-widgets-bundle' ),
+						'default' => 'right',
+						'options' => array(
+							'left' => __( 'Left', 'hashcore-widgets-bundle'),
+							'right' => __( 'Right', 'hashcore-widgets-bundle'),
+						)
+					)
+				)
+			),
+
+			'button' => array(
+				'type' => 'widget',
+				'class' => 'HashCore_Widget_Button_Widget',
+				'label' => __('Button', 'hashcore-widgets-bundle'),
+			),
+
 		);
 	}
 

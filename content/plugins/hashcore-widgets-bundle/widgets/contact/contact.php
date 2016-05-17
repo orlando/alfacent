@@ -19,455 +19,8 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
 			),
 			array(),
-			array(
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-					'default' => __('Contact Us', 'hashcore-widgets-bundle'),
-				),
-
-				'display_title' => array(
-					'type' => 'checkbox',
-					'label' => __('Display title', 'hashcore-widgets-bundle'),
-				),
-
-				'settings' => array(
-					'type' => 'section',
-					'label' => __('Settings', 'hashcore-widgets-bundle'),
-					'hide' => true,
-					'fields' => array(
-						'to' => array(
-							'type' => 'text',
-							'label' => __('To email address', 'hashcore-widgets-bundle'),
-							'description' => __('Where contact emails will be delivered to.', 'hashcore-widgets-bundle'),
-							'sanitize' => 'multiple_emails',
-						),
-						'default_subject' => array(
-							'type' => 'text',
-							'label' => __('Default subject', 'hashcore-widgets-bundle'),
-							'description' => __("Subject to use when there isn't one available.", 'hashcore-widgets-bundle'),
-						),
-						'subject_prefix' => array(
-							'type' => 'text',
-							'label' => __('Subject prefix', 'hashcore-widgets-bundle'),
-							'description' => __('Prefix added to all incoming email subjects.', 'hashcore-widgets-bundle'),
-						),
-						'success_message' => array(
-							'type' => 'tinymce',
-							'label' => __('Success message', 'hashcore-widgets-bundle'),
-							'description' => __('Message to display after message successfully sent.', 'hashcore-widgets-bundle'),
-							'default' => __("Thanks for contacting us. We'll get back to you shortly.", 'hashcore-widgets-bundle')
-						),
-						'submit_text' => array(
-							'type' => 'text',
-							'label' => __('Submit button text', 'hashcore-widgets-bundle'),
-							'default' => __("Contact Us", 'hashcore-widgets-bundle')
-						)
-					)
-				),
-
-				'fields' => array(
-
-					'type' => 'repeater',
-					'label' => __('Fields', 'hashcore-widgets-bundle'),
-					'item_name' => __('Field', 'hashcore-widgets-bundle'),
-					'item_label' => array(
-						'selector'     => "[id*='label']",
-					),
-					'fields' => array(
-
-						'type' => array(
-							'type' => 'select',
-							'label' => __( 'Field Type', 'hashcore-widgets-bundle' ),
-							'options' => array(
-								'name' => __( 'Name', 'hashcore-widgets-bundle' ),
-								'email' => __( 'Email', 'hashcore-widgets-bundle' ),
-								'subject' => __( 'Subject', 'hashcore-widgets-bundle' ),
-								'text' => __( 'Text', 'hashcore-widgets-bundle' ),
-								'textarea' => __( 'Text Area', 'hashcore-widgets-bundle' ),
-								'select' => __( 'Dropdown Select', 'hashcore-widgets-bundle' ),
-								'checkboxes' => __( 'Checkboxes', 'hashcore-widgets-bundle' ),
-							),
-							'state_emitter' => array(
-								'callback' => 'select',
-								'args' => array( 'field_type_{$repeater}' ),
-							)
-						),
-
-						'label' => array(
-							'type' => 'text',
-							'label' => __('Label', 'hashcore-widgets-bundle'),
-						),
-
-						'required' => array(
-							'type' => 'section',
-							'label' => __('Required Field', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'required' => array(
-									'type' => 'checkbox',
-									'label' => __('Required field', 'hashcore-widgets-bundle'),
-									'description' => __('Is this field required?', 'hashcore-widgets-bundle'),
-								),
-								'missing_message' => array(
-									'type' => 'text',
-									'label' => __('Missing message', 'hashcore-widgets-bundle'),
-									'description' => __('Error message to display if this field is missing.', 'hashcore-widgets-bundle'),
-								)
-							)
-						),
-
-						// This are for select and checkboxes
-						'options' => array(
-							'type' => 'repeater',
-							'label' => __( 'Options', 'hashcore-widgets-bundle' ),
-							'item_name' => __( 'Option', 'hashcore-widgets-bundle' ),
-							'item_label' => array( 'selector' => "[id*='value']" ),
-							'fields' => array(
-								'value' => array(
-									'type' => 'text',
-									'label' => __( 'Value', 'hashcore-widgets-bundle' ),
-								),
-							),
-
-							// These are only required for a few states
-							'state_handler' => array(
-								'field_type_{$repeater}[select,checkboxes]' => array('show'),
-								'_else[field_type_{$repeater}]' => array( 'hide' ),
-							),
-						),
-					),
-				),
-
-				'spam' => array(
-					'type' => 'section',
-					'label' => __( 'Spam Protection', 'hashcore-widgets-bundle' ),
-					'hide' => true,
-					'fields' => array(
-
-						'recaptcha' => array(
-							'type' => 'section',
-							'label' => __('Recaptcha', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'use_captcha' => array(
-									'type' => 'checkbox',
-									'label' => __( 'Use Captcha', 'hashcore-widgets-bundle' ),
-									'default' => false,
-								),
-								'site_key' => array(
-									'type' => 'text',
-									'label' => __( 'ReCaptcha Site Key', 'hashcore-widgets-bundle' ),
-								),
-								'secret_key' => array(
-									'type' => 'text',
-									'label' => __( 'ReCaptcha Secret Key', 'hashcore-widgets-bundle' ),
-								),
-								'theme' => array(
-									'type' => 'select',
-									'label' => __( 'Theme', 'hashcore-widgets-bundle' ),
-									'default' => 'light',
-									'options' => array(
-										'light' => __( 'Light', 'hashcore-widgets-bundle' ),
-										'dark' => __( 'Dark', 'hashcore-widgets-bundle' ),
-									),
-								),
-								'type' => array(
-									'type' => 'select',
-									'label' => __( 'Challenge type', 'hashcore-widgets-bundle' ),
-									'default' => 'image',
-									'options' => array(
-										'image' => __( 'Image', 'hashcore-widgets-bundle' ),
-										'audio' => __( 'Audio', 'hashcore-widgets-bundle' ),
-									),
-								),
-								'size' => array(
-									'type' => 'select',
-									'label' => __( 'Size', 'hashcore-widgets-bundle' ),
-									'default' => 'normal',
-									'options' => array(
-										'normal' => __( 'Normal', 'hashcore-widgets-bundle' ),
-										'compact' => __( 'Compact', 'hashcore-widgets-bundle' ),
-									),
-								),
-							)
-						),
-
-						'akismet' => array(
-							'type' => 'section',
-							'label' => __('Akismet', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'use_akismet'=> array(
-									'type' => 'checkbox',
-									'label' => __( 'Use Akismet filtering', 'hashcore-widgets-bundle' ),
-									'default' => true,
-								),
-								'spam_action'=> array(
-									'type' => 'select',
-									'label' => __( 'Spam action', 'hashcore-widgets-bundle' ),
-									'options' => array(
-										'error' => __('Show error message', 'hashcore-widgets-bundle'),
-										'tag' => __('Tag as spam in subject', 'hashcore-widgets-bundle'),
-									),
-									'description' => __('How to handle submissions that are identified as spam.', 'hashcore-widgets-bundle'),
-									'default' => 'error',
-								),
-							)
-						),
-					)
-				),
-
-				'design' => array(
-					'type' => 'section',
-					'label' => __('Design', 'hashcore-widgets-bundle'),
-					'hide' => true,
-					'fields' => array(
-
-						'container' => array(
-							'type' => 'section',
-							'label' => __('Container', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'background' => array(
-									'type' => 'color',
-									'label' => __('Background color', 'hashcore-widgets-bundle'),
-									'default' => '#f2f2f2',
-								),
-								'padding' => array(
-									'type' => 'measurement',
-									'label' => __('Padding', 'hashcore-widgets-bundle'),
-									'default' => '10px',
-								),
-								'border_color' => array(
-									'type' => 'color',
-									'label' => __('Border color', 'hashcore-widgets-bundle'),
-									'default' => '#c0c0c0',
-								),
-								'border_width' => array(
-									'type' => 'measurement',
-									'label' => __('Border width', 'hashcore-widgets-bundle'),
-									'default' => '1px',
-								),
-								'border_style' => array(
-									'type' => 'select',
-									'label' => __('Border style', 'hashcore-widgets-bundle'),
-									'default' => 'solid',
-									'options' => array(
-										'none' => __( 'None', 'hashcore-widgets-bundle' ),
-										'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
-										'dotted' => __( 'Dotted', 'hashcore-widgets-bundle' ),
-										'dashed' => __( 'Dashed', 'hashcore-widgets-bundle' ),
-										'solid' => __( 'Solid', 'hashcore-widgets-bundle' ),
-										'double' => __( 'Double', 'hashcore-widgets-bundle' ),
-										'groove' => __( 'Groove', 'hashcore-widgets-bundle' ),
-										'ridge' => __( 'Ridge', 'hashcore-widgets-bundle' ),
-										'inset' => __( 'Inset', 'hashcore-widgets-bundle' ),
-										'outset' => __( 'Outset', 'hashcore-widgets-bundle' ),
-									)
-								),
-							)
-						),
-
-						'labels' => array(
-							'type' => 'section',
-							'label' => __( 'Field labels', 'hashcore-widgets-bundle' ),
-							'fields' => array(
-								'font' => array(
-									'type' => 'font',
-									'label' => __( 'Font', 'hashcore-widgets-bundle' ),
-									'default' => 'default',
-								),
-								'size' => array(
-									'type' => 'measurement',
-									'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
-									'default' => 'default',
-								),
-								'color' => array(
-									'type' => 'color',
-									'label' => __( 'Color', 'hashcore-widgets-bundle' ),
-									'default' => 'default',
-								),
-								'position' => array(
-									'type' => 'select',
-									'label' => __( 'Position', 'hashcore-widgets-bundle' ),
-									'default' => 'above',
-									'options' => array(
-										'above' => __( 'Above', 'hashcore-widgets-bundle' ),
-										'below' => __( 'Below', 'hashcore-widgets-bundle' ),
-										'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-										'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-										'inside' => __( 'Inside', 'hashcore-widgets-bundle' ),
-									),
-								),
-								'width' => array(
-									'type' => 'measurement',
-									'label' => __( 'Width', 'hashcore-widgets-bundle' ),
-									'default' => '',
-								),
-								'align' => array(
-									'type' => 'select',
-									'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-									'default' => 'left',
-									'options' => array(
-										'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-										'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-										'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-										'justify' => __( 'Justify', 'hashcore-widgets-bundle' ),
-									)
-								),
-							),
-						),
-
-						'errors' => array(
-							'type' => 'section',
-							'label' => __('Error messages', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'background' => array(
-									'type' => 'color',
-									'label' => __('Error background color', 'hashcore-widgets-bundle'),
-									'default' => '#fce4e5',
-								),
-								'border_color' => array(
-									'type' => 'color',
-									'label' => __('Error border color', 'hashcore-widgets-bundle'),
-									'default' => '#ec666a',
-								),
-								'text_color' => array(
-									'type' => 'color',
-									'label' => __('Error text color', 'hashcore-widgets-bundle'),
-									'default' => '#ec666a',
-								),
-								'padding' => array(
-									'type' => 'measurement',
-									'label' => __('Error padding', 'hashcore-widgets-bundle'),
-									'default' => '5px',
-								),
-								'margin' => array(
-									'type' => 'measurement',
-									'label' => __('Error margin', 'hashcore-widgets-bundle'),
-									'default' => '10px',
-								),
-							)
-						),
-
-						'submit' => array(
-							'type' => 'section',
-							'label' => __('Submit button', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'styled' => array(
-									'type' => 'checkbox',
-									'label' => __('Style submit button', 'hashcore-widgets-bundle'),
-									'description' => __('Style the button or leave it with default theme styling.', 'hashcore-widgets-bundle'),
-									'default' => true,
-								),
-
-								'background_color' => array(
-									'type' => 'color',
-									'label' => __('Background color', 'hashcore-widgets-bundle'),
-									'default' => '#eeeeee',
-								),
-								'background_gradient' => array(
-									'type' => 'slider',
-									'label' => __('Gradient intensity', 'hashcore-widgets-bundle'),
-									'default' => 10,
-								),
-								'border_color' => array(
-									'type' => 'color',
-									'label' => __('Border color', 'hashcore-widgets-bundle'),
-									'default' => '#989a9c',
-								),
-								'border_style' => array(
-									'type' => 'select',
-									'label' => __('Border style', 'hashcore-widgets-bundle'),
-									'default' => 'solid',
-									'options' => array(
-										'none' => __('None', 'hashcore-widgets-bundle'),
-										'solid' => __('Solid', 'hashcore-widgets-bundle'),
-										'dotted' => __('Dotted', 'hashcore-widgets-bundle'),
-										'dashed' => __('Dashed', 'hashcore-widgets-bundle'),
-									)
-								),
-								'border_width' => array(
-									'type' => 'measurement',
-									'label' => __('Border width', 'hashcore-widgets-bundle'),
-									'default' => '1px',
-								),
-								'border_radius' => array(
-									'type' => 'slider',
-									'label' => __('Border rounding', 'hashcore-widgets-bundle'),
-									'default' => 3,
-									'max' => 50,
-									'min' => 0
-								),
-								'text_color' => array(
-									'type' => 'color',
-									'label' => __('Text color', 'hashcore-widgets-bundle'),
-									'default' => '#5a5a5a',
-								),
-								'font_size' => array(
-									'type' => 'measurement',
-									'label' => __('Font size', 'hashcore-widgets-bundle'),
-									'default' => 'default',
-								),
-								'weight' => array(
-									'type' => 'select',
-									'label' => __('Font weight', 'hashcore-widgets-bundle'),
-									'default' => '500',
-									'options' => array(
-										'normal' => __('Normal', 'hashcore-widgets-bundle'),
-										'500' => __('Semi-bold', 'hashcore-widgets-bundle'),
-										'bold' => __('Bold', 'hashcore-widgets-bundle'),
-									)
-								),
-								'padding' => array(
-									'type' => 'measurement',
-									'label' => __('Padding', 'hashcore-widgets-bundle'),
-									'default' => '10px',
-								),
-								'inset_highlight' => array(
-									'type' => 'slider',
-									'label' => __('Inset highlight', 'hashcore-widgets-bundle'),
-									'description' => __('The white highlight at the bottom of the button', 'hashcore-widgets-bundle'),
-									'default' => 50,
-									'max' => 100,
-									'min' => 0
-								),
-							)
-						),
-
-						'focus' => array(
-							'type' => 'section',
-							'label' => __('Input focus', 'hashcore-widgets-bundle'),
-							'fields' => array(
-								'style' => array(
-									'type' => 'select',
-									'label' => __( 'Style', 'hashcore-widgets-bundle' ),
-									'default' => 'solid',
-									'options' => array(
-										'dotted' => __( 'Dotted', 'hashcore-widgets-bundle' ),
-										'dashed' => __( 'Dashed', 'hashcore-widgets-bundle' ),
-										'solid' => __( 'Solid', 'hashcore-widgets-bundle' ),
-										'double' => __( 'Double', 'hashcore-widgets-bundle' ),
-										'groove' => __( 'Groove', 'hashcore-widgets-bundle' ),
-										'ridge' => __( 'Ridge', 'hashcore-widgets-bundle' ),
-										'inset' => __( 'Inset', 'hashcore-widgets-bundle' ),
-										'outset' => __( 'Outset', 'hashcore-widgets-bundle' ),
-										'none' => __( 'None', 'hashcore-widgets-bundle' ),
-										'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
-									)
-								),
-								'color' => array(
-										'type' => 'color',
-										'label' => __( 'Color', 'hashcore-widgets-bundle' ),
-										'default' => 'default',
-								),
-								'width' => array(
-									'type' => 'measurement',
-									'label' => __( 'Width', 'hashcore-widgets-bundle' ),
-									'default' => '1px',
-								),
-							),
-						),
-					),
-				),
-			)
+			false,
+			plugin_dir_path(__FILE__)
 		);
 	}
 
@@ -486,6 +39,490 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			)
 		);
 		add_filter( 'hashcore_widgets_sanitize_field_multiple_emails', array( $this, 'sanitize_multiple_emails' ) );
+	}
+
+	function initialize_form(){
+		return array(
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+				'default' => __('Contact Us', 'hashcore-widgets-bundle'),
+			),
+
+			'display_title' => array(
+				'type' => 'checkbox',
+				'label' => __('Display title', 'hashcore-widgets-bundle'),
+			),
+
+			'settings' => array(
+				'type' => 'section',
+				'label' => __('Settings', 'hashcore-widgets-bundle'),
+				'hide' => true,
+				'fields' => array(
+					'to' => array(
+						'type' => 'text',
+						'label' => __('To email address', 'hashcore-widgets-bundle'),
+						'description' => __('Where contact emails will be delivered to.', 'hashcore-widgets-bundle'),
+						'sanitize' => 'multiple_emails',
+					),
+					'default_subject' => array(
+						'type' => 'text',
+						'label' => __('Default subject', 'hashcore-widgets-bundle'),
+						'description' => __("Subject to use when there isn't one available.", 'hashcore-widgets-bundle'),
+					),
+					'subject_prefix' => array(
+						'type' => 'text',
+						'label' => __('Subject prefix', 'hashcore-widgets-bundle'),
+						'description' => __('Prefix added to all incoming email subjects.', 'hashcore-widgets-bundle'),
+					),
+					'success_message' => array(
+						'type' => 'tinymce',
+						'label' => __('Success message', 'hashcore-widgets-bundle'),
+						'description' => __('Message to display after message successfully sent.', 'hashcore-widgets-bundle'),
+						'default' => __("Thanks for contacting us. We'll get back to you shortly.", 'hashcore-widgets-bundle')
+					),
+					'submit_text' => array(
+						'type' => 'text',
+						'label' => __('Submit button text', 'hashcore-widgets-bundle'),
+						'default' => __("Contact Us", 'hashcore-widgets-bundle')
+					)
+				)
+			),
+
+			'fields' => array(
+
+				'type' => 'repeater',
+				'label' => __('Fields', 'hashcore-widgets-bundle'),
+				'item_name' => __('Field', 'hashcore-widgets-bundle'),
+				'item_label' => array(
+					'selector'     => "[id*='label']",
+				),
+				'fields' => array(
+
+					'type' => array(
+						'type' => 'select',
+						'label' => __( 'Field Type', 'hashcore-widgets-bundle' ),
+						'options' => array(
+							'name' => __( 'Name', 'hashcore-widgets-bundle' ),
+							'email' => __( 'Email', 'hashcore-widgets-bundle' ),
+							'subject' => __( 'Subject', 'hashcore-widgets-bundle' ),
+							'text' => __( 'Text', 'hashcore-widgets-bundle' ),
+							'textarea' => __( 'Text Area', 'hashcore-widgets-bundle' ),
+							'select' => __( 'Dropdown Select', 'hashcore-widgets-bundle' ),
+							'checkboxes' => __( 'Checkboxes', 'hashcore-widgets-bundle' ),
+						),
+						'state_emitter' => array(
+							'callback' => 'select',
+							'args' => array( 'field_type_{$repeater}' ),
+						)
+					),
+
+					'label' => array(
+						'type' => 'text',
+						'label' => __('Label', 'hashcore-widgets-bundle'),
+					),
+
+					'description' => array(
+						'type' => 'text',
+						'label' => __('Description', 'hashcore-widgets-bundle'),
+						'description' => __('This text will appear small beneath the input field.', 'hashcore-widgets-bundle'),
+					),
+
+					'required' => array(
+						'type' => 'section',
+						'label' => __('Required Field', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'required' => array(
+								'type' => 'checkbox',
+								'label' => __('Required field', 'hashcore-widgets-bundle'),
+								'description' => __('Is this field required?', 'hashcore-widgets-bundle'),
+							),
+							'missing_message' => array(
+								'type' => 'text',
+								'label' => __('Missing message', 'hashcore-widgets-bundle'),
+								'description' => __('Error message to display if this field is missing.', 'hashcore-widgets-bundle'),
+							)
+						)
+					),
+
+					// This are for select and checkboxes
+					'options' => array(
+						'type' => 'repeater',
+						'label' => __( 'Options', 'hashcore-widgets-bundle' ),
+						'item_name' => __( 'Option', 'hashcore-widgets-bundle' ),
+						'item_label' => array( 'selector' => "[id*='value']" ),
+						'fields' => array(
+							'value' => array(
+								'type' => 'text',
+								'label' => __( 'Value', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						// These are only required for a few states
+						'state_handler' => array(
+							'field_type_{$repeater}[select,checkboxes]' => array('show'),
+							'_else[field_type_{$repeater}]' => array( 'hide' ),
+						),
+					),
+				),
+			),
+
+			'spam' => array(
+				'type' => 'section',
+				'label' => __( 'Spam Protection', 'hashcore-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+
+					'recaptcha' => array(
+						'type' => 'section',
+						'label' => __('Recaptcha', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'use_captcha' => array(
+								'type' => 'checkbox',
+								'label' => __( 'Use Captcha', 'hashcore-widgets-bundle' ),
+								'default' => false,
+							),
+							'site_key' => array(
+								'type' => 'text',
+								'label' => __( 'ReCaptcha Site Key', 'hashcore-widgets-bundle' ),
+							),
+							'secret_key' => array(
+								'type' => 'text',
+								'label' => __( 'ReCaptcha Secret Key', 'hashcore-widgets-bundle' ),
+							),
+							'theme' => array(
+								'type' => 'select',
+								'label' => __( 'Theme', 'hashcore-widgets-bundle' ),
+								'default' => 'light',
+								'options' => array(
+									'light' => __( 'Light', 'hashcore-widgets-bundle' ),
+									'dark' => __( 'Dark', 'hashcore-widgets-bundle' ),
+								),
+							),
+							'type' => array(
+								'type' => 'select',
+								'label' => __( 'Challenge type', 'hashcore-widgets-bundle' ),
+								'default' => 'image',
+								'options' => array(
+									'image' => __( 'Image', 'hashcore-widgets-bundle' ),
+									'audio' => __( 'Audio', 'hashcore-widgets-bundle' ),
+								),
+							),
+							'size' => array(
+								'type' => 'select',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => 'normal',
+								'options' => array(
+									'normal' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'compact' => __( 'Compact', 'hashcore-widgets-bundle' ),
+								),
+							),
+						)
+					),
+
+					'akismet' => array(
+						'type' => 'section',
+						'label' => __('Akismet', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'use_akismet'=> array(
+								'type' => 'checkbox',
+								'label' => __( 'Use Akismet filtering', 'hashcore-widgets-bundle' ),
+								'default' => true,
+							),
+							'spam_action'=> array(
+								'type' => 'select',
+								'label' => __( 'Spam action', 'hashcore-widgets-bundle' ),
+								'options' => array(
+									'error' => __('Show error message', 'hashcore-widgets-bundle'),
+									'tag' => __('Tag as spam in subject', 'hashcore-widgets-bundle'),
+								),
+								'description' => __('How to handle submissions that are identified as spam.', 'hashcore-widgets-bundle'),
+								'default' => 'error',
+							),
+						)
+					),
+				)
+			),
+
+			'design' => array(
+				'type' => 'section',
+				'label' => __('Design', 'hashcore-widgets-bundle'),
+				'hide' => true,
+				'fields' => array(
+
+					'container' => array(
+						'type' => 'section',
+						'label' => __('Container', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'background' => array(
+								'type' => 'color',
+								'label' => __('Background color', 'hashcore-widgets-bundle'),
+								'default' => '#f2f2f2',
+							),
+							'padding' => array(
+								'type' => 'measurement',
+								'label' => __('Padding', 'hashcore-widgets-bundle'),
+								'default' => '10px',
+							),
+							'border_color' => array(
+								'type' => 'color',
+								'label' => __('Border color', 'hashcore-widgets-bundle'),
+								'default' => '#c0c0c0',
+							),
+							'border_width' => array(
+								'type' => 'measurement',
+								'label' => __('Border width', 'hashcore-widgets-bundle'),
+								'default' => '1px',
+							),
+							'border_style' => array(
+								'type' => 'select',
+								'label' => __('Border style', 'hashcore-widgets-bundle'),
+								'default' => 'solid',
+								'options' => array(
+									'none' => __( 'None', 'hashcore-widgets-bundle' ),
+									'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
+									'dotted' => __( 'Dotted', 'hashcore-widgets-bundle' ),
+									'dashed' => __( 'Dashed', 'hashcore-widgets-bundle' ),
+									'solid' => __( 'Solid', 'hashcore-widgets-bundle' ),
+									'double' => __( 'Double', 'hashcore-widgets-bundle' ),
+									'groove' => __( 'Groove', 'hashcore-widgets-bundle' ),
+									'ridge' => __( 'Ridge', 'hashcore-widgets-bundle' ),
+									'inset' => __( 'Inset', 'hashcore-widgets-bundle' ),
+									'outset' => __( 'Outset', 'hashcore-widgets-bundle' ),
+								)
+							),
+						)
+					),
+
+					'labels' => array(
+						'type' => 'section',
+						'label' => __( 'Field labels', 'hashcore-widgets-bundle' ),
+						'fields' => array(
+							'font' => array(
+								'type' => 'font',
+								'label' => __( 'Font', 'hashcore-widgets-bundle' ),
+								'default' => 'default',
+							),
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
+								'default' => 'default',
+							),
+							'color' => array(
+								'type' => 'color',
+								'label' => __( 'Color', 'hashcore-widgets-bundle' ),
+								'default' => 'default',
+							),
+							'position' => array(
+								'type' => 'select',
+								'label' => __( 'Position', 'hashcore-widgets-bundle' ),
+								'default' => 'above',
+								'options' => array(
+									'above' => __( 'Above', 'hashcore-widgets-bundle' ),
+									'below' => __( 'Below', 'hashcore-widgets-bundle' ),
+									'left' => __( 'Left', 'hashcore-widgets-bundle' ),
+									'right' => __( 'Right', 'hashcore-widgets-bundle' ),
+									'inside' => __( 'Inside', 'hashcore-widgets-bundle' ),
+								),
+							),
+							'width' => array(
+								'type' => 'measurement',
+								'label' => __( 'Width', 'hashcore-widgets-bundle' ),
+								'default' => '',
+							),
+							'align' => array(
+								'type' => 'select',
+								'label' => __( 'Align', 'hashcore-widgets-bundle' ),
+								'default' => 'left',
+								'options' => array(
+									'left' => __( 'Left', 'hashcore-widgets-bundle' ),
+									'right' => __( 'Right', 'hashcore-widgets-bundle' ),
+									'center' => __( 'Center', 'hashcore-widgets-bundle' ),
+									'justify' => __( 'Justify', 'hashcore-widgets-bundle' ),
+								)
+							),
+						),
+					),
+
+					'descriptions' => array(
+						'type' => 'section',
+						'label' => __( 'Field descriptions', 'hashcore-widgets-bundle' ),
+						'fields' => array(
+							'size' =>  array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '0.9em',
+							),
+							'color' =>  array(
+								'type' => 'color',
+								'label' => __( 'Color', 'hashcore-widgets-bundle' ),
+								'default' => '#999999',
+							),
+							'style' =>  array(
+								'type' => 'select',
+								'label' => __( 'Style', 'hashcore-widgets-bundle' ),
+								'default' => 'italic',
+								'options' => array(
+									'italic' => __( 'Italic', 'hashcore-widgets-bundle' ),
+									'normal' => __( 'Normal', 'hashcore-widgets-bundle' ),
+								)
+							),
+						)
+					),
+
+					'errors' => array(
+						'type' => 'section',
+						'label' => __('Error messages', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'background' => array(
+								'type' => 'color',
+								'label' => __('Error background color', 'hashcore-widgets-bundle'),
+								'default' => '#fce4e5',
+							),
+							'border_color' => array(
+								'type' => 'color',
+								'label' => __('Error border color', 'hashcore-widgets-bundle'),
+								'default' => '#ec666a',
+							),
+							'text_color' => array(
+								'type' => 'color',
+								'label' => __('Error text color', 'hashcore-widgets-bundle'),
+								'default' => '#ec666a',
+							),
+							'padding' => array(
+								'type' => 'measurement',
+								'label' => __('Error padding', 'hashcore-widgets-bundle'),
+								'default' => '5px',
+							),
+							'margin' => array(
+								'type' => 'measurement',
+								'label' => __('Error margin', 'hashcore-widgets-bundle'),
+								'default' => '10px',
+							),
+						)
+					),
+
+					'submit' => array(
+						'type' => 'section',
+						'label' => __('Submit button', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'styled' => array(
+								'type' => 'checkbox',
+								'label' => __('Style submit button', 'hashcore-widgets-bundle'),
+								'description' => __('Style the button or leave it with default theme styling.', 'hashcore-widgets-bundle'),
+								'default' => true,
+							),
+
+							'background_color' => array(
+								'type' => 'color',
+								'label' => __('Background color', 'hashcore-widgets-bundle'),
+								'default' => '#eeeeee',
+							),
+							'background_gradient' => array(
+								'type' => 'slider',
+								'label' => __('Gradient intensity', 'hashcore-widgets-bundle'),
+								'default' => 10,
+							),
+							'border_color' => array(
+								'type' => 'color',
+								'label' => __('Border color', 'hashcore-widgets-bundle'),
+								'default' => '#989a9c',
+							),
+							'border_style' => array(
+								'type' => 'select',
+								'label' => __('Border style', 'hashcore-widgets-bundle'),
+								'default' => 'solid',
+								'options' => array(
+									'none' => __('None', 'hashcore-widgets-bundle'),
+									'solid' => __('Solid', 'hashcore-widgets-bundle'),
+									'dotted' => __('Dotted', 'hashcore-widgets-bundle'),
+									'dashed' => __('Dashed', 'hashcore-widgets-bundle'),
+								)
+							),
+							'border_width' => array(
+								'type' => 'measurement',
+								'label' => __('Border width', 'hashcore-widgets-bundle'),
+								'default' => '1px',
+							),
+							'border_radius' => array(
+								'type' => 'slider',
+								'label' => __('Border rounding', 'hashcore-widgets-bundle'),
+								'default' => 3,
+								'max' => 50,
+								'min' => 0
+							),
+							'text_color' => array(
+								'type' => 'color',
+								'label' => __('Text color', 'hashcore-widgets-bundle'),
+								'default' => '#5a5a5a',
+							),
+							'font_size' => array(
+								'type' => 'measurement',
+								'label' => __('Font size', 'hashcore-widgets-bundle'),
+								'default' => 'default',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __('Font weight', 'hashcore-widgets-bundle'),
+								'default' => '500',
+								'options' => array(
+									'normal' => __('Normal', 'hashcore-widgets-bundle'),
+									'500' => __('Semi-bold', 'hashcore-widgets-bundle'),
+									'bold' => __('Bold', 'hashcore-widgets-bundle'),
+								)
+							),
+							'padding' => array(
+								'type' => 'measurement',
+								'label' => __('Padding', 'hashcore-widgets-bundle'),
+								'default' => '10px',
+							),
+							'inset_highlight' => array(
+								'type' => 'slider',
+								'label' => __('Inset highlight', 'hashcore-widgets-bundle'),
+								'description' => __('The white highlight at the bottom of the button', 'hashcore-widgets-bundle'),
+								'default' => 50,
+								'max' => 100,
+								'min' => 0
+							),
+						)
+					),
+
+					'focus' => array(
+						'type' => 'section',
+						'label' => __('Input focus', 'hashcore-widgets-bundle'),
+						'fields' => array(
+							'style' => array(
+								'type' => 'select',
+								'label' => __( 'Style', 'hashcore-widgets-bundle' ),
+								'default' => 'solid',
+								'options' => array(
+									'dotted' => __( 'Dotted', 'hashcore-widgets-bundle' ),
+									'dashed' => __( 'Dashed', 'hashcore-widgets-bundle' ),
+									'solid' => __( 'Solid', 'hashcore-widgets-bundle' ),
+									'double' => __( 'Double', 'hashcore-widgets-bundle' ),
+									'groove' => __( 'Groove', 'hashcore-widgets-bundle' ),
+									'ridge' => __( 'Ridge', 'hashcore-widgets-bundle' ),
+									'inset' => __( 'Inset', 'hashcore-widgets-bundle' ),
+									'outset' => __( 'Outset', 'hashcore-widgets-bundle' ),
+									'none' => __( 'None', 'hashcore-widgets-bundle' ),
+									'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
+								)
+							),
+							'color' => array(
+								'type' => 'color',
+								'label' => __( 'Color', 'hashcore-widgets-bundle' ),
+								'default' => 'default',
+							),
+							'width' => array(
+								'type' => 'measurement',
+								'label' => __( 'Width', 'hashcore-widgets-bundle' ),
+								'default' => '1px',
+							),
+						),
+					),
+				),
+			),
+		);
 	}
 
 	function sanitize_multiple_emails( $value ) {
@@ -548,7 +585,8 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 		unset($instance['title']);
 		unset($instance['display_title']);
 		unset($instance['design']);
-		unset($instance['panels_data']);
+		unset($instance['panels_info']);
+		unset($instance['_sow_form_id']);
 
 		$vars['instance_hash'] = md5( serialize( $instance) );
 		return $vars;
@@ -581,6 +619,11 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			'label_position' => $label_position,
 			'label_width' => $instance['design']['labels']['width'],
 			'label_align' => $instance['design']['labels']['align'],
+
+			// Field descriptions
+			'description_font_size' => $instance['design']['descriptions']['size'],
+			'description_font_color' => $instance['design']['descriptions']['color'],
+			'description_font_style' => $instance['design']['descriptions']['style'],
 
 			// The error message styles
 			'error_background' => $instance['design']['errors']['background'],
@@ -725,6 +768,14 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 				$this->render_form_label( $field_id, $field['label'], $instance );
 			}
 
+			if ( ! empty( $field['description'] ) ) {
+				?>
+				<div class="sow-form-field-description">
+				<?php echo wp_kses_post( $field['description'] ) ?>
+				</div>
+				<?php
+			}
+
 			?></div><?php
 		}
 	}
@@ -749,6 +800,13 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			array(
 				'status' => null,
 			);
+		}
+
+		// Make sure that this action only runs once per instance
+		static $send_cache = array();
+		$send_cache_hash = md5( serialize( $instance ) . '::' . $storage_hash );
+		if( isset( $send_cache[$send_cache_hash] ) ) {
+			return $send_cache[$send_cache_hash];
 		}
 
 		$errors = array();
@@ -842,10 +900,12 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			}
 		}
 
-		return array(
+		$send_cache[$send_cache_hash] = array(
 			'status' => empty($errors) ? 'success' : 'fail',
 			'errors' => $errors
 		);
+
+		return $send_cache[$send_cache_hash];
 	}
 
 	/**
@@ -974,8 +1034,8 @@ class HashCore_Widgets_ContactForm_Widget extends HashCore_Widget {
 			// Store the version with the expired hashes removed
 			update_option( 'so_contact_hashes', $hash_check, true );
 
-			// This is a duplicate message
-			return new WP_Error( 1, __('Message already sent', 'hashcore-widgets-bundle') );
+			// This message has already been sent successfully
+			return true;
 		}
 
 		$mail_success = wp_mail( $instance['settings']['to'], $email_fields['subject'], $body, $headers );

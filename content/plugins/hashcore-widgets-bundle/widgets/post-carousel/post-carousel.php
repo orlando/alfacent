@@ -46,22 +46,11 @@ class HashCore_Widget_PostCarousel_Widget extends HashCore_Widget {
 				'description' => __('Display your posts as a carousel.', 'hashcore-widgets-bundle'),
 				'panels_groups' => array( 'hashcore-tab' ), // Include in widgets groups.
 				'panels_icon' => 'dashicons dashicons-welcome-view-site',
-				'help' => 'https:///widgets-bundle/post-carousel-widget/'
 			),
 			array(
 
 			),
-			array(
-				'title' => array(
-					'type' => 'text',
-					'label' => __('Title', 'hashcore-widgets-bundle'),
-				),
-
-				'posts' => array(
-					'type' => 'posts',
-					'label' => __('Posts query', 'hashcore-widgets-bundle'),
-				),
-			),
+			false ,
 			plugin_dir_path(__FILE__).'../'
 		);
 	}
@@ -93,6 +82,20 @@ class HashCore_Widget_PostCarousel_Widget extends HashCore_Widget {
 					SOW_BUNDLE_VERSION
 				)
 			)
+		);
+	}
+
+	function initialize_form(){
+		return array(
+			'title' => array(
+				'type' => 'text',
+				'label' => __('Title', 'hashcore-widgets-bundle'),
+			),
+
+			'posts' => array(
+				'type' => 'posts',
+				'label' => __('Posts query', 'hashcore-widgets-bundle'),
+			),
 		);
 	}
 

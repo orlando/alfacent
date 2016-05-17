@@ -20,6 +20,7 @@ $hashcore_includes = [
 	'/inc/config-tgm.php',			// Config TGM plugins installer.
 	'/inc/admin/menus-register.php', // Custom menu of Theme.
 	'/inc/widgets-register.php',		 // Widgets path register.
+	'layouts/pre-layout-front-page.php', // Prebuilt layouts front page.
 ];
 
 foreach ( $hashcore_includes as $file ) {

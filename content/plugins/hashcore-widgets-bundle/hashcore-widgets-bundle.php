@@ -2,7 +2,7 @@
 /*
 Plugin Name: HashCore Widgets Bundle
 Description: A collection of all widgets, neatly bundled into a single plugin. It's also a framework to code your own widgets on top of.
-Version: 1.5.9
+Version: 1.5.10
 Text Domain: hashcore-widgets
 Domain Path: /languages
 Author:
@@ -12,7 +12,7 @@ License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 */
 
-define('SOW_BUNDLE_VERSION', '1.5.9');
+define('SOW_BUNDLE_VERSION', '1.5.10');
 define('SOW_BUNDLE_JS_SUFFIX', '.min');
 define('SOW_BUNDLE_BASE_FILE', __FILE__);
 
@@ -30,11 +30,25 @@ class HashCore_Widgets_Bundle {
 	 */
 	static $default_active_widgets = array(
 		'button' => true,
-		'google-map' => true,
-		'image' => true,
-		'slider' => true,
-		'post-carousel' => true,
+		'contact' => true,
+		'cta' => true,
 		'editor' => true,
+		'features' => true,
+		'google-map' => true,
+		'headline' => true,
+		'hero' => true,
+		'icon' => true,
+		'image' => true,
+		'image-button' => true,
+		'image-grid' => true,
+		'post-carousel' => true,
+		'price-table' => true,
+		'simple-masonry' => true,
+		'slider' => true,
+		'social-media-buttons' => true,
+		'tabs' => true,
+		'testimonial' => true,
+		'video' => true,
 	);
 
 	function __construct(){
@@ -596,8 +610,9 @@ class HashCore_Widgets_Bundle {
 	 * Add action links.
 	 */
 	function plugin_action_links($links){
-		$links[] = '<a href="' . admin_url('plugins.php?page=so-widgets-plugins') . '">'.__('Manage Widgets', 'hashcore-widgets-bundle').'</a>';
-		$links[] = '<a href="https:///thread/" target="_blank">'.__('Support', 'hashcore-widgets-bundle').'</a>';
+		unset( $links['edit'] );
+		$links['manage'] = '<a href="' . admin_url('plugins.php?page=so-widgets-plugins') . '">'.__('Manage Widgets', 'hashcore-widgets-bundle').'</a>';
+		$links['support'] = '<a href="https:///thread/" target="_blank">'.__('Support', 'hashcore-widgets-bundle').'</a>';
 		return $links;
 	}
 
