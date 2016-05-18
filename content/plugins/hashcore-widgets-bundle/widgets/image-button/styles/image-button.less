@@ -15,14 +15,14 @@
 @background: @background_color;
 
 .position (@a) when (@position = above) {
-	top: 0;
+  top: 0;
 }
 .position (@a) when (@position = below) {
   bottom: 0;
 }
 
 .background (@a) when (@background = transparent) {
-	background: transparent;
+  background: transparent;
 }
 .background (@a) when not (@background = transparent) {
   @red: red(@background);
@@ -38,24 +38,24 @@
   .sow-image-wrapper {
     position: relative;
     display: inline-block;
-		overflow: hidden;
+    overflow: hidden;
 
     .sow-image-info {
       position: absolute;
       width: 100%;
       text-align: center;
       left: 0;
-			color: @title_color;
-			.position(@position);
-			.background(@background);
+      color: @title_color;
+      .position(@position);
+      .background(@background);
 
-			&-title {
-				font-size: @title_size;
-			}
+      &-title {
+        font-size: @title_size;
+      }
 
-			&-description {
-				font-size: @description_size;
-			}
+      &-description {
+        font-size: @description_size;
+      }
     }
   }
 
