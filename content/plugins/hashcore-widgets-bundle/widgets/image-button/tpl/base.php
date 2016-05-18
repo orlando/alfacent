@@ -46,9 +46,16 @@ if ( ! empty( $alt ) ) $attr['alt'] = $alt;
 
     <?php if ( 'hidden' !== $title_position ) : ?>
       <div class="sow-image-info">
-        <span class="sow-image-info-title"> <?php echo wp_kses_post( $title ) ?> </span>
+        <?php if ( 'below' === $title_position ) : ?>
+          <span class="sow-image-info-title"> <?php echo wp_kses_post( $title ) ?> </span>
+        <?php endif; ?>
+
         <?php if ( ! empty( $description ) ) : ?>
           <p class="sow-image-info-description"> <?php echo wp_kses_post( $description ) ?> </p>
+        <?php endif; ?>
+        
+        <?php if ( 'above' === $title_position ) : ?>
+          <span class="sow-image-info-title"> <?php echo wp_kses_post( $title ) ?> </span>
         <?php endif; ?>
       </div>
     <?php endif; ?>
