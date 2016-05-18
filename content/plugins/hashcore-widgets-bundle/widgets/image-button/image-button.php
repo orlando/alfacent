@@ -58,6 +58,17 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'label' => __( 'Title text button', 'hashcore-widgets-bundle' ),
 						),
 
+						'description' => array(
+							'type' => 'text',
+							'label' => __( 'Description of title', 'hashcore-widgets-bundle' ),
+						),
+
+						'hover_description' => array(
+							'type' => 'checkbox',
+							'default' => false,
+							'label' => __( 'Show description only in hover', 'hashcore-widgets-bundle' ),
+						),
+
 						'title_position' => array(
 							'type' => 'select',
 							'label' => __( 'Title position button', 'hashcore-widgets-bundle' ),
@@ -69,11 +80,28 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							),
 						),
 
-						'title_check' => array(
-							'type' => 'checkbox',
-							'default' => true,
-							'label' => __( 'Title', 'hashcore-widgets-bundle' ),
-							'description' => __( 'Is you wanna a title inside image.', 'hashcore-widgets-bundle' ),
+						'title_size' => array(
+							'type' => 'select',
+							'label' => __( 'Title font size', 'hashcore-widgets-bundle' ),
+							'default' => '1.5em',
+							'options' => array(
+								'1.5em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+								'2em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+								'2.5em' => __( 'Large', 'hashcore-widgets-bundle' ),
+								'3em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						'description_size' => array(
+							'type' => 'select',
+							'label' => __( 'Description font size', 'hashcore-widgets-bundle' ),
+							'default' => '1em',
+							'options' => array(
+								'1em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+								'1.3em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+								'1.6em' => __( 'Large', 'hashcore-widgets-bundle' ),
+								'2em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+							),
 						),
 
 						'title_color' => array(
@@ -91,7 +119,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'type' => 'slider',
 							'min' => 0,
 							'max' => 100,
-							'default' => 100,
+							'default' => 80,
 						),
 
 						'alt' => array(
@@ -130,17 +158,6 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 		);
 	}
 
-	function modify_form( $form ) {
-		global $_wp_additional_image_sizes;
-		if ( ! empty( $_wp_additional_image_sizes ) ) {
-			foreach ( $_wp_additional_image_sizes as $i => $s ) {
-				$form['size']['options'][$i] = $i;
-			}
-		}
-
-		return $form;
-	}
-
 	function get_style_hash( $instance ) {
 		return substr( md5( serialize( $this->get_less_variables( $instance ) ) ), 0, 12 );
 	}
@@ -153,7 +170,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 		return array(
 			'title' => $instance['image']['title'],
 			'title_position' => $instance['image']['title_position'],
-			'title_check' => $instance['image']['title_check'],
+			'description' => $instance['image']['description'],
 			'image' => $instance['image']['image'],
 			'size' => $instance['image']['size'],
 			'image_fallback' => ! empty( $instance['image']['image_fallback'] ) ? $instance['image']['image_fallback'] : false,
@@ -175,6 +192,13 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			'image_height' => ! empty( $instance['image']['bound'] ) ? 'auto' : '',
 			'image_width' => ! empty( $instance['image']['full_width'] ) ? '100%' : '',
 			'title_position' => $instance['image']['title_position'],
+			'title_color' => ! empty( $instance['image']['title_color'] ) ? $instance['image']['title_color'] : '#ffffff',
+			'title_size' => $instance['image']['title_size'],
+			'description_size' => $instance['image']['description_size'],
+			'background_color' => ! empty( $instance['image']['background_color'] ) ? $instance['image']['background_color'] : 'transparent',
+			'opacity' => $instance['image']['opacity'],
+			'hover_description' => $instance['image']['hover_description'],
+
 		);
 	}
 }

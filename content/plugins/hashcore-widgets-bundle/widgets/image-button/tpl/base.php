@@ -44,9 +44,12 @@ if ( ! empty( $alt ) ) $attr['alt'] = $alt;
 	<div class="sow-image-wrapper">
 		<img <?php foreach($attr as $n => $v) echo $n.'="' . esc_attr($v) . '" ' ?> class="<?php echo esc_attr( implode(' ', $classes) ) ?>"/>
 
-		<?php if( $title_position != 'hidden' ) : ?>
-			<div class="sow-image-title">
-				<h2> <?php echo $title ?> </h2>
+		<?php if ( 'hidden' !== $title_position ) : ?>
+			<div class="sow-image-info">
+				<span class="sow-image-info-title"> <?php echo wp_kses_post( $title ) ?> </span>
+				<?php if ( ! empty( $description ) ) : ?>
+					<p class="sow-image-info-description"> <?php echo wp_kses_post( $description ) ?> </p>
+				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 

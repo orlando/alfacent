@@ -4,8 +4,15 @@
 @image_height: default;
 @image_width: default;
 @title_position: above;
+@title_color: #ffffff;
+@title_size: 1em;
+@description_size: .5em;
+@background_color: transparent;
+@opacity: 80;
+@hover_description: false;
 
 @position: @title_position;
+@background: @background_color;
 
 .position (@a) when (@position = above) {
 	top: 0;
@@ -14,19 +21,41 @@
   bottom: 0;
 }
 
+.background (@a) when (@background = transparent) {
+	background: transparent;
+}
+.background (@a) when not (@background = transparent) {
+  @red: red(@background);
+  @blue: blue(@background);
+  @green: green(@background);
+  background: rgba(@red, @green, @blue, @opacity/100);
+}
+
+
 .sow-image-container {
   text-align: @image_alignment;
 
   .sow-image-wrapper {
     position: relative;
     display: inline-block;
+		overflow: hidden;
 
-    .sow-image-title {
+    .sow-image-info {
       position: absolute;
       width: 100%;
       text-align: center;
       left: 0;
-      .position(@position);
+			color: @title_color;
+			.position(@position);
+			.background(@background);
+
+			&-title {
+				font-size: @title_size;
+			}
+
+			&-description {
+				font-size: @description_size;
+			}
     }
   }
 
