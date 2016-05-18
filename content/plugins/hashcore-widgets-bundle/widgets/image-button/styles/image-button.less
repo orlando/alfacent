@@ -9,16 +9,19 @@
 @description_size: .5em;
 @background_color: transparent;
 @opacity: 80;
-@hover_description: false;
+@hover_description: 0;
+@hover_move: 50;
 
 @position: @title_position;
 @background: @background_color;
+@hover: @hover_description;
 
 .position (@a) when (@position = above) {
   top: 0;
 }
 .position (@a) when (@position = below) {
   bottom: 0;
+  .hover(@hover);
 }
 
 .background (@a) when (@background = transparent) {
@@ -29,6 +32,14 @@
   @blue: blue(@background);
   @green: green(@background);
   background: rgba(@red, @green, @blue, @opacity/100);
+}
+
+.hover (@a) when (@hover = 1) {
+  transform: translate3d(0, @hover_move, 0);
+
+  &:hover {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 
@@ -48,6 +59,9 @@
       color: @title_color;
       .position(@position);
       .background(@background);
+      transition: all .5s linear;
+      font: @hover_description;
+      font: @hover;
 
       &-title {
         font-size: @title_size;
