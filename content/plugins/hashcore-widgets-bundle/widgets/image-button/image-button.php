@@ -69,14 +69,6 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'label' => __( 'Show description only in hover', 'hashcore-widgets-bundle' ),
 						),
 
-						'hover_move' => array(
-							'label' => __( 'Define the size to hide the description, this value is manual by limitation', 'hashcore-widgets-bundle' ),
-							'type' => 'slider',
-							'min' => 0,
-							'max' => 200,
-							'default' => 50,
-						),
-
 						'title_position' => array(
 							'type' => 'select',
 							'label' => __( 'Title position button', 'hashcore-widgets-bundle' ),
@@ -206,7 +198,6 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			'background_color' => ! empty( $instance['image']['background_color'] ) ? $instance['image']['background_color'] : 'transparent',
 			'opacity' => $instance['image']['opacity'],
 			'hover_description' => $instance['image']['hover_description'],
-			'hover_move' => $instance['image']['hover_move'] . 'px',
 
 		);
 	}

@@ -10,7 +10,6 @@
 @background_color: transparent;
 @opacity: 80;
 @hover_description: 0;
-@hover_move: 50;
 
 @position: @title_position;
 @background: @background_color;
@@ -39,22 +38,26 @@
 }
 
 .hover-down (@a) when (@hover = 1) {
-  .sow-image-info {
-    transform: translate3d(0, @hover_move, 0);
+  .sow-image-info-description {
+    max-height: 0;
+    transition: max-height 0.216s ease-out;
   }
 
-  &:hover .sow-image-info {
-    transform: translate3d(0, 0, 0);
+  &:hover .sow-image-info-description {
+    max-height: 300px;
+    transition: max-height 0.216s ease-in;
   }
 }
 
 .hover-up (@a) when (@hover = 1) {
-  .sow-image-info {
-    transform: translate3d(0, -@hover_move, 0);
+  .sow-image-info-description {
+    max-height: 0;
+    transition: max-height 0.216s ease-out;
   }
 
-  &:hover .sow-image-info {
-    transform: translate3d(0, 0, 0);
+  &:hover .sow-image-info-description {
+    max-height: 300px;
+    transition: max-height 0.216s ease-in;
   }
 }
 
@@ -75,7 +78,6 @@
       left: 0;
       color: @title_color;
       .background(@background);
-      transition: all .216s linear;
 
       &-title {
         font-size: @title_size;
@@ -83,6 +85,7 @@
 
       &-description {
         font-size: @description_size;
+        margin: 0
       }
     }
   }
