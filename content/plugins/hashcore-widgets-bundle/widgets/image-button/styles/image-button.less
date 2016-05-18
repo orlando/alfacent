@@ -17,11 +17,16 @@
 @hover: @hover_description;
 
 .position (@a) when (@position = above) {
-  top: 0;
+  .sow-image-info{
+    top: 0;
+  }
+  .hover-up(@hover);
 }
 .position (@a) when (@position = below) {
-  bottom: 0;
-  .hover(@hover);
+  .sow-image-info {
+    bottom: 0;
+  }
+  .hover-down(@hover);
 }
 
 .background (@a) when (@background = transparent) {
@@ -34,10 +39,22 @@
   background: rgba(@red, @green, @blue, @opacity/100);
 }
 
-.hover (@a) when (@hover = 1) {
-  transform: translate3d(0, @hover_move, 0);
+.hover-down (@a) when (@hover = 1) {
+  .sow-image-info {
+    transform: translate3d(0, @hover_move, 0);
+  }
 
-  &:hover {
+  &:hover .sow-image-info {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hover-up (@a) when (@hover = 1) {
+  .sow-image-info {
+    transform: translate3d(0, -@hover_move, 0);
+  }
+
+  &:hover .sow-image-info {
     transform: translate3d(0, 0, 0);
   }
 }
@@ -50,6 +67,7 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
+    .position(@position);
 
     .sow-image-info {
       position: absolute;
@@ -57,11 +75,8 @@
       text-align: center;
       left: 0;
       color: @title_color;
-      .position(@position);
       .background(@background);
       transition: all .5s linear;
-      font: @hover_description;
-      font: @hover;
 
       &-title {
         font-size: @title_size;
