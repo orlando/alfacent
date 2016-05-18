@@ -9,6 +9,7 @@
  * @var $alt
  * @var $url
  * @var $new_window
+ * @var $description
  */
 
 ?>
@@ -53,7 +54,7 @@ if ( ! empty( $alt ) ) $attr['alt'] = $alt;
         <?php if ( ! empty( $description ) ) : ?>
           <p class="sow-image-info-description"> <?php echo wp_kses_post( $description ) ?> </p>
         <?php endif; ?>
-        
+
         <?php if ( 'above' === $title_position ) : ?>
           <span class="sow-image-info-title"> <?php echo wp_kses_post( $title ) ?> </span>
         <?php endif; ?>
