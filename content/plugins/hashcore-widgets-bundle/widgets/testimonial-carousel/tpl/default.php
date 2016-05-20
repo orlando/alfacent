@@ -7,7 +7,7 @@
 ?>
 <?php if( !empty( $instance['title'] ) ) echo $args['before_title'] . esc_html($instance['title']) . $args['after_title'] ?>
 <?php $this->caret_svg() ?>
-<div class="sow-testimonials owl-carousel ">
+<div class="sow-testimonials owl-carousel">
 	<?php foreach( $testimonials as $testimonial ) : ?>
 		<?php
 		$url = $testimonial['url'];
@@ -27,38 +27,40 @@
 				<?php endif; ?>
 
 				<div class="sow-testimonial-user">
-					<?php if( ! empty( $image_id ) ) : ?>
-					<div class="sow-image-wrapper">
-						<?php if( $link_image ) : ?>
-						<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
-						<?php endif; ?>
-						<?php echo $this->testimonial_user_image( $image_id, $design ); ?>
-						<?php if( $link_image ) : ?>
-						</a>
-						<?php endif; ?>
-					</div>
-					<?php endif; ?>
-
-					<div class="sow-text">
-						<?php if( $link_name ) : ?>
-						<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
-						<?php endif; ?>
-							<strong><?php echo esc_html( $testimonial['name'] ) ?></strong>
-						<?php if( $link_name ) : ?>
-						</a>
-						<?php endif; ?>
-						<?php if( $link_location ) : ?>
+					<div class="sow-testimonial-user-wrapper">
+						<?php if( ! empty( $image_id ) ) : ?>
+						<div class="sow-image-wrapper">
+							<?php if( $link_image ) : ?>
 							<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
-						<?php endif; ?>
-						<?php if( ! empty( $location ) ) : ?>
-							<span><?php echo esc_html( $location ) ?></span>
-						<?php endif; ?>
-						<?php if( $link_location ) : ?>
+							<?php endif; ?>
+							<?php echo $this->testimonial_user_image( $image_id, $design ); ?>
+							<?php if( $link_image ) : ?>
 							</a>
+							<?php endif; ?>
+						</div>
 						<?php endif; ?>
-					</div>
 
-					<?php // $this->testimonial_pointer($design) ?>
+						<div class="sow-text">
+							<?php if( $link_name ) : ?>
+							<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
+							<?php endif; ?>
+								<strong><?php echo esc_html( $testimonial['name'] ) ?></strong>
+							<?php if( $link_name ) : ?>
+							</a>
+							<?php endif; ?>
+							<?php if( $link_location ) : ?>
+								<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
+							<?php endif; ?>
+							<?php if( ! empty( $location ) ) : ?>
+								<span><?php echo esc_html( $location ) ?></span>
+							<?php endif; ?>
+							<?php if( $link_location ) : ?>
+								</a>
+							<?php endif; ?>
+						</div>
+
+						<?php // $this->testimonial_pointer($design) ?>
+					</div>
 				</div>
 
 				<?php if( strpos($design['layout'], '_above') === false ) : ?>

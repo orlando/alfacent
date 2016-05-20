@@ -155,6 +155,7 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 					'image' => array(
 						'type' => 'section',
 						'label' => __( 'Image', 'hashcore-widgets-bundle' ),
+						'default' => 'square',
 						'fields' => array(
 							'image_shape' => array(
 								'type' => 'select',
@@ -163,7 +164,6 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 									'square' => __( 'Square', 'hashcore-widgets-bundle' ),
 									'round' => __( 'Round', 'hashcore-widgets-bundle' ),
 								),
-								'default' => 'square',
 							),
 
 							'image_size' => array(
@@ -188,12 +188,45 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 							'text_background' => array(
 								'type' => 'color',
 								'label' => __( 'Text Background', 'hashcore-widgets-bundle' ),
-								'default' => '#f0f0f0',
 							),
 							'text_color' => array(
 								'type' => 'color',
 								'label' => __( 'Text Color', 'hashcore-widgets-bundle' ),
 								'default' => '#444444',
+							),
+							'text_color_author' => array(
+								'type' => 'color',
+								'label' => __( 'Text Author Color', 'hashcore-widgets-bundle' ),
+								'default' => '#444444',
+							),
+						),
+					),
+
+					'font' => array(
+						'type' => 'section',
+						'label' => __( 'Fonts size', 'hashcore-widgets-bundle' ),
+						'fields' => array(
+							'size_text' => array(
+								'type' => 'select',
+								'label' => __( 'Font size text', 'hashcore-widgets-bundle' ),
+								'default' => '1em',
+								'options' => array(
+									'1em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'1.15em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+									'1.3em' => __( 'Large', 'hashcore-widgets-bundle' ),
+									'1.45em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+								),
+							),
+							'size_author' => array(
+								'type' => 'select',
+								'label' => __( 'Font size Author', 'hashcore-widgets-bundle' ),
+								'default' => '.6em',
+								'options' => array(
+									'.6em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'.8em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+									'1em' => __( 'Large', 'hashcore-widgets-bundle' ),
+									'1.3em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+								),
 							),
 						),
 					),
@@ -219,20 +252,19 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 					'user_position' => array(
 						'type' => 'select',
 						'label' => __( 'User position', 'hashcore-widgets-bundle' ),
-						'default' => 'left',
+						'default' => 'center',
 						'options' => array(
 							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
 							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-							'middle' => __( 'Middle', 'hashcore-widgets-bundle' ),
+							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
 						),
 					),
 
 					'layout' => array(
 						'type' => 'select',
 						'label' => __( 'Testimonial layout', 'hashcore-widgets-bundle' ),
-						'default' => 'side',
+						'default' => 'text_above',
 						'options' => array(
-							'side' => __( 'Side by side', 'hashcore-widgets-bundle' ),
 							'text_above' => __( 'Text above user', 'hashcore-widgets-bundle' ),
 							'text_below' => __( 'Text below user', 'hashcore-widgets-bundle' ),
 						),
@@ -272,16 +304,19 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 	}
 
 	function get_less_variables( $instance ){
-		return array (
+		return array(
 			'image_size' => intval($instance['design']['image']['image_size']) . 'px',
 			'testimonial_size' => round(100/$instance['settings']['per_line_desktop'], 4) . '%',
 			'testimonial_padding' => intval($instance['design']['padding']) . 'px',
-			'testimonial_background' => $instance['design']['colors']['testimonial_background'],
+			'testimonial_background' => ! empty( $instance['design']['colors']['testimonial_background'] ) ? $instance['design']['colors']['testimonial_background'] : 'transparent',
 
 			// The text block.
 			'text_border_radius' => intval($instance['design']['border_radius']) . 'px',
-			'text_background' => $instance['design']['colors']['text_background'],
+			'text_background' => ! empty( $instance['design']['colors']['text_background'] ) ? $instance['design']['colors']['text_background'] : 'transparent',
 			'text_color' => $instance['design']['colors']['text_color'],
+			'user_position' => $instance['design']['user_position'],
+			'text_color_author' => $instance['design']['colors']['text_color_author'],
+			'size_author' => $instance['design']['font']['size_author'],
 
 			// All the responsive sizes.
 			'tablet_testimonial_size' => round(100/$instance['settings']['per_line_tablet'], 4) . '%',
@@ -311,17 +346,12 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 		}
 	}
 
-	function testimonial_pointer( $design ){
-
-	}
-
 	function testimonial_wrapper_class($design){
 		$classes = array();
 		$classes[] = 'sow-user-' . sanitize_html_class( $design['user_position'] );
 		$classes[] = 'sow-layout-' . sanitize_html_class( $design['layout'] );
 		return str_replace( '_', '-', implode( ' ', $classes ) );
 	}
-
 }
 
 hashcore_widget_register( 'hashcore-testimonials-carousel', __FILE__, 'HashCore_Widgets_Testimonials_Carousel' );
