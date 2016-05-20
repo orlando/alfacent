@@ -18,7 +18,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			),
 			array(),
 			array(
-				'Image' => array(
+				'image' => array(
 					'type' => 'section',
 					'label'  => __( 'Image', 'hashcore-widgets-bundle' ),
 					'hide'   => false,
@@ -55,18 +55,71 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 
 						'title' => array(
 							'type' => 'text',
-							'label' => __( 'Title text', 'hashcore-widgets-bundle' ),
+							'label' => __( 'Title text button', 'hashcore-widgets-bundle' ),
+						),
+
+						'description' => array(
+							'type' => 'text',
+							'label' => __( 'Description of title', 'hashcore-widgets-bundle' ),
+						),
+
+						'hover_description' => array(
+							'type' => 'checkbox',
+							'default' => false,
+							'label' => __( 'Show description only in hover', 'hashcore-widgets-bundle' ),
 						),
 
 						'title_position' => array(
 							'type' => 'select',
-							'label' => __( 'Title position', 'hashcore-widgets-bundle' ),
+							'label' => __( 'Title position button', 'hashcore-widgets-bundle' ),
 							'default' => 'hidden',
 							'options' => array(
 								'hidden' => __( 'Hidden', 'hashcore-widgets-bundle' ),
 								'above' => __( 'Above', 'hashcore-widgets-bundle' ),
 								'below' => __( 'Below', 'hashcore-widgets-bundle' ),
 							),
+						),
+
+						'title_size' => array(
+							'type' => 'select',
+							'label' => __( 'Title font size', 'hashcore-widgets-bundle' ),
+							'default' => '1.5em',
+							'options' => array(
+								'1.5em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+								'2em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+								'2.5em' => __( 'Large', 'hashcore-widgets-bundle' ),
+								'3em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						'description_size' => array(
+							'type' => 'select',
+							'label' => __( 'Description font size', 'hashcore-widgets-bundle' ),
+							'default' => '1em',
+							'options' => array(
+								'1em' => __( 'Normal', 'hashcore-widgets-bundle' ),
+								'1.3em' => __( 'Medium', 'hashcore-widgets-bundle' ),
+								'1.6em' => __( 'Large', 'hashcore-widgets-bundle' ),
+								'2em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+							),
+						),
+
+						'title_color' => array(
+							'type' => 'color',
+							'label' => __( 'Title text color', 'hashcore-widgets-bundle' ),
+						),
+
+						'background_color' => array(
+							'type' => 'color',
+							'label' => __( 'Title background color', 'hashcore-widgets-bundle' ),
+						),
+
+						'opacity' => array(
+							'label' => __( 'Background image opacity', 'hashcore-widgets-bundle' ),
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 100,
+							'default' => 80,
 						),
 
 						'alt' => array(
@@ -78,6 +131,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'type' => 'link',
 							'label' => __( 'Destination URL', 'hashcore-widgets-bundle' ),
 						),
+
 						'new_window' => array(
 							'type' => 'checkbox',
 							'default' => false,
@@ -90,6 +144,7 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							'label' => __( 'Bound', 'hashcore-widgets-bundle' ),
 							'description' => __( "Make sure the image doesn't extend beyond its container.", 'hashcore-widgets-bundle' ),
 						),
+
 						'full_width' => array(
 							'type' => 'checkbox',
 							'default' => false,
@@ -98,31 +153,9 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 						),
 					),
 				),
-				'button' => array(
-					'type' => 'section',
-					'label'  => __( 'Button', 'hashcore-widgets-bundle' ),
-					'hide'   => true,
-					'fields' => array(
-						'text' => array(
-							'type' => 'text',
-							'label' => __('Text', 'hashcore-widgets-bundle')
-						),
-					),
-				),
 			),
 			plugin_dir_path( __FILE__ ).'../'
 		);
-	}
-
-	function modify_form( $form ) {
-		global $_wp_additional_image_sizes;
-		if ( ! empty( $_wp_additional_image_sizes ) ) {
-			foreach ( $_wp_additional_image_sizes as $i => $s ) {
-				$form['size']['options'][$i] = $i;
-			}
-		}
-
-		return $form;
 	}
 
 	function get_style_hash( $instance ) {
@@ -135,28 +168,37 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 
 	public function get_template_variables( $instance, $args ) {
 		return array(
-			'title' => $instance['title'],
-			'title_position' => $instance['title_position'],
-			'image' => $instance['image'],
-			'size' => $instance['size'],
-			'image_fallback' => ! empty( $instance['image_fallback'] ) ? $instance['image_fallback'] : false,
-			'alt' => $instance['alt'],
-			'url' => $instance['url'],
-			'new_window' => $instance['new_window'],
+			'title' => $instance['image']['title'],
+			'title_position' => $instance['image']['title_position'],
+			'description' => $instance['image']['description'],
+			'image' => $instance['image']['image'],
+			'size' => $instance['image']['size'],
+			'image_fallback' => ! empty( $instance['image']['image_fallback'] ) ? $instance['image']['image_fallback'] : false,
+			'alt' => $instance['image']['alt'],
+			'url' => $instance['image']['url'],
+			'new_window' => $instance['image']['new_window'],
 		);
 	}
 
 	function get_style_name( $instance) {
-		return 'hashcore-image-button';
+		return 'image-button';
 	}
 
 	function get_less_variables( $instance) {
 		return array(
-			'image_alignment' => $instance['align'],
-			'image_display' => $instance['align'] === 'default' ? 'block' : 'inline-block',
-			'image_max_width' => ! empty( $instance['bound'] ) ? '100%' : '',
-			'image_height' => ! empty( $instance['bound'] ) ? 'auto' : '',
-			'image_width' => ! empty( $instance['full_width'] ) ? '100%' : '',
+			'image_alignment' => $instance['image']['align'],
+			'image_display' => $instance['image']['align'] === 'default' ? 'block' : 'inline-block',
+			'image_max_width' => ! empty( $instance['image']['bound'] ) ? '100%' : '',
+			'image_height' => ! empty( $instance['image']['bound'] ) ? 'auto' : '',
+			'image_width' => ! empty( $instance['image']['full_width'] ) ? '100%' : '',
+			'title_position' => $instance['image']['title_position'],
+			'title_color' => ! empty( $instance['image']['title_color'] ) ? $instance['image']['title_color'] : '#ffffff',
+			'title_size' => $instance['image']['title_size'],
+			'description_size' => $instance['image']['description_size'],
+			'background_color' => ! empty( $instance['image']['background_color'] ) ? $instance['image']['background_color'] : 'transparent',
+			'opacity' => $instance['image']['opacity'],
+			'hover_description' => $instance['image']['hover_description'],
+
 		);
 	}
 }

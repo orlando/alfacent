@@ -1,0 +1,100 @@
+@image_alignment: default;
+@image_display: block;
+@image_max_width: default;
+@image_height: default;
+@image_width: default;
+@title_position: above;
+@title_color: #ffffff;
+@title_size: 1em;
+@description_size: .5em;
+@background_color: transparent;
+@opacity: 80;
+@hover_description: 0;
+
+@position: @title_position;
+@background: @background_color;
+@hover: @hover_description;
+
+// Mixins
+.position (@a) when (@position = above) {
+  .sow-image-info{
+    top: 0;
+  }
+  .hover-up(@hover);
+}
+
+.position (@a) when (@position = below) {
+  .sow-image-info {
+    bottom: 0;
+  }
+  .hover-down(@hover);
+}
+
+.background (@a) when not (@background = transparent) {
+  @red: red(@background);
+  @blue: blue(@background);
+  @green: green(@background);
+  background: rgba(@red, @green, @blue, @opacity/100);
+}
+
+.hover-down (@a) when (@hover = 1) {
+  .sow-image-info-description {
+    max-height: 0;
+    transition: max-height 0.216s ease-out;
+  }
+
+  &:hover .sow-image-info-description {
+    max-height: 300px;
+    transition: max-height 0.216s ease-in;
+  }
+}
+
+.hover-up (@a) when (@hover = 1) {
+  .sow-image-info-description {
+    max-height: 0;
+    transition: max-height 0.216s ease-out;
+  }
+
+  &:hover .sow-image-info-description {
+    max-height: 300px;
+    transition: max-height 0.216s ease-in;
+  }
+}
+
+// Style
+.sow-image-container {
+  text-align: @image_alignment;
+
+  .sow-image-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    .position(@position);
+
+    .sow-image-info {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      color: @title_color;
+      .background(@background);
+
+      &-title {
+        font-size: @title_size;
+      }
+
+      &-description {
+        font-size: @description_size;
+        margin: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .so-widget-image {
+    display: @image_display;
+    max-width: @image_max_width;
+    width: @image_width;
+    height: @image_height;
+  }
+}
