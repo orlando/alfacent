@@ -233,10 +233,10 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 
 					'padding' => array(
 						'type' => 'slider',
-						'label' => __( 'Padding', 'hashcore-widgets-bundle' ),
-						'integer' => true,
-						'default' => 10,
-						'max' => 100,
+						'label' => __( 'Padding ', 'hashcore-widgets-bundle' ),
+						'integer' => false,
+						'default' => 1,
+						'max' => 10,
 						'min' => 0,
 					),
 
@@ -307,7 +307,7 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 		return array(
 			'image_size' => intval($instance['design']['image']['image_size']) . 'px',
 			'testimonial_size' => round(100/$instance['settings']['per_line_desktop'], 4) . '%',
-			'testimonial_padding' => intval($instance['design']['padding']) . 'px',
+			'testimonial_padding' => intval($instance['design']['padding']) . 'em',
 			'testimonial_background' => ! empty( $instance['design']['colors']['testimonial_background'] ) ? $instance['design']['colors']['testimonial_background'] : 'transparent',
 
 			// The text block.

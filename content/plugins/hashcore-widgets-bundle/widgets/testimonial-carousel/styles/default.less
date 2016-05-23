@@ -1,7 +1,7 @@
 @import "../../../base/less/mixins";
 
 @image_size: 75px;
-@testimonial_padding: 10px;
+@testimonial_padding: 1.5em;
 
 @testimonial_background: transparent;
 @text_background: #f0f0f0;
@@ -11,22 +11,29 @@
 @text_color_author:#444;
 @size_author: 1em;
 
+@tablets: ~"only screen and (min-width: 768px)";
+
 .sow-testimonials {
 	background: @testimonial_background;
 	position: relative;
 
 	.owl-prev,
 	.owl-next {
-		width: 60px;
+		width: 1.5em;
 		height: auto;
 		text-align: center;
-		font-size: 45px;
+		font-size: 2em;
 		line-height: 1;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		background: @text_color;
 		color: #fff;
+		display: none !important;
+
+		@media @tablets {
+			display: block !important;
+		}
 	}
 
 	.owl-prev {
@@ -39,7 +46,12 @@
 	.sow-testimonial-text {
 		background: @text_background;
 		color: @text_color;
-		padding: @testimonial_padding @testimonial_padding*2;
+		padding: @testimonial_padding 0;
+
+		@media @tablets {
+			padding: @testimonial_padding @testimonial_padding*2;
+		}
+
 		.border-radius(@text_border_radius);
 	}
 
