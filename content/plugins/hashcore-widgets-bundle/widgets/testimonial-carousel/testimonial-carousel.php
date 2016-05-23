@@ -233,16 +233,16 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 
 					'padding' => array(
 						'type' => 'slider',
-						'label' => __( 'Padding ', 'hashcore-widgets-bundle' ),
+						'label' => __( 'Padding of text', 'hashcore-widgets-bundle' ),
 						'integer' => false,
-						'default' => 1,
+						'default' => 2,
 						'max' => 10,
 						'min' => 0,
 					),
 
 					'border_radius' => array(
 						'type' => 'slider',
-						'label' => __( 'Padding', 'hashcore-widgets-bundle' ),
+						'label' => __( 'Padding of image', 'hashcore-widgets-bundle' ),
 						'integer' => true,
 						'default' => 4,
 						'max' => 100,
