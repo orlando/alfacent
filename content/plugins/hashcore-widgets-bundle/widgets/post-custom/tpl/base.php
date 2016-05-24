@@ -4,16 +4,14 @@ $posts = new WP_Query( $query );
 ?>
 
 <?php if ( $posts->have_posts() ) : ?>
-	<div class="hashcore-post-title">
-		<?php echo $args['before_title'] . esc_html($instance['title']) . $args['after_title'] ?>
-	</div>
 
 	<div class="hashcore-post-container">
-		<div class="hashcore-post-wrapper"
-		     data-query="<?php echo esc_attr($instance['posts']) ?>"
-		     data-found-posts="<?php echo esc_attr($posts->found_posts) ?>"
-		     data-ajax-url="<?php echo sow_esc_url( wp_nonce_url( admin_url('admin-ajax.php'), 'widgets_action', '_widgets_nonce' ) ) ?>"
-			>
+
+		<h3 class="hashcore-post-title">
+			<?php echo esc_html( $instance['title'] )?>
+		</h3>
+		
+		<div class="hashcore-post-wrapper">
 
 			<?php include 'post-item.php' ?>
 
