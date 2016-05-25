@@ -98,6 +98,11 @@ class HashCore_Widget_Post_Custom extends HashCore_Widget {
 				'label' => __( 'Hover color of link', 'hashcore-widgets-bundle' ),
 			),
 
+			'decoration_color' => array(
+				'type' => 'color',
+				'label' => __( 'Decoration color', 'hashcore-widgets-bundle' ),
+			),
+
 			'text_weight' => array(
 				'type' => 'select',
 				'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
@@ -142,6 +147,7 @@ class HashCore_Widget_Post_Custom extends HashCore_Widget {
 			'text_color' => ! empty( $instance['text_color'] ) ? $instance['text_color'] : '#444444',
 			'hover_color' => ! empty( $instance['hover_color'] ) ? $instance['hover_color'] : '#bbbbbb',
 			'title_color' => ! empty( $instance['title_color'] ) ? $instance['title_color'] : '#444444',
+			'decoration_color' => ! empty( $instance['decoration_color'] ) ? $instance['decoration_color'] : '#bbbbbb',
 			'post_background' => ! empty( $instance['post_background'] ) ? $instance['post_background'] : 'transparent',
 			'opacity' => $instance['opacity'],
 			'text_weight' => $instance['text_weight'],

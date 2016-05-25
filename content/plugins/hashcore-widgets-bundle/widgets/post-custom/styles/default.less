@@ -5,6 +5,7 @@
 @text_color: #444444;
 @title_color: #444444;
 @hover_color: #bbbbbb;
+@decoration_color: #bbbbbb;
 @post_background: transparent;
 @opacity: 100;
 @title_alignment: center;
@@ -58,26 +59,37 @@
     }
 
     &-circle {
-      font-size: @text_size/2;
+      font-size: @text_size/2.2;
+      color: @decoration_color;
     }
 
     &-category > a,
-    &-read > a,
-    &-title {
+    &-read > a {
       text-decoration: none;
-      color: @text_color;
       transition: all .216s ease;
     }
 
-    &-category > a:hover,
-    &-read > a:hover {
+    &-category > a {
+      color: @text_color;
+
+      &:hover {
+        color: @hover_color;
+      }
+    }
+
+    &-read > a {
       color: @hover_color;
+
+      &:hover {
+        color: @text_color;
+      }
     }
 
     &-title {
       font-size: @font_size/1.3;
       padding: 0;
       margin: .3em 0;
+      color: @text_color;
     }
 
     &-comment {
@@ -91,6 +103,12 @@
     &-read {
       display: inline-block;
       font-size: @text_size/1.3;
+    }
+
+    &-decoration {
+      width: 20em;
+      margin: auto;
+      border-bottom: 2px solid @decoration_color;
     }
   }
 }
