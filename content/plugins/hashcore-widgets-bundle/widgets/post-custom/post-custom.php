@@ -93,6 +93,11 @@ class HashCore_Widget_Post_Custom extends HashCore_Widget {
 				'label' => __( 'Text color', 'hashcore-widgets-bundle' ),
 			),
 
+			'hover_color' => array(
+				'type' => 'color',
+				'label' => __( 'Hover color of link', 'hashcore-widgets-bundle' ),
+			),
+
 			'text_weight' => array(
 				'type' => 'select',
 				'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
@@ -135,6 +140,7 @@ class HashCore_Widget_Post_Custom extends HashCore_Widget {
 			'rounding' => $instance['rounding'] . 'em',
 			'padding' => $instance['padding'] . 'em',
 			'text_color' => ! empty( $instance['text_color'] ) ? $instance['text_color'] : '#444444',
+			'hover_color' => ! empty( $instance['hover_color'] ) ? $instance['hover_color'] : '#bbbbbb',
 			'title_color' => ! empty( $instance['title_color'] ) ? $instance['title_color'] : '#444444',
 			'post_background' => ! empty( $instance['post_background'] ) ? $instance['post_background'] : 'transparent',
 			'opacity' => $instance['opacity'],
