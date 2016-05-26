@@ -206,12 +206,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573cd65d84df0',
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Spacer',
+					'raw' => false,
 					'grid' => 2,
 					'cell' => 0,
 					'id' => 5,
 					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
 					'style' => array(
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
@@ -274,11 +274,92 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573cd65ff2ec6',
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Spacer',
+					'raw' => false,
 					'grid' => 2,
 					'cell' => 1,
 					'id' => 8,
 					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
 					'style' => array(
+						'background_display' => 'tile',
+					),
+				),
+			),
+			9 => array(
+				'title' => '',
+				'testimonials' => array(
+					0 => array(
+						'name' => 'ING. MANUEL ORTIZ, PRESIDENTE DE DANA DE VENEZUELA C.A.',
+						'location' => '',
+						'image' => 0,
+						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Conozco a ALFA CENTAURO ELECTRIC C.A. desde hace 23 años, cuando comenzaba sus operaciones acá en Venezuela, en aquel entonces realizaban trabajos para corregir el bajo factor de potencia y ahorrar energía. Desde entonces han realizado una variedad de trabajos en las diferentes plantas del grupo Dana. Destacan las instalaciones eléctricas de nuestro DATA CENTER y la protección integral contra los rayos de nuestra planta EJES Y CARDANES donde instalaron 06 PARARRAYOS  de APLICACIONES TECNOLOGICAS. Los recomiendo totalmente.</span></p>',
+						'text_selected_editor' => 'tinymce',
+						'url' => '',
+						'link_name' => false,
+						'link_image' => false,
+						'new_window' => false,
+					),
+					1 => array(
+						'name' => 'JAVIER GAONA, Latin Manager de APLICACIONES TECNOLOGICAS S.A.	De España.',
+						'location' => '',
+						'image' => 0,
+						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Alfa Centauro Electric C.A. es nuestro representante en Venezuela desde el año 2014. Pese al entorno económico difícil, Alfa Centauro,  viene realizando un trabajo importante dando a conocer e instalando nuestros productos, principalmente los Pararrayos con dispositivo de Cebado DAT CONTROLER PLUS y los supresores de Picos ATSHOCK y ATSUB. Conocí a su Presidente el Ing. Tadeo del Águila Aliaga, en el curso de entrenamiento llevado a cabo en junio del 2014, en la Planta de Aplicaciones en Valencia -  España y me impresiono su alto nivel técnico y conocimiento de nuestros productos.</span></p>',
+						'text_selected_editor' => 'tinymce',
+						'url' => '',
+						'link_name' => false,
+						'link_image' => false,
+						'new_window' => false,
+					),
+					2 => array(
+						'name' => 'ING. JORGE PINILLA, Gerente de Ingeniería de Cerámica Carabobo SACA',
+						'location' => '',
+						'image' => 0,
+						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Alfa Centauro Electric C.A. desde hace muchos años, es proveedor de nuestra empresa. Realizan trabajos eléctricos de alto nivel técnico. Diversas acometidas eléctricas para las diferentes Líneas de Producción de cerámicas. Mantenimiento de nuestras subestaciones eléctricas, modificaciones en nuestro Data Center, Instalaciones de Grupos Electrógenos, Iluminaciones nuevas y mantenimiento de las existentes. Es una  empresa de un alto nivel técnico y lo recomiendo plenamente.</span></p>',
+						'text_selected_editor' => 'tinymce',
+						'url' => '',
+						'link_name' => false,
+						'link_image' => false,
+						'new_window' => false,
+					),
+				),
+				'settings' => array(
+					'per_line_desktop' => 1,
+					'per_line_tablet' => 1,
+					'per_line_mobile' => 1,
+					'so_field_container_state' => 'open',
+				),
+				'design' => array(
+					'image' => array(
+						'image_shape' => 'square',
+						'image_size' => 65,
+						'so_field_container_state' => 'open',
+					),
+					'colors' => array(
+						'testimonial_background' => false,
+						'text_background' => false,
+						'text_color' => '#1c1a7e',
+						'text_color_author' => '#1c1a7e',
+						'so_field_container_state' => 'open',
+					),
+					'font' => array(
+						'size_text' => '1em',
+						'size_author' => '1em',
+						'so_field_container_state' => 'open',
+					),
+					'padding' => 2,
+					'border_radius' => 7,
+					'user_position' => 'center',
+					'layout' => 'text_above',
+					'so_field_container_state' => 'open',
+				),
+				'_sow_form_id' => '573e037a4c580',
+				'panels_info' => array(
+					'class' => 'HashCore_Widgets_Testimonials_Carousel',
+					'grid' => 3,
+					'cell' => 0,
+					'id' => 9,
+					'widget_id' => '19922979-b23c-4cf9-abdd-bab40ea04ec4',
+					'style' => array(
+						'padding' => '0px',
 						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
@@ -306,6 +387,19 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			2 => array(
 				'cells' => 2,
 				'style' => array(
+					'bottom_margin' => '0px',
+					'background_display' => 'tile',
+				),
+			),
+			3 => array(
+				'cells' => 1,
+				'style' => array(
+					'class' => 'nopadding',
+					'row_css' => 'padding-right: 0
+												padding-left: 0',
+					'padding' => '0px',
+					'row_stretch' => 'full',
+					'background' => '#f8d940',
 					'background_display' => 'tile',
 				),
 			),
@@ -326,6 +420,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			3 => array(
 				'grid' => 2,
 				'weight' => 0.5,
+			),
+			4 => array(
+				'grid' => 3,
+				'weight' => 1,
 			),
 		),
 	);
