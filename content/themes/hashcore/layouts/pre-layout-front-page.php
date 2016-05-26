@@ -354,12 +354,39 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573e037a4c580',
 				'panels_info' => array(
 					'class' => 'HashCore_Widgets_Testimonials_Carousel',
+					'raw' => false,
 					'grid' => 3,
 					'cell' => 0,
 					'id' => 9,
 					'widget_id' => '19922979-b23c-4cf9-abdd-bab40ea04ec4',
 					'style' => array(
 						'padding' => '0px',
+						'background_display' => 'tile',
+					),
+				),
+			),
+			10 => array(
+				'title' => 'Blog',
+				'posts' => 'post_type=post&date_query={"after":"","before":""}&orderby=date&order=DESC&posts_per_page=1&sticky=&additional=',
+				'font_size' => '2.5',
+				'text_size' => '1.15',
+				'rounding' => '.25',
+				'padding' => '1',
+				'title_color' => '#1c1a7e',
+				'text_color' => '#ffffff',
+				'hover_color' => '#f8d940',
+				'decoration_color' => '#1e73be',
+				'text_weight' => '300',
+				'post_background' => '#1c1a7e',
+				'opacity' => 100,
+				'_sow_form_id' => '5743525eea23f',
+				'panels_info' => array(
+					'class' => 'HashCore_Widget_Post_Custom',
+					'grid' => 4,
+					'cell' => 0,
+					'id' => 10,
+					'widget_id' => '6502b4cf-7834-4d34-94e0-e8125bc70e61',
+					'style' => array(
 						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
@@ -397,11 +424,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'class' => 'nopadding',
 					'row_css' => 'padding-right: 0
 												padding-left: 0',
+					'bottom_margin' => '0px',
 					'padding' => '0px',
 					'row_stretch' => 'full',
 					'background' => '#f8d940',
 					'background_display' => 'tile',
 				),
+			),
+			4 => array(
+				'cells' => 1,
+				'style' => array(),
 			),
 		),
 		'grid_cells' => array(
@@ -423,6 +455,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			),
 			4 => array(
 				'grid' => 3,
+				'weight' => 1,
+			),
+			5 => array(
+				'grid' => 4,
 				'weight' => 1,
 			),
 		),
