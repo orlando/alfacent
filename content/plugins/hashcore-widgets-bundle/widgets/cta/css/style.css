@@ -1,8 +1,3 @@
-.sow-cta-base {
-  zoom: 1;
-  border: 1px solid ;
-  padding: 2em 2.5em;
-}
 .sow-cta-base:before {
   content: '';
   display: block;
@@ -12,30 +7,18 @@
   display: table;
   clear: both;
 }
-.sow-cta-base .sow-cta-text h4,
-.sow-cta-base .sow-cta-text h5,
-.sow-cta-base .sow-cta-text p {
-  margin: 0.4em 0;
-}
-.sow-cta-base .sow-cta-text h4 {
-  margin-top: 0;
-}
-.sow-cta-base .sow-cta-text h5,
-.sow-cta-base .sow-cta-text p {
-  margin-bottom: 0;
-  font-weight: normal;
-}
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 768px) {
   .sow-cta-base {
     text-align: center;
     padding: 1.75em;
   }
   .sow-cta-base .sow-cta-text {
-    float: none;
+    float: none !important;
   }
   .sow-cta-base .so-widget-sow-button {
     display: inline-block;
-    float: none;
+    float: none !important;
     margin-top: 2em !important;
     margin-left: 0!important;
   }

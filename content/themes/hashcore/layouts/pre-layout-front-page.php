@@ -149,22 +149,6 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				),
 			),
 			3 => array(
-				'widget_title' => '',
-				'spacer' => 20,
-				'_sow_form_id' => '573cc54d903a5',
-				'panels_info' => array(
-					'class' => 'HashCore_Widget_Spacer',
-					'raw' => false,
-					'grid' => 2,
-					'cell' => 0,
-					'id' => 3,
-					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
-					'style' => array(
-						'background_display' => 'tile',
-					),
-				),
-			),
-			4 => array(
 				'image' => array(
 					'image' => 12,
 					'image_fallback' => '',
@@ -193,46 +177,14 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'raw' => false,
 					'grid' => 2,
 					'cell' => 0,
-					'id' => 4,
+					'id' => 3,
 					'widget_id' => 'cb062168-2baf-43ed-8029-f016a56fe202',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			5 => array(
-				'widget_title' => '',
-				'spacer' => 20,
-				'_sow_form_id' => '573cd65d84df0',
-				'panels_info' => array(
-					'class' => 'HashCore_Widget_Spacer',
-					'raw' => false,
-					'grid' => 2,
-					'cell' => 0,
-					'id' => 5,
-					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
-					'style' => array(
-						'background_display' => 'tile',
-					),
-				),
-			),
-			6 => array(
-				'widget_title' => '',
-				'spacer' => 20,
-				'_sow_form_id' => '573cc9ba537ad',
-				'panels_info' => array(
-					'class' => 'HashCore_Widget_Spacer',
-					'raw' => false,
-					'grid' => 2,
-					'cell' => 1,
-					'id' => 6,
-					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
-					'style' => array(
-						'background_display' => 'tile',
-					),
-				),
-			),
-			7 => array(
+			4 => array(
 				'image' => array(
 					'image' => 11,
 					'image_fallback' => '',
@@ -261,30 +213,68 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'raw' => false,
 					'grid' => 2,
 					'cell' => 1,
-					'id' => 7,
+					'id' => 4,
 					'widget_id' => '7ce7e4c6-217f-43c3-9690-58989ea9cb08',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			8 => array(
-				'widget_title' => '',
-				'spacer' => 20,
-				'_sow_form_id' => '573cd65ff2ec6',
+			5 => array(
+				'title' => 'En busca de la mejor solucion para tu proyecto?',
+				'sub_title' => '',
+				'design' => array(
+					'background_color' => false,
+					'border_color' => false,
+					'title_color' => '#ffffff',
+					'sub_title_color' => false,
+					'font_size' => '1.5',
+					'padding_top' => '2.5',
+					'padding_side' => '0',
+					'button_align' => 'right',
+					'so_field_container_state' => 'open',
+				),
+				'button' => array(
+					'text' => 'Trabaja con nosotros',
+					'url' => '#',
+					'new_window' => true,
+					'button_icon' => array(
+						'icon_selected' => '',
+						'icon_color' => '#1e73be',
+						'icon' => 0,
+						'so_field_container_state' => 'closed',
+					),
+					'design' => array(
+						'theme' => 'flat',
+						'button_color' => '#f8d940',
+						'text_color' => '#1c1a7e',
+						'hover' => true,
+						'font_size' => '1.3',
+						'rounding' => '0.25',
+						'padding' => '0.5',
+						'so_field_container_state' => 'open',
+					),
+					'attributes' => array(
+						'id' => '',
+						'title' => '',
+						'onclick' => '',
+						'so_field_container_state' => 'closed',
+					),
+				),
+				'_sow_form_id' => '57471720b7a79',
 				'panels_info' => array(
-					'class' => 'HashCore_Widget_Spacer',
-					'raw' => false,
-					'grid' => 2,
-					'cell' => 1,
-					'id' => 8,
-					'widget_id' => 'bddf754a-e14a-4da5-b941-e3b801994c75',
+					'class' => 'HashCore_Widget_Cta_Widget',
+					'grid' => 3,
+					'cell' => 0,
+					'id' => 5,
+					'widget_id' => '35bfb3ec-96db-4f13-a6df-1286c0acb453',
 					'style' => array(
+						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
 			),
-			9 => array(
+			6 => array(
 				'title' => '',
 				'testimonials' => array(
 					0 => array(
@@ -355,9 +345,9 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Widgets_Testimonials_Carousel',
 					'raw' => false,
-					'grid' => 3,
+					'grid' => 4,
 					'cell' => 0,
-					'id' => 9,
+					'id' => 6,
 					'widget_id' => '19922979-b23c-4cf9-abdd-bab40ea04ec4',
 					'style' => array(
 						'padding' => '0px',
@@ -365,7 +355,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					),
 				),
 			),
-			10 => array(
+			7 => array(
 				'title' => 'Blog',
 				'posts' => 'post_type=post&date_query={"after":"","before":""}&orderby=date&order=DESC&posts_per_page=1&sticky=&additional=',
 				'font_size' => '2.5',
@@ -382,9 +372,9 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '5743525eea23f',
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Post_Custom',
-					'grid' => 4,
+					'grid' => 5,
 					'cell' => 0,
-					'id' => 10,
+					'id' => 7,
 					'widget_id' => '6502b4cf-7834-4d34-94e0-e8125bc70e61',
 					'style' => array(
 						'background_image_attachment' => false,
@@ -414,6 +404,8 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			2 => array(
 				'cells' => 2,
 				'style' => array(
+					'row_css' => 'padding-top: 2.5em;
+												padding-bottom: 2.5em;',
 					'bottom_margin' => '0px',
 					'background_display' => 'tile',
 				),
@@ -421,9 +413,18 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			3 => array(
 				'cells' => 1,
 				'style' => array(
+					'bottom_margin' => '0px',
+					'row_stretch' => 'full',
+					'background_image_attachment' => 224,
+					'background_display' => 'cover',
+				),
+			),
+			4 => array(
+				'cells' => 1,
+				'style' => array(
 					'class' => 'nopadding',
 					'row_css' => 'padding-right: 0
-												padding-left: 0',
+	padding-left: 0',
 					'bottom_margin' => '0px',
 					'padding' => '0px',
 					'row_stretch' => 'full',
@@ -431,9 +432,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'background_display' => 'tile',
 				),
 			),
-			4 => array(
+			5 => array(
 				'cells' => 1,
-				'style' => array(),
+				'style' => array(
+					'bottom_margin' => '0px',
+					'background_display' => 'tile',
+				),
 			),
 		),
 		'grid_cells' => array(
@@ -459,6 +463,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			),
 			5 => array(
 				'grid' => 4,
+				'weight' => 1,
+			),
+			6 => array(
+				'grid' => 5,
 				'weight' => 1,
 			),
 		),
