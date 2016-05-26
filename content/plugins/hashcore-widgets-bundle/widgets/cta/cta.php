@@ -82,6 +82,53 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 						'type' => 'color',
 						'label' => __('Border color', 'hashcore-widgets-bundle'),
 					),
+					'title_color' => array(
+						'type' => 'color',
+						'label' => __('Title color', 'hashcore-widgets-bundle'),
+					),
+					'sub_title_color' => array(
+						'type' => 'color',
+						'label' => __('Sub title color', 'hashcore-widgets-bundle'),
+					),
+					'font_size' => array(
+						'type' => 'select',
+						'label' => __( 'Font size title', 'hashcore-widgets-bundle' ),
+						'default' => '2',
+						'options' => array(
+							'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+							'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+						),
+					),
+					'padding_top' => array(
+						'type' => 'select',
+						'label' => __( 'Padding top/bottom', 'hashcore-widgets-bundle' ),
+						'default' => '0',
+						'options' => array(
+							'0' => __( 'None', 'hashcore-widgets-bundle' ),
+							'.5' => __( 'Tiny', 'hashcore-widgets-bundle' ),
+							'1' => __( 'Small', 'hashcore-widgets-bundle' ),
+							'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+							'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+						),
+					),
+					'padding_side' => array(
+						'type' => 'select',
+						'label' => __( 'Padding left/right', 'hashcore-widgets-bundle' ),
+						'default' => '0',
+						'options' => array(
+							'0' => __( 'None', 'hashcore-widgets-bundle' ),
+							'.5' => __( 'Tiny', 'hashcore-widgets-bundle' ),
+							'1' => __( 'Small', 'hashcore-widgets-bundle' ),
+							'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+							'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+						),
+					),
 					'button_align' => array(
 						'type' => 'select',
 						'label' => __( 'Button align', 'hashcore-widgets-bundle' ),
@@ -99,7 +146,6 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 				'class' => 'HashCore_Widget_Button_Widget',
 				'label' => __('Button', 'hashcore-widgets-bundle'),
 			),
-
 		);
 	}
 
@@ -115,9 +161,14 @@ class HashCore_Widget_Cta_Widget extends HashCore_Widget {
 		if( empty( $instance ) ) return array();
 
 		return array(
-			'border_color' => $instance['design']['border_color'],
-			'background_color' => $instance['design']['background_color'],
+			'border_color' => ! empty( $instance['design']['border_color'] ) ? $instance['design']['border_color'] : 'transparent',
+			'background_color' => ! empty( $instance['design']['background_color'] ) ? $instance['design']['background_color'] : 'transparent',
 			'button_align' => $instance['design']['button_align'],
+			'title_color' => ! empty( $instance['design']['title_color'] ) ? $instance['design']['title_color'] : '#444444',
+			'sub_title_color' => ! empty( $instance['design']['sub_title_color'] ) ? $instance['design']['sub_title_color'] : '#bbbbbb',
+			'font_size' => $instance['design']['font_size'] . 'em',
+			'padding_top' => $instance['design']['padding_top'] . 'em',
+			'padding_side' => $instance['design']['padding_side'] . 'em',
 		);
 	}
 

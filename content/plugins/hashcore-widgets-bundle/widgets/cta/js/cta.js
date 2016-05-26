@@ -6,7 +6,9 @@ jQuery(function($){
             $t = $$.find('.sow-cta-text');
 
         if($t.outerHeight() > $b.outerHeight()) {
-            $b.css('margin-top', ( $t.outerHeight() - $b.outerHeight() )/2  );
+          $b.css('margin-top', ( $t.outerHeight() - $b.outerHeight() )/2  );
+        } else {
+          $t.css('margin-top', ( $b.outerHeight() - $t.outerHeight() )/2  );
         }
     });
 });
