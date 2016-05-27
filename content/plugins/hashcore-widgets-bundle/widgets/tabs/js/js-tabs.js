@@ -3,6 +3,10 @@ jQuery(function($){
 
   $('.soua-tab ul.soua-tabs').addClass('active').find('> li:eq(0)').addClass('current');
 
+  if ($('.soua-tab .tab_content').height() > $('.soua-tab .tab_content .tabs_item:first-child').height())  {
+    $('.soua-tab .tab_content .tabs_item:first-child').addClass('tabs_item-center');
+  }
+
   $('.soua-tab ul.soua-tabs li a').click(function (g) {
     var tab = $(this).closest('.soua-tab'),
       index = $(this).closest('li').index();
