@@ -6,9 +6,9 @@ $widget_tag = wp_kses_post( $instance['widget_tag'] );
 
 
 <?php if ( $widget_title ) { ?>
-  <<?php echo $widget_tag . ' class="soua-tab-title"' ?>>
-    <span><?php echo $widget_title ?></span>
-  </<?php echo $widget_tag ?>>
+  <h1<?php echo ' class="soua-tab-title"' ?>>
+    <?php echo $widget_title ?>
+  </h1>
 <?php } ?>
 
 <?php if ( $tabs_selection == 'horizontal' ) : ?>
