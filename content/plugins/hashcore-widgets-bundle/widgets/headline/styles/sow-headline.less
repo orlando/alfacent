@@ -12,7 +12,6 @@
 @sub_headline_tag: h3;
 @sub_headline_font: default;
 @sub_headline_weight: 400;
-@sub_headline_align: left;
 @sub_headline_color: default;
 @sub_headline_size: 1em;
 
@@ -22,17 +21,28 @@
 @divider_top_margin: 20px;
 @divider_side_margin: 60px;
 
+@align_mobile: 0;
+
+.align_mobile (@a) when (@align_mobile = 1) {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
 #sow-headline-container.sow-headline {
+  text-align: @headline_align;
+  .align_mobile (@align_mobile);
 
   .headline,
   .sub-headline {
     margin: 0;
     padding: 0;
+    display: inline-block;
   }
 
   .headline {
     .font(@headline_font, @headline_weight);
-    text-align: @headline_align;
+    // text-align: @headline_align;
     color: @headline_color;
     line-height: 1.4;
     font-size: @headline_size;
@@ -41,7 +51,7 @@
 
   .sub-headline {
     .font(@sub_headline_font, @sub_headline_weight);
-    text-align: @sub_headline_align;
+    //text-align: @sub_headline_align;
     color: @sub_headline_color;
     line-height: 1.4;
     font-size: @sub_headline_size;

@@ -36,7 +36,7 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'type' => 'text',
 						'label' => __( 'Text', 'hashcore-widgets-bundle' ),
 					),
-					'headline_size' => array(
+					'size' => array(
 						'type' => 'select',
 						'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
 						'default' => '1.5',
@@ -54,7 +54,7 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
 						'default' => 'default',
 					),
-					'headline_weight' => array(
+					'weight' => array(
 						'type' => 'select',
 						'label' => __( 'Font Style', 'hashcore-widgets-bundle' ),
 						'default' => '400',
@@ -80,6 +80,11 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 							'justify' => __( 'Justify', 'hashcore-widgets-bundle' ),
 						),
 					),
+					'align_mobile' => array(
+						'type' => 'checkbox',
+						'default' => false,
+						'label' => __( 'Always center in mobile view < 768px', 'hashcore-widgets-bundle' ),
+					),
 				),
 			),
 			'sub_headline' => array(
@@ -91,7 +96,7 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'type' => 'text',
 						'label' => __( 'Text', 'hashcore-widgets-bundle' ),
 					),
-					'sub_headline_size' => array(
+					'size' => array(
 						'type' => 'select',
 						'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
 						'default' => '1',
@@ -109,7 +114,7 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
 						'default' => 'default',
 					),
-					'sub_headline_weight' => array(
+					'weight' => array(
 						'type' => 'select',
 						'label' => __( 'Font style', 'hashcore-widgets-bundle' ),
 						'default' => '400',
@@ -123,17 +128,6 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 					'color' => array(
 						'type' => 'color',
 						'label' => __( 'Color', 'hashcore-widgets-bundle' ),
-					),
-					'align' => array(
-						'type' => 'select',
-						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-						'default' => 'center',
-						'options' => array(
-							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-							'justify' => __( 'Justify', 'hashcore-widgets-bundle' ),
-						),
 					),
 				),
 			),
@@ -210,15 +204,13 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 				$font = hashcore_widget_get_font( $headline_styles['font'] );
 				$less_vars['headline_font'] = $font['family'];
 			}
-			$less_vars['headline_weight'] = $headline_styles['headline_weight'];
-			$less_vars['headline_size'] = $headline_styles['headline_size'] . 'em';
+			$less_vars['headline_weight'] = $headline_styles['weight'];
+			$less_vars['headline_size'] = $headline_styles['size'] . 'em';
+			$less_vars['align_mobile'] = $headline_styles['align_mobile'];
 		}
 
 		if ( ! empty( $instance['sub_headline'] ) ) {
 			$sub_headline_styles = $instance['sub_headline'];
-			if ( ! empty( $sub_headline_styles['align'] ) ) {
-				$less_vars['sub_headline_align'] = $sub_headline_styles['align'];
-			}
 			if ( ! empty( $sub_headline_styles['tag'] ) ) {
 				$less_vars['sub_headline_tag'] = $sub_headline_styles['tag'];
 			}
@@ -229,8 +221,8 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 				$font = hashcore_widget_get_font( $sub_headline_styles['font'] );
 				$less_vars['sub_headline_font'] = $font['family'];
 			}
-			$less_vars['sub_headline_weight'] = $sub_headline_styles['sub_headline_weight'];
-			$less_vars['sub_headline_size'] = $sub_headline_styles['sub_headline_size'] . 'em';
+			$less_vars['sub_headline_weight'] = $sub_headline_styles['weight'];
+			$less_vars['sub_headline_size'] = $sub_headline_styles['size'] . 'em';
 		}
 
 		if ( ! empty( $instance['divider'] ) ) {
