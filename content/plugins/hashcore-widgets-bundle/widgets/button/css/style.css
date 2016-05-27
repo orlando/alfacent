@@ -31,7 +31,7 @@
   width: 1em;
   background-size: cover;
 }
-.ow-button-base.ow-button-align-left {
+/*.ow-button-base.ow-button-align-left {
   text-align: left;
 }
 .ow-button-base.ow-button-align-right {
@@ -39,6 +39,59 @@
 }
 .ow-button-base.ow-button-align-center {
   text-align: center;
+}
+.ow-button-base.ow-button-align-justify a {
+  display: block;
+}*/
+
+.ow-button-base.ow-button-align-left {
+  text-align: left;
+}
+.ow-button-base.ow-button-align-left-center {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .ow-button-base.ow-button-align-left-center {
+    text-align: center;
+  }
+}
+.ow-button-base.ow-button-align-left-justify {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .ow-button-base.ow-button-align-left-justify a {
+    display: block;
+  }
+}
+.ow-button-base.ow-button-align-right {
+  text-align: right;
+}
+.ow-button-base.ow-button-align-right-center {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .ow-button-base.ow-button-align-right-center {
+    text-align: center;
+  }
+}
+.ow-button-base.ow-button-align-right-justify {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .ow-button-base.ow-button-align-right-justify a {
+    display: block;
+  }
+}
+.ow-button-base.ow-button-align-center {
+  text-align: center;
+}
+.ow-button-base.ow-button-align-center-justify {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .ow-button-base.ow-button-align-center-justify a {
+    display: block;
+  }
 }
 .ow-button-base.ow-button-align-justify a {
   display: block;
