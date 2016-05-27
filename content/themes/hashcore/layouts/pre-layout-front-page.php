@@ -88,8 +88,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'so_field_container_state' => 'closed',
 				),
 				'_sow_form_id' => '5747594cabff5',
+				'new_window' => false,
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Button_Widget',
+					'raw' => false,
 					'grid' => 0,
 					'cell' => 0,
 					'id' => 1,
@@ -97,15 +99,13 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'style' => array(
 						'widget_css' => 'padding-left: 2em;
 	padding-right: 2em;',
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
-				'new_window' => false,
 			),
 			2 => array(
 				'widget_title' => 'Nosotros',
-				'widget_tag' => 'h1',
+				'font_size' => '2.5',
 				'repeater' => array(
 					0 => array(
 						'tab_title' => 'Nosotros',
@@ -126,12 +126,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'tabs_selection' => 'horizontal',
 				'tabs_styling' => array(
 					'align' => 'center',
-					'tab_content_height' => '400px',
-					'tab_content_padding_bottom' => '30px',
+					'height_tab_content' => 26,
+					'tab_content_padding_bottom' => '1',
 					'title_color' => '#1c1a7e',
 					'active_tab_color' => '#ffffff',
 					'inactive_tab_color' => '#1c1a7e',
-					'active_tab_rounding' => '0.25em',
+					'active_tab_rounding' => '0.25',
 					'bg_color' => '#ffffff',
 					'tab_content_color' => false,
 					'so_field_container_state' => 'open',
@@ -484,7 +484,11 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			1 => array(
 				'cells' => 1,
 				'style' => array(
+					'row_css' => 'padding-top: 2.5em;
+	padding-bottom: 2.5em;
+	',
 					'bottom_margin' => '0px',
+					'background_image_attachment' => false,
 					'background_display' => 'tile',
 				),
 			),
