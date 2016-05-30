@@ -262,12 +262,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573b271d0a40d',
 				'panels_info' => array(
 					'class' => 'HashCore_Image_Button_Widget',
+					'raw' => false,
 					'grid' => 3,
 					'cell' => 0,
 					'id' => 5,
 					'widget_id' => 'cb062168-2baf-43ed-8029-f016a56fe202',
 					'style' => array(
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
@@ -298,12 +298,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573b272127c60',
 				'panels_info' => array(
 					'class' => 'HashCore_Image_Button_Widget',
+					'raw' => false,
 					'grid' => 3,
 					'cell' => 1,
 					'id' => 6,
 					'widget_id' => '7ce7e4c6-217f-43c3-9690-58989ea9cb08',
 					'style' => array(
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
@@ -366,10 +366,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'title' => '',
 				'testimonials' => array(
 					0 => array(
-						'name' => 'ING. MANUEL ORTIZ, PRESIDENTE DE DANA DE VENEZUELA C.A.',
+						'name' => '- Ing. Manuel Ortiz, Presidente De Dana De Venezuela C.A.',
 						'location' => '',
 						'image' => 0,
-						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Conozco a ALFA CENTAURO ELECTRIC C.A. desde hace 23 años, cuando comenzaba sus operaciones acá en Venezuela, en aquel entonces realizaban trabajos para corregir el bajo factor de potencia y ahorrar energía. Desde entonces han realizado una variedad de trabajos en las diferentes plantas del grupo Dana. Destacan las instalaciones eléctricas de nuestro DATA CENTER y la protección integral contra los rayos de nuestra planta EJES Y CARDANES donde instalaron 06 PARARRAYOS  de APLICACIONES TECNOLOGICAS. Los recomiendo totalmente.</span></p>',
+						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Conozco a ALFA CENTAURO ELECTRIC C.A. desde hace 23 años, cuando comenzaba sus operaciones acá en Venezuela, en aquel entonces realizaban trabajos para corregir el bajo factor de potencia y ahorrar energía. Desde entonces han realizado una variedad de trabajos en las diferentes plantas del grupo Dana. Destacan las instalaciones eléctricas de nuestro DATA CENTER y la protección integral contra los rayos de nuestra planta EJES Y CARDANES donde instalaron 6 PARARRAYOS  de APLICACIONES TECNOLOGICAS. Los recomiendo totalmente.</span></p>',
 						'text_selected_editor' => 'tinymce',
 						'url' => '',
 						'link_name' => false,
@@ -377,7 +377,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 						'new_window' => false,
 					),
 					1 => array(
-						'name' => 'JAVIER GAONA, Latin Manager de APLICACIONES TECNOLOGICAS S.A.  De España.',
+						'name' => '- Javier Gaona, Latín Manager De Aplicaciones Tecnológicas S.A.	De España.',
 						'location' => '',
 						'image' => 0,
 						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Alfa Centauro Electric C.A. es nuestro representante en Venezuela desde el año 2014. Pese al entorno económico difícil, Alfa Centauro,  viene realizando un trabajo importante dando a conocer e instalando nuestros productos, principalmente los Pararrayos con dispositivo de Cebado DAT CONTROLER PLUS y los supresores de Picos ATSHOCK y ATSUB. Conocí a su Presidente el Ing. Tadeo del Águila Aliaga, en el curso de entrenamiento llevado a cabo en junio del 2014, en la Planta de Aplicaciones en Valencia -  España y me impresiono su alto nivel técnico y conocimiento de nuestros productos.</span></p>',
@@ -388,7 +388,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 						'new_window' => false,
 					),
 					2 => array(
-						'name' => 'ING. JORGE PINILLA, Gerente de Ingeniería de Cerámica Carabobo SACA',
+						'name' => '- Ing. Jorge Pinilla, Gerente De Ingeniería De Cerámica Carabobo Saca',
 						'location' => '',
 						'image' => 0,
 						'text' => '<p class="p1" style="text-align: center;"><span class="s1">Alfa Centauro Electric C.A. desde hace muchos años, es proveedor de nuestra empresa. Realizan trabajos eléctricos de alto nivel técnico. Diversas acometidas eléctricas para las diferentes Líneas de Producción de cerámicas. Mantenimiento de nuestras subestaciones eléctricas, modificaciones en nuestro Data Center, Instalaciones de Grupos Electrógenos, Iluminaciones nuevas y mantenimiento de las existentes. Es una  empresa de un alto nivel técnico y lo recomiendo plenamente.</span></p>',
@@ -419,8 +419,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 						'so_field_container_state' => 'open',
 					),
 					'font' => array(
-						'size_text' => '1em',
-						'size_author' => '1em',
+						'size_text' => '1.15',
+						'weight_text' => '300',
+						'size_author' => '.8',
+						'weight_author' => '300',
 						'so_field_container_state' => 'open',
 					),
 					'padding' => 2,
@@ -432,13 +434,13 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '573e037a4c580',
 				'panels_info' => array(
 					'class' => 'HashCore_Widgets_Testimonials_Carousel',
-					'raw' => false,
 					'grid' => 5,
 					'cell' => 0,
 					'id' => 8,
 					'widget_id' => '19922979-b23c-4cf9-abdd-bab40ea04ec4',
 					'style' => array(
 						'padding' => '0px',
+						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
