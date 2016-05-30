@@ -1,4 +1,4 @@
-$size--header-height:                            7rem;
+$size--site-nav-height:                          $size--header-height;
 $size--header-font:                              85%;
 $color--branding-text:                           white;
 $size--strip-margin-top:                         6px;
@@ -6,18 +6,23 @@ $size--strip-height:                             4px;
 $size--strip-width-base:                         32px;
 $size--strip-width-step:                         6px;
 $size--strip-margin-left:                        $size--strip-width-step;
-$deep-koamaru:                                   #1C1A7E;
-$color--menu-item-border-bottom:                 $deep-koamaru;
+$color--menu-item-border-bottom:                 $color--accent;
+$color--header-detached-background:     $white;
 
-.site-header {
-  font-size: $size--header-font;
-  left: 0;
-  top: 0;
-  padding-bottom: $grid-gutter-width;
-  padding-top: $grid-gutter-width;
+.site-nav {
   position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
   width: 100%;
-  z-index: 1;
+  // to keep height with no mofidication box-border need space for padding.
+  height: $size--site-nav-height + $space*2;
+  padding-bottom: $space;
+  padding-top: $space;
+  background: $color--header-detached-background;
+  font-size: $size--header-font;
+  z-index: 4;
+  transition: background .15s linear;
 }
 
 .header-branding {

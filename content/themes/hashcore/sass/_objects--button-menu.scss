@@ -1,11 +1,10 @@
-$size--mobile-toggle-height:                    7.5rem;
+$size--mobile-toggle-height:                    $size--header-height;
 $color--branding-text:                          $white;
-$deep-koamaru:                                  #1C1A7E;
 $size--mobile-toggle-strip-height:              4px;
 $size--mobile-toggle-strip-margin-top:          6px + $size--mobile-toggle-strip-height;
 $size--mobile-toggle-strip-width-base:          36px;
 $size--mobile-toggle-strip-width-step:          6px;
-$color--mobile-toggle-strip-background:         $deep-koamaru;
+$color--mobile-toggle-strip-background:         $color--accent;
 
 .mobile-toggle {
   display: block;
@@ -44,7 +43,6 @@ $color--mobile-toggle-strip-background:         $deep-koamaru;
 }
 
 .mobile-toggle-strip {
-  top: 3.5rem;
 
   &::before,
   &::after {
