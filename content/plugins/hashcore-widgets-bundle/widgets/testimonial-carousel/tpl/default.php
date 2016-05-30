@@ -44,7 +44,7 @@
 							<?php if( $link_name ) : ?>
 							<a href="<?php echo sow_esc_url( $url ) ?>" <?php if( ! empty( $new_window ) ) { echo 'target="_blank"'; } ?>>
 							<?php endif; ?>
-								<strong><?php echo esc_html( $testimonial['name'] ) ?></strong>
+								<span><?php echo esc_html( $testimonial['name'] ) ?></span>
 							<?php if( $link_name ) : ?>
 							</a>
 							<?php endif; ?>
