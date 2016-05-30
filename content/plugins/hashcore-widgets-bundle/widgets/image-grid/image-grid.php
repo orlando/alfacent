@@ -100,31 +100,11 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 						'type' => 'number',
 					),
 
-					'spacing_item' => array(
-						'type' => 'select',
-						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-						'default' => 'space-around',
-						'options' => array(
-							'flex-start' => __( 'Begin of container', 'hashcore-widgets-bundle' ),
-							'flex-end' => __( 'End of container', 'hashcore-widgets-bundle' ),
-							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-							'space-between' => __( 'Space Between', 'hashcore-widgets-bundle' ),
-							'space-around' => __( 'Space Around', 'hashcore-widgets-bundle' ),
-						),
-					),
-
-					'spacing_x' => array(
-						'label' => __( 'Spacing', 'hashcore-widgets-bundle' ),
-						'description' => __( 'Amount of spacing horizontally between images .', 'hashcore-widgets-bundle' ),
+					'spacing' => array(
+						'label' => __('Spacing', 'hashcore-widgets-bundle'),
+						'description' => __('Amount of spacing between images.', 'hashcore-widgets-bundle'),
 						'type' => 'number',
 						'default' => 10,
-					),
-
-					'spacing_y' => array(
-						'label' => __( 'Spacing', 'hashcore-widgets-bundle' ),
-						'description' => __( 'Amount of spacing vertically between images.', 'hashcore-widgets-bundle' ),
-						'type' => 'number',
-						'default' => 20,
 					),
 				)
 			)
@@ -139,11 +119,12 @@ class HashCore_Widgets_ImageGrid_Widget extends HashCore_Widget {
 	 * @return mixed
 	 */
 	function get_less_variables( $instance ) {
-		return array(
-			'spacing_x' => $instance['display']['spacing_x'] . 'px',
-			'spacing_y' => $instance['display']['spacing_y'] . 'px',
-			'spacing_item' => $instance['display']['spacing_item'],
-		);
+		$less = array();
+		if( !empty( $instance['display']['spacing'] ) ) {
+			$less['spacing'] = intval($instance['display']['spacing']) . 'px';
+		}
+
+		return $less;
 	}
 }
 
