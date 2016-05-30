@@ -91,7 +91,7 @@ class HashCore_Widgets_ImageGridFlex extends HashCore_Widget {
 						'label' => __( 'Column in mobile view', 'hashcore-widgets-bundle' ),
 						'description' => __( 'If you want to display the grid column when mobile view?', 'hashcore-widgets-bundle' ),
 						'type' => 'checkbox',
-						'default' => 'true',
+						'default' => true,
 					),
 
 					'column_mobile' => array(
