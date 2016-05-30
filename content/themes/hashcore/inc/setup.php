@@ -135,7 +135,7 @@ add_action( 'widgets_init', 'hashcore_widgets_init' );
 function hashcore_scripts() {
 	wp_enqueue_style( 'hashcore-style', get_template_directory_uri() . '/assets/styles/main.css' );
 
-	wp_enqueue_style( 'hashcore-style-font-awesome', get_template_directory_uri() . '/assets/styles/font-awesome.min.css' );
+	wp_enqueue_style( 'hashcore-style-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 
 	wp_enqueue_script( 'hashcore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
