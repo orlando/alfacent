@@ -53,6 +53,13 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 							),
 						),
 
+						'center_mobile' => array(
+							'label' => __( 'Center on mobile view', 'hashcore-widgets-bundle' ),
+							'description' => __( 'If you want to display image center when mobile view?', 'hashcore-widgets-bundle' ),
+							'type' => 'checkbox',
+							'default' => true,
+						),
+
 						'title' => array(
 							'type' => 'text',
 							'label' => __( 'Title text button', 'hashcore-widgets-bundle' ),
@@ -197,7 +204,8 @@ class HashCore_Image_Button_Widget extends HashCore_Widget {
 			'description_size' => $instance['image']['description_size'],
 			'background_color' => ! empty( $instance['image']['background_color'] ) ? $instance['image']['background_color'] : 'transparent',
 			'opacity' => $instance['image']['opacity'],
-			'hover_description' => $instance['image']['hover_description'],
+			'hover_description' => ! empty( $instance['image']['hover_description'] ) ? '1' : '0',
+			'center_mobile' => ! empty( $instance['image']['center_mobile'] ) ? '1' : '0',
 
 		);
 	}
