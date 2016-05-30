@@ -65,6 +65,13 @@ class HashCore_Widget_Image_Widget extends HashCore_Widget {
 				),
 			),
 
+			'center_mobile' => array(
+				'label' => __( 'Center on mobile view', 'hashcore-widgets-bundle' ),
+				'description' => __( 'If you want to display image center when mobile view?', 'hashcore-widgets-bundle' ),
+				'type' => 'checkbox',
+				'default' => true,
+			),
+
 			'title' => array(
 				'type' => 'text',
 				'label' => __('Title text', 'hashcore-widgets-bundle'),
@@ -144,6 +151,7 @@ class HashCore_Widget_Image_Widget extends HashCore_Widget {
 			'image_max_width' => ! empty( $instance['bound'] ) ? '100%' : '',
 			'image_height' => ! empty( $instance['bound'] ) ? 'auto' : '',
 			'image_width' => ! empty( $instance['full_width'] ) ? '100%' : '',
+			'center_mobile' => ! empty( $instance['center_mobile'] ) ? '1' : '0',
 		);
 	}
 }

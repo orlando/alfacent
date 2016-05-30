@@ -3,9 +3,20 @@
 @image_max_width: default;
 @image_height: default;
 @image_width: default;
+@center_mobile: 1;
 
+// Mixins
+.center (@a) when (@center_mobile = 1) {
+  @media only screen and (max-width: 780px) {
+		text-align: center;
+	}
+}
+
+//Style
 .sow-image-container {
 	text-align: @image_alignment;
+	.center (@center_mobile);
+	
 	.so-widget-image {
 		display: @image_display;
 		max-width: @image_max_width;
@@ -13,4 +24,3 @@
 		height: @image_height;
 	}
 }
-
