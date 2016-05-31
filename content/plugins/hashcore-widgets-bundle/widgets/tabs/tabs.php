@@ -27,17 +27,17 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 					'default' => '',
 				),
 
-				'widget_tag' => array(
+				'font_size' => array(
 					'type' => 'select',
-					'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
-					'default' => 'h3',
+					'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
+					'default' => '1.5',
 					'options' => array(
-						'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
-						'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
-						'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
-						'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
-						'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
-						'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
+						'.5' => __( 'Tiny', 'hashcore-widgets-bundle' ),
+						'1' => __( 'Small', 'hashcore-widgets-bundle' ),
+						'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+						'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+						'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+						'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
 					),
 				),
 
@@ -102,29 +102,26 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 							),
 						),
 
-						'tab_content_height' => array(
-							'type'		=> 'select',
-							'label'	 => __( 'Height of tab', 'hashcore-widgets-bundle' ),
-							'default' => '400px',
-							'options' => array(
-								'200px'	=> __( '200 Px', 'hashcore-widgets-bundle' ),
-								'300px'	=> __( '300 Px', 'hashcore-widgets-bundle' ),
-								'400px'	=> __( '400 Px', 'hashcore-widgets-bundle' ),
-								'500px'	=> __( '500 Px', 'hashcore-widgets-bundle' ),
-								'600px'	=> __( '600 Px', 'hashcore-widgets-bundle' ),
-							),
+						'height_tab_content' => array(
+							'label' => __( 'Height of container text', 'hashcore-widgets-bundle' ),
+							'type' => 'slider',
+							'integer' => 'true',
+							'min' => 1,
+							'max' => 100,
+							'default' => 20,
 						),
 
 						'tab_content_padding_bottom' => array(
-							'type'		=> 'select',
-							'label'	 => __( 'Padding Bottom of Content', 'hashcore-widgets-bundle' ),
-							'default' => '30px',
+							'type' => 'select',
+							'label' => __( 'Padding bottom container', 'hashcore-widgets-bundle' ),
+							'default' => '1',
 							'options' => array(
 								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
-								'10px'	=> __( 'Low', 'hashcore-widgets-bundle' ),
-								'20px'	=> __( 'Medium', 'hashcore-widgets-bundle' ),
-								'30px'	=> __( 'High', 'hashcore-widgets-bundle' ),
-								'40px'	=> __( 'Very high', 'hashcore-widgets-bundle' ),
+								'.5' => __( 'Low', 'hashcore-widgets-bundle' ),
+								'1' => __( 'Medium', 'hashcore-widgets-bundle' ),
+								'1.5' => __( 'High', 'hashcore-widgets-bundle' ),
+								'2' => __( 'Very high', 'hashcore-widgets-bundle' ),
+								'2.5' => __( 'Extreme high', 'hashcore-widgets-bundle' ),
 							),
 						),
 
@@ -149,12 +146,12 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 						'active_tab_rounding'	 => array(
 							'type'		=> 'select',
 							'label'	 => __( 'Rounding', 'hashcore-widgets-bundle' ),
-							'default' => '0.25em',
+							'default' => '0.25',
 							'options' => array(
 								'0'			=> __( 'None', 'hashcore-widgets-bundle' ),
-								'0.25em' => __( 'Slightly rounded', 'hashcore-widgets-bundle' ),
-								'0.5em'	=> __( 'Very rounded', 'hashcore-widgets-bundle' ),
-								'1.5em'	=> __( 'Completely rounded', 'hashcore-widgets-bundle' ),
+								'0.25' => __( 'Slightly rounded', 'hashcore-widgets-bundle' ),
+								'0.5'	=> __( 'Very rounded', 'hashcore-widgets-bundle' ),
+								'1.5'	=> __( 'Completely rounded', 'hashcore-widgets-bundle' ),
 							),
 						),
 
@@ -195,14 +192,15 @@ class HashCore_Widget_Tabs extends Hashcore_Widget {
 	function get_less_variables( $instance ) {
 		return array(
 			'align' => $instance['tabs_styling']['align'],
-			'tab_content_height' => $instance['tabs_styling']['tab_content_height'],
-			'tab_content_padding_bottom' => $instance['tabs_styling']['tab_content_padding_bottom'],
+			'tab_content_height' => $instance['tabs_styling']['height_tab_content'] . 'em',
+			'tab_content_padding_bottom' => $instance['tabs_styling']['tab_content_padding_bottom'] . 'em',
 			'title_color' => $instance['tabs_styling']['title_color'],
 			'active_tab_color' => $instance['tabs_styling']['active_tab_color'],
 			'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],
-			'active_tab_rounding' => $instance['tabs_styling']['active_tab_rounding'],
+			'active_tab_rounding' => $instance['tabs_styling']['active_tab_rounding'] . 'em',
 			'bg_color' => $instance['tabs_styling']['bg_color'],
 			'tab_content_color' => $instance['tabs_styling']['tab_content_color'],
+			'font_size' => $instance['font_size'] . 'em',
 		);
 	}
 }

@@ -1,8 +1,10 @@
 @align: center;
-@tab_content_height: 400px;
-@tab_content_padding_bottom: 30px;
-@active_tab_rounding: 0.25em;
+@tab_content_height: 40em;
+@tab_content_padding_bottom: 1em;
+@active_tab_rounding: .25em;
 @title_color: #000000;
+@font_size: 1em;
+
 
 @bg_color: #eeeeee;
 @inactive_tab_color: #888888 ;
@@ -14,6 +16,16 @@
 .soua-tab-title {
   text-align: @align;
   color: @title_color;
+  padding: 0;
+  margin: 0;
+  font-size: @font_size;
+  padding-bottom: @font_size/4;
+}
+
+.tabs_item-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .soua-tab {
@@ -37,17 +49,16 @@
   width: 100%;
   padding: 0;
   text-align: @align;
-  font-size: 80%;
+  font-size: 1.5em;
   padding-bottom: (@tab_content_padding_bottom / 2);
 
   @media @tablets {
     padding-bottom: @tab_content_padding_bottom;
-    font-size: 100%;
   }
 
   li {
     display: block;
-    line-height: 38px;
+    line-height: 1.5em;
     overflow: hidden;
     padding: 0 !important;
     position: relative;
@@ -89,10 +100,10 @@
   }
 
   p {
-    font-size: 70%;
+    font-size: 1.3em;
 
     @media @tablets {
-      font-size: 100%;
+      font-size: 1.1em;
     }
   }
 
