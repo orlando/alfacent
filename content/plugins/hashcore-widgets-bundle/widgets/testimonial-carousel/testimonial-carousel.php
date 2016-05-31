@@ -209,23 +209,48 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 							'size_text' => array(
 								'type' => 'select',
 								'label' => __( 'Font size text', 'hashcore-widgets-bundle' ),
-								'default' => '1em',
+								'default' => '1',
 								'options' => array(
-									'1em' => __( 'Normal', 'hashcore-widgets-bundle' ),
-									'1.15em' => __( 'Medium', 'hashcore-widgets-bundle' ),
-									'1.3em' => __( 'Large', 'hashcore-widgets-bundle' ),
-									'1.45em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+									'1' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'1.15' => __( 'Medium', 'hashcore-widgets-bundle' ),
+									'1.3' => __( 'Large', 'hashcore-widgets-bundle' ),
+									'1.45' => __( 'Extra large', 'hashcore-widgets-bundle' ),
 								),
 							),
+
+							'weight_text' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+
 							'size_author' => array(
 								'type' => 'select',
 								'label' => __( 'Font size Author', 'hashcore-widgets-bundle' ),
-								'default' => '.6em',
+								'default' => '.6',
 								'options' => array(
-									'.6em' => __( 'Normal', 'hashcore-widgets-bundle' ),
-									'.8em' => __( 'Medium', 'hashcore-widgets-bundle' ),
-									'1em' => __( 'Large', 'hashcore-widgets-bundle' ),
-									'1.3em' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+									'.6' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'.8' => __( 'Medium', 'hashcore-widgets-bundle' ),
+									'1' => __( 'Large', 'hashcore-widgets-bundle' ),
+									'1.3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+								),
+							),
+
+							'weight_author' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
 								),
 							),
 						),
@@ -316,7 +341,10 @@ class HashCore_Widgets_Testimonials_Carousel extends HashCore_Widget {
 			'text_color' => $instance['design']['colors']['text_color'],
 			'user_position' => $instance['design']['user_position'],
 			'text_color_author' => $instance['design']['colors']['text_color_author'],
-			'size_author' => $instance['design']['font']['size_author'],
+			'size_author' => $instance['design']['font']['size_author'] . 'em',
+			'size_text' => $instance['design']['font']['size_text'] . 'em',
+			'weight_text' => $instance['design']['font']['weight_text'],
+			'weight_author' => $instance['design']['font']['weight_author'],
 
 			// All the responsive sizes.
 			'tablet_testimonial_size' => round(100/$instance['settings']['per_line_tablet'], 4) . '%',

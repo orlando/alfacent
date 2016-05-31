@@ -9,7 +9,11 @@
 @text_border_radius: 4px;
 @user_position: center;
 @text_color_author:#444;
-@size_author: 1em;
+@size_author: .6em;
+@size_text: 1em;
+@weight_text: 400;
+@weight_author: 400;
+
 
 @tablets: ~"only screen and (min-width: 768px)";
 
@@ -47,6 +51,8 @@
 		background: @text_background;
 		color: @text_color;
 		padding: @testimonial_padding 0;
+		font-size: @size_text;
+		font-weight: @weight_text;
 
 		@media @tablets {
 			padding: @testimonial_padding @testimonial_padding*2;
@@ -77,6 +83,7 @@
 					.sow-text {
 						color: @text_color_author;
 						font-size: @size_author;
+						font-weight: @weight_author;
 					}
 				}
 
