@@ -41,14 +41,17 @@ class HashCore_Widgets_Bundle {
 		'image' => true,
 		'image-button' => true,
 		'image-grid' => true,
+		'image-grid-flex' => true,
 		'post-carousel' => true,
+		'post-custom' => true,
 		'price-table' => true,
-		'spacer' => true,
 		'simple-masonry' => true,
 		'slider' => true,
 		'social-media-buttons' => true,
+		'spacer' => true,
 		'tabs' => true,
 		'testimonial' => true,
+		'testimonial-carousel' => true,
 		'video' => true,
 	);
 

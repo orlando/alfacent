@@ -152,18 +152,20 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			3 => array(
 				'headline' => array(
 					'text' => 'Nuestros Aliados',
-					'tag' => 'h1',
+					'size' => '2.5',
 					'font' => 'default',
+					'weight' => '400',
 					'color' => '#f8d940',
 					'align' => 'center',
+					'align_mobile' => true,
 					'so_field_container_state' => 'open',
 				),
 				'sub_headline' => array(
 					'text' => '',
-					'tag' => 'h3',
+					'size' => '1',
 					'font' => 'default',
+					'weight' => '400',
 					'color' => false,
-					'align' => 'center',
 					'so_field_container_state' => 'closed',
 				),
 				'divider' => array(
@@ -174,7 +176,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'side_margin_unit' => 'px',
 					'top_margin' => '0px',
 					'top_margin_unit' => 'px',
-					'so_field_container_state' => 'open',
+					'so_field_container_state' => 'closed',
 				),
 				'_sow_form_id' => '571a83996c06f',
 				'panels_info' => array(
@@ -193,42 +195,42 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'images' => array(
 					0 => array(
 						'image' => 10,
-						'title' => '',
+						'title' => 'Dana',
 						'url' => '',
 					),
 					1 => array(
 						'image' => 71,
-						'title' => '',
+						'title' => 'codelectra',
 						'url' => '',
 					),
 					2 => array(
 						'image' => 6,
-						'title' => '',
+						'title' => 'ceramica-carabobo',
 						'url' => '',
 					),
 					3 => array(
 						'image' => 9,
-						'title' => '',
+						'title' => 'APLICACIONES',
 						'url' => '',
 					),
 				),
 				'display' => array(
-					'attachment_size' => 'medium',
-					'max_height' => 80,
-					'max_width' => 280,
+					'attachment_size' => 'large',
+					'max_height' => 75,
+					'max_width' => 275,
 					'spacing_item' => 'space-around',
 					'spacing_x' => 10,
 					'spacing_y' => 20,
 					'so_field_container_state' => 'open',
 				),
-				'_sow_form_id' => '571a8340f0019',
+				'_sow_form_id' => '574c4734da669',
 				'panels_info' => array(
-					'class' => 'HashCore_Widgets_ImageGrid_Widget',
+					'class' => 'HashCore_Widgets_ImageGridFlex',
 					'raw' => false,
 					'grid' => 2,
 					'cell' => 0,
 					'id' => 4,
-					'widget_id' => '9a0633dd-f944-4249-a539-6fb889608f35',
+					'widget_id' => '98636c6c-5cf9-4254-a326-6bf569246df6',
 					'style' => array(
 						'background_display' => 'tile',
 					),
@@ -488,14 +490,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 	padding-bottom: 2.5em;
 	',
 					'bottom_margin' => '0px',
-					'background_image_attachment' => false,
 					'background_display' => 'tile',
 				),
 			),
 			2 => array(
 				'cells' => 1,
 				'style' => array(
+					'row_css' => 'padding-top: 2.5em !important;
+	padding-bottom: 2.5em !important;',
 					'bottom_margin' => '0px',
+					'gutter' => '1.5em',
 					'padding' => '0px',
 					'row_stretch' => 'full',
 					'background' => '#1c1a7e',
