@@ -1,7 +1,7 @@
 <div id="sow-headline-container" class="sow-headline">
 
 	<?php if ( !empty( $headline ) ) : ?>
-		<<?php echo $headline_tag ?>><?php echo $headline ?></<?php echo $headline_tag ?>>
+		<h1 class="headline"><?php echo $headline ?></h1>
 	<?php endif; ?>
 
 	<?php if ( $has_divider ) : ?>
@@ -11,7 +11,8 @@
 	<?php endif; ?>
 
 	<?php if ( !empty( $sub_headline ) ) : ?>
-		<<?php echo $sub_headline_tag ?>><?php echo $sub_headline ?></<?php echo $sub_headline_tag ?>>
+		<br/>
+		<h2 class="sub-headline"><?php echo $sub_headline ?></h2>
 	<?php endif; ?>
 
 </div>

@@ -18,6 +18,92 @@ function hashcore_front_page_prebuilt( $layouts ) {
 		'description' => __( 'Default front-page', 'hashcore' ), // Optional.
 		'widgets' => array(
 			0 => array(
+				'headline' => array(
+					'text' => '¿Tu empresa necesita ',
+					'size' => '3',
+					'font' => 'default',
+					'weight' => '600',
+					'color' => '#ffffff',
+					'align' => 'left',
+					'align_mobile' => true,
+					'so_field_container_state' => 'open',
+				),
+				'sub_headline' => array(
+					'text' => 'Instalaciones Eléctricas?',
+					'size' => '3',
+					'font' => 'default',
+					'weight' => '600',
+					'color' => '#f8d940',
+					'so_field_container_state' => 'open',
+				),
+				'divider' => array(
+					'style' => 'none',
+					'weight' => 'thin',
+					'color' => '#EEEEEE',
+					'side_margin' => '60px',
+					'side_margin_unit' => 'px',
+					'top_margin' => '20px',
+					'top_margin_unit' => 'px',
+					'so_field_container_state' => 'open',
+				),
+				'_sow_form_id' => '574757c0c5dbc',
+				'panels_info' => array(
+					'class' => 'HashCore_Widget_Headline_Widget',
+					'raw' => false,
+					'grid' => 0,
+					'cell' => 0,
+					'id' => 0,
+					'widget_id' => '6ba2e04f-8e62-4399-8572-e656ebf53398',
+					'style' => array(
+						'widget_css' => 'padding-left: 2em;
+	padding-right: 2em;',
+						'background_display' => 'tile',
+					),
+				),
+			),
+			1 => array(
+				'text' => 'Tenemos la Respuesta',
+				'url' => '#',
+				'button_icon' => array(
+					'icon_selected' => '',
+					'icon_color' => false,
+					'icon' => 0,
+					'so_field_container_state' => 'open',
+				),
+				'design' => array(
+					'align' => 'left-justify',
+					'theme' => 'flat',
+					'button_color' => '#1c1a7e',
+					'text_color' => '#ffffff',
+					'hover' => true,
+					'font_size' => '1.3',
+					'rounding' => '0.25',
+					'padding' => '0.5',
+					'so_field_container_state' => 'open',
+				),
+				'attributes' => array(
+					'id' => '',
+					'title' => '',
+					'onclick' => '',
+					'so_field_container_state' => 'closed',
+				),
+				'_sow_form_id' => '5747594cabff5',
+				'panels_info' => array(
+					'class' => 'HashCore_Widget_Button_Widget',
+					'grid' => 0,
+					'cell' => 0,
+					'id' => 1,
+					'widget_id' => '4deb07be-dea9-4991-9fa9-8265041cfac1',
+					'style' => array(
+						'widget_css' => 'padding-left: 2em;
+	padding-right: 2em;',
+						'background_image_attachment' => false,
+						'background_display' => 'tile',
+					),
+				),
+				'new_window' => false,
+			),
+			2 => array(
 				'widget_title' => 'Nosotros',
 				'widget_tag' => 'h1',
 				'repeater' => array(
@@ -54,16 +140,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Tabs',
 					'raw' => false,
-					'grid' => 0,
+					'grid' => 1,
 					'cell' => 0,
-					'id' => 0,
+					'id' => 2,
 					'widget_id' => 'ae8df818-cbe7-4017-bb06-e940932293a8',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			1 => array(
+			3 => array(
 				'headline' => array(
 					'text' => 'Nuestros Aliados',
 					'tag' => 'h1',
@@ -94,16 +180,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Headline_Widget',
 					'raw' => false,
-					'grid' => 1,
+					'grid' => 2,
 					'cell' => 0,
-					'id' => 1,
+					'id' => 3,
 					'widget_id' => 'e129e3fb-226a-4ae9-8f94-0e2b80170293',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			2 => array(
+			4 => array(
 				'images' => array(
 					0 => array(
 						'image' => 10,
@@ -139,16 +225,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Widgets_ImageGrid_Widget',
 					'raw' => false,
-					'grid' => 1,
+					'grid' => 2,
 					'cell' => 0,
-					'id' => 2,
+					'id' => 4,
 					'widget_id' => '9a0633dd-f944-4249-a539-6fb889608f35',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			3 => array(
+			5 => array(
 				'image' => array(
 					'image' => 12,
 					'image_fallback' => '',
@@ -175,16 +261,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Image_Button_Widget',
 					'raw' => false,
-					'grid' => 2,
+					'grid' => 3,
 					'cell' => 0,
-					'id' => 3,
+					'id' => 5,
 					'widget_id' => 'cb062168-2baf-43ed-8029-f016a56fe202',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			4 => array(
+			6 => array(
 				'image' => array(
 					'image' => 11,
 					'image_fallback' => '',
@@ -211,16 +297,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Image_Button_Widget',
 					'raw' => false,
-					'grid' => 2,
+					'grid' => 3,
 					'cell' => 1,
-					'id' => 4,
+					'id' => 6,
 					'widget_id' => '7ce7e4c6-217f-43c3-9690-58989ea9cb08',
 					'style' => array(
 						'background_display' => 'tile',
 					),
 				),
 			),
-			5 => array(
+			7 => array(
 				'title' => 'En busca de la mejor solucion para tu proyecto?',
 				'sub_title' => '',
 				'design' => array(
@@ -264,17 +350,17 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '57471720b7a79',
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Cta_Widget',
-					'grid' => 3,
+					'raw' => false,
+					'grid' => 4,
 					'cell' => 0,
-					'id' => 5,
+					'id' => 7,
 					'widget_id' => '35bfb3ec-96db-4f13-a6df-1286c0acb453',
 					'style' => array(
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
 			),
-			6 => array(
+			8 => array(
 				'title' => '',
 				'testimonials' => array(
 					0 => array(
@@ -345,9 +431,9 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'panels_info' => array(
 					'class' => 'HashCore_Widgets_Testimonials_Carousel',
 					'raw' => false,
-					'grid' => 4,
+					'grid' => 5,
 					'cell' => 0,
-					'id' => 6,
+					'id' => 8,
 					'widget_id' => '19922979-b23c-4cf9-abdd-bab40ea04ec4',
 					'style' => array(
 						'padding' => '0px',
@@ -355,7 +441,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					),
 				),
 			),
-			7 => array(
+			9 => array(
 				'title' => 'Blog',
 				'posts' => 'post_type=post&date_query={"after":"","before":""}&orderby=date&order=DESC&posts_per_page=1&sticky=&additional=',
 				'font_size' => '2.5',
@@ -372,12 +458,12 @@ function hashcore_front_page_prebuilt( $layouts ) {
 				'_sow_form_id' => '5743525eea23f',
 				'panels_info' => array(
 					'class' => 'HashCore_Widget_Post_Custom',
-					'grid' => 5,
+					'raw' => false,
+					'grid' => 6,
 					'cell' => 0,
-					'id' => 7,
+					'id' => 9,
 					'widget_id' => '6502b4cf-7834-4d34-94e0-e8125bc70e61',
 					'style' => array(
-						'background_image_attachment' => false,
 						'background_display' => 'tile',
 					),
 				),
@@ -387,11 +473,22 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			0 => array(
 				'cells' => 1,
 				'style' => array(
+					'row_css' => 'padding-top: 7em;
+	padding-bottom: 9em;',
+					'bottom_margin' => '0px',
+					'row_stretch' => 'full',
+					'background_image_attachment' => 219,
+					'background_display' => 'cover',
+				),
+			),
+			1 => array(
+				'cells' => 1,
+				'style' => array(
 					'bottom_margin' => '0px',
 					'background_display' => 'tile',
 				),
 			),
-			1 => array(
+			2 => array(
 				'cells' => 1,
 				'style' => array(
 					'bottom_margin' => '0px',
@@ -401,16 +498,16 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'background_display' => 'tile',
 				),
 			),
-			2 => array(
+			3 => array(
 				'cells' => 2,
 				'style' => array(
 					'row_css' => 'padding-top: 2.5em;
-												padding-bottom: 2.5em;',
+	padding-bottom: 2.5em;',
 					'bottom_margin' => '0px',
 					'background_display' => 'tile',
 				),
 			),
-			3 => array(
+			4 => array(
 				'cells' => 1,
 				'style' => array(
 					'bottom_margin' => '0px',
@@ -419,7 +516,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'background_display' => 'cover',
 				),
 			),
-			4 => array(
+			5 => array(
 				'cells' => 1,
 				'style' => array(
 					'class' => 'nopadding',
@@ -432,7 +529,7 @@ function hashcore_front_page_prebuilt( $layouts ) {
 					'background_display' => 'tile',
 				),
 			),
-			5 => array(
+			6 => array(
 				'cells' => 1,
 				'style' => array(
 					'bottom_margin' => '0px',
@@ -451,15 +548,15 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			),
 			2 => array(
 				'grid' => 2,
-				'weight' => 0.5,
+				'weight' => 1,
 			),
 			3 => array(
-				'grid' => 2,
+				'grid' => 3,
 				'weight' => 0.5,
 			),
 			4 => array(
 				'grid' => 3,
-				'weight' => 1,
+				'weight' => 0.5,
 			),
 			5 => array(
 				'grid' => 4,
@@ -467,6 +564,10 @@ function hashcore_front_page_prebuilt( $layouts ) {
 			),
 			6 => array(
 				'grid' => 5,
+				'weight' => 1,
+			),
+			7 => array(
+				'grid' => 6,
 				'weight' => 1,
 			),
 		),

@@ -21,7 +21,7 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 			),
 			array(),
 			false,
-			plugin_dir_path(__FILE__)
+			plugin_dir_path( __FILE__ )
 		);
 	}
 
@@ -36,27 +36,38 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'type' => 'text',
 						'label' => __( 'Text', 'hashcore-widgets-bundle' ),
 					),
-					'tag' => array(
+					'size' => array(
 						'type' => 'select',
-						'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
-						'default' => 'h1',
+						'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
+						'default' => '1.5',
 						'options' => array(
-							'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
-							'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
-							'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
-							'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
-							'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
-							'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
-						)
+							'.5' => __( 'Tiny', 'hashcore-widgets-bundle' ),
+							'1' => __( 'Small', 'hashcore-widgets-bundle' ),
+							'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+							'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+						),
 					),
 					'font' => array(
 						'type' => 'font',
 						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
-						'default' => 'default'
+						'default' => 'default',
+					),
+					'weight' => array(
+						'type' => 'select',
+						'label' => __( 'Font Style', 'hashcore-widgets-bundle' ),
+						'default' => '400',
+						'options' => array(
+							'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+							'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+							'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+						),
 					),
 					'color' => array(
 						'type' => 'color',
-						'label' => __('Color', 'hashcore-widgets-bundle'),
+						'label' => __( 'Color', 'hashcore-widgets-bundle' ),
 					),
 					'align' => array(
 						'type' => 'select',
@@ -66,10 +77,15 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
 							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
 							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-							'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
-						)
-					)
-				)
+							'justify' => __( 'Justify', 'hashcore-widgets-bundle' ),
+						),
+					),
+					'align_mobile' => array(
+						'type' => 'checkbox',
+						'default' => false,
+						'label' => __( 'Always center in mobile view < 768px', 'hashcore-widgets-bundle' ),
+					),
+				),
 			),
 			'sub_headline' => array(
 				'type' => 'section',
@@ -78,42 +94,42 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 				'fields' => array(
 					'text' => array(
 						'type' => 'text',
-						'label' => __('Text', 'hashcore-widgets-bundle')
+						'label' => __( 'Text', 'hashcore-widgets-bundle' ),
 					),
-					'tag' => array(
+					'size' => array(
 						'type' => 'select',
-						'label' => __( 'H Tag', 'hashcore-widgets-bundle' ),
-						'default' => 'h3',
+						'label' => __( 'Font size', 'hashcore-widgets-bundle' ),
+						'default' => '1',
 						'options' => array(
-							'h1' => __( 'H1', 'hashcore-widgets-bundle' ),
-							'h2' => __( 'H2', 'hashcore-widgets-bundle' ),
-							'h3' => __( 'H3', 'hashcore-widgets-bundle' ),
-							'h4' => __( 'H4', 'hashcore-widgets-bundle' ),
-							'h5' => __( 'H5', 'hashcore-widgets-bundle' ),
-							'h6' => __( 'H6', 'hashcore-widgets-bundle' ),
-						)
+							'.5' => __( 'Tiny', 'hashcore-widgets-bundle' ),
+							'1' => __( 'Small', 'hashcore-widgets-bundle' ),
+							'1.5' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'2' => __( 'Medium', 'hashcore-widgets-bundle' ),
+							'2.5' => __( 'Large', 'hashcore-widgets-bundle' ),
+							'3' => __( 'Extra large', 'hashcore-widgets-bundle' ),
+						),
 					),
 					'font' => array(
 						'type' => 'font',
 						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
-						'default' => 'default'
+						'default' => 'default',
+					),
+					'weight' => array(
+						'type' => 'select',
+						'label' => __( 'Font style', 'hashcore-widgets-bundle' ),
+						'default' => '400',
+						'options' => array(
+							'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+							'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+							'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+							'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+						),
 					),
 					'color' => array(
 						'type' => 'color',
-						'label' => __('Color', 'hashcore-widgets-bundle'),
+						'label' => __( 'Color', 'hashcore-widgets-bundle' ),
 					),
-					'align' => array(
-						'type' => 'select',
-						'label' => __( 'Align', 'hashcore-widgets-bundle' ),
-						'default' => 'center',
-						'options' => array(
-							'center' => __( 'Center', 'hashcore-widgets-bundle' ),
-							'left' => __( 'Left', 'hashcore-widgets-bundle' ),
-							'right' => __( 'Right', 'hashcore-widgets-bundle' ),
-							'justify' => __( 'Justify', 'hashcore-widgets-bundle' )
-						)
-					)
-				)
+				),
 			),
 			'divider' => array(
 				'type' => 'section',
@@ -125,16 +141,16 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 						'label' => __( 'Style', 'hashcore-widgets-bundle' ),
 						'default' => 'solid',
 						'options' => array(
-							'none' => __('None', 'hashcore-widgets-bundle'),
-							'solid' => __('Solid', 'hashcore-widgets-bundle'),
-							'dotted' => __('Dotted', 'hashcore-widgets-bundle'),
-							'dashed' => __('Dashed', 'hashcore-widgets-bundle'),
-							'double' => __('Double', 'hashcore-widgets-bundle'),
-							'groove' => __('Groove', 'hashcore-widgets-bundle'),
-							'ridge' => __('Ridge', 'hashcore-widgets-bundle'),
-							'inset' => __('Inset', 'hashcore-widgets-bundle'),
-							'outset' => __('Outset', 'hashcore-widgets-bundle'),
-						)
+							'none' => __( 'None', 'hashcore-widgets-bundle' ),
+							'solid' => __( 'Solid', 'hashcore-widgets-bundle' ),
+							'dotted' => __( 'Dotted', 'hashcore-widgets-bundle' ),
+							'dashed' => __( 'Dashed', 'hashcore-widgets-bundle' ),
+							'double' => __( 'Double', 'hashcore-widgets-bundle' ),
+							'groove' => __( 'Groove', 'hashcore-widgets-bundle' ),
+							'ridge' => __( 'Ridge', 'hashcore-widgets-bundle' ),
+							'inset' => __( 'Inset', 'hashcore-widgets-bundle' ),
+							'outset' => __( 'Outset', 'hashcore-widgets-bundle' ),
+						),
 					),
 					'weight' => array(
 						'type' => 'select',
@@ -144,25 +160,25 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 							'thin' => __( 'Thin', 'hashcore-widgets-bundle' ),
 							'medium' => __( 'Medium', 'hashcore-widgets-bundle' ),
 							'thick' => __( 'Thick', 'hashcore-widgets-bundle' ),
-						)
+						),
 					),
 					'color' => array(
 						'type' => 'color',
-						'label' => __('Color', 'hashcore-widgets-bundle'),
-						'default' => '#EEEEEE'
+						'label' => __( 'Color', 'hashcore-widgets-bundle' ),
+						'default' => '#EEEEEE',
 					),
 					'side_margin' => array(
 						'type' => 'measurement',
-						'label' => __('Side Margin', 'hashcore-widgets-bundle'),
+						'label' => __( 'Side Margin', 'hashcore-widgets-bundle' ),
 						'default' => '60px',
 					),
 					'top_margin' => array(
 						'type' => 'measurement',
-						'label' => __('Top/Bottom Margin', 'hashcore-widgets-bundle'),
+						'label' => __( 'Top/Bottom Margin', 'hashcore-widgets-bundle' ),
 						'default' => '20px',
-					)
-				)
-			)
+					),
+				),
+			),
 		);
 	}
 
@@ -187,17 +203,14 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 			if ( ! empty( $headline_styles['font'] ) ) {
 				$font = hashcore_widget_get_font( $headline_styles['font'] );
 				$less_vars['headline_font'] = $font['family'];
-				if ( ! empty( $font['weight'] ) ) {
-					$less_vars['headline_font_weight'] = $font['weight'];
-				}
 			}
+			$less_vars['headline_weight'] = $headline_styles['weight'];
+			$less_vars['headline_size'] = $headline_styles['size'] . 'em';
+			$less_vars['align_mobile'] = $headline_styles['align_mobile'];
 		}
 
 		if ( ! empty( $instance['sub_headline'] ) ) {
 			$sub_headline_styles = $instance['sub_headline'];
-			if ( ! empty( $sub_headline_styles['align'] ) ) {
-				$less_vars['sub_headline_align'] = $sub_headline_styles['align'];
-			}
 			if ( ! empty( $sub_headline_styles['tag'] ) ) {
 				$less_vars['sub_headline_tag'] = $sub_headline_styles['tag'];
 			}
@@ -207,10 +220,9 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 			if ( ! empty( $sub_headline_styles['font'] ) ) {
 				$font = hashcore_widget_get_font( $sub_headline_styles['font'] );
 				$less_vars['sub_headline_font'] = $font['family'];
-				if ( ! empty( $font['weight'] ) ) {
-					$less_vars['sub_headline_font_weight'] = $font['weight'];
-				}
 			}
+			$less_vars['sub_headline_weight'] = $sub_headline_styles['weight'];
+			$less_vars['sub_headline_size'] = $sub_headline_styles['size'] . 'em';
 		}
 
 		if ( ! empty( $instance['divider'] ) ) {
@@ -228,15 +240,13 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 				$less_vars['divider_color'] = $divider_styles['color'];
 			}
 
-			if ( !empty( $divider_styles['top_margin'] ) ) {
+			if ( ! empty( $divider_styles['top_margin'] ) ) {
 				$less_vars['divider_top_margin'] = $divider_styles['top_margin'];
 			}
 
-			if ( !empty( $divider_styles['side_margin'] ) ) {
+			if ( ! empty( $divider_styles['side_margin'] ) ) {
 				$less_vars['divider_side_margin'] = $divider_styles['side_margin'];
 			}
-
-
 		}
 
 		return $less_vars;
@@ -274,12 +284,10 @@ class HashCore_Widget_Headline_Widget extends HashCore_Widget {
 
 		return array(
 			'headline' => $instance['headline']['text'],
-			'headline_tag' => $instance['headline']['tag'],
 			'sub_headline' => $instance['sub_headline']['text'],
-			'sub_headline_tag' => $instance['sub_headline']['tag'],
 			'has_divider' => ! empty( $instance['divider'] ) && $instance['divider']['style'] != 'none'
 		);
 	}
 }
 
-hashcore_widget_register('sow-headline', __FILE__, 'HashCore_Widget_Headline_Widget');
+hashcore_widget_register( 'sow-headline', __FILE__, 'HashCore_Widget_Headline_Widget' );

@@ -70,8 +70,13 @@ class HashCore_Widget_Button_Widget extends HashCore_Widget {
 							'default' => 'center',
 							'options' => array(
 								'left' => __('Left', 'hashcore-widgets-bundle'),
+								'left-center' => __('Left and center in mobile', 'hashcore-widgets-bundle'),
+								'left-justify' => __('Left and justify in mobile', 'hashcore-widgets-bundle'),
 								'right' => __('Right', 'hashcore-widgets-bundle'),
+								'right-center' => __('right and center in mobile', 'hashcore-widgets-bundle'),
+								'right-justify' => __('right and justify in mobile', 'hashcore-widgets-bundle'),
 								'center' => __('Center', 'hashcore-widgets-bundle'),
+								'center-justify' => __('center and justify in mobile', 'hashcore-widgets-bundle'),
 								'justify' => __('Justify', 'hashcore-widgets-bundle'),
 							),
 						),
