@@ -1,5 +1,12 @@
-<nav id="site-nav">
-  <header class="site-header">
+<nav class="navigation">
+  <div id="site-nav-mobile" class="site-nav-mobile-wrapper">
+    <div class="site-nav-mobile">
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu-mobile' ) ); ?>
+    </div>
+  </div>
+
+  <div id="site-nav" class="site-nav animated">
+
   	<div class="container">
   		<div class="row">
   			<div class="col-xs-12 col-sm-3">
@@ -36,9 +43,5 @@
 
   		</div>
   	</div>
-  </header>
-
-  <div id="site-nav-mobile">
-    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu-mobile' ) ); ?>
   </div>
 </nav>

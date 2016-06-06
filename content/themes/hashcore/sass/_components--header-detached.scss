@@ -1,0 +1,42 @@
+$size--site-nav-height:                 $size--header-height + $space*2;
+
+$color--header-detached-expanded-header-detached: $color--accent;
+$color--branding-text-hover:            #d9d9d9;
+
+// === TOP MENU LAYOUT ===
+// =======================
+.site-nav {
+  &.animated {
+    animation-duration: .216s;
+  }
+
+  // when shown & detached position is fixed
+  &.header-detached {
+    position: fixed;
+    transition: background .5s;
+
+    -webkit-animation-name: slideInDown;
+    -moz-animation-name: slideInDown;
+    animation-name: slideInDown;
+
+    transition: transform .216s,height .216s,background .316s,opacity .216s;
+  }
+
+  // when hidden it goes up
+  &.header-hidden {
+    -webkit-animation-name: slideOutUp;
+    -moz-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+
+    // fixes high speed scrolling bug
+    opacity: 0;
+  }
+}
+
+.expanded + .site-nav {
+  background: $color--header-detached-expanded-header-detached;
+}
+
+.expanded + .site-nav .header-branding {
+  opacity: 0;
+}

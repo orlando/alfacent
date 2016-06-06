@@ -1,13 +1,9 @@
-$size--site-footer-height-mobile:                $size--site-footer-height-mobile;
-$size--site-footer-height-desktop:               $size--site-footer-height-desktop;
-
-html,
-body {
-	height: 100%;
-}
+$size--site-footer-height-mobile:            $size--site-footer-height-mobile;
+$size--site-footer-height-desktop:           $size--site-footer-height-desktop;
+$size--site-wrapper--padding-top: 					 $size--header-height + $space*2;
 
 .site-wrapper {
-	padding-top: 12rem;
+	padding-top: $size--site-wrapper--padding-top;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;

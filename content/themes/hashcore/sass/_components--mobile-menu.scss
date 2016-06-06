@@ -1,153 +1,49 @@
-$size--site-nav-height:                                12rem;
-$deep-koamaru:                                         #1C1A7E;
-$white:                                                #FFF;
+$size--site-nav-height:                         $size--header-height + $space*2;
+$deep-koamaru:                                  #1C1A7E;
+$white:                                         #FFF;
 
-$color--branding-text:                                 $white;
-$color--site-nav-background:                           $deep-koamaru;
+$color--branding-text:                          $white;
+$color--site-nav-background:                    $deep-koamaru;
+
+
 // when navigation is shown, don’t allow scrolling of content
 body.no_scroll {
   overflow: hidden;
   height: 100%;
 }
 
-// Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right
-@-moz-document url-prefix() {
-  body.no_scroll {
-    /*margin-right: 23px;*/
-
-  }
-
-  body.no_scroll .expanded {
-    /*padding-right: 7px;*/
-    background: $deep-koamaru; /* because FF no blur, reduce bg transparency */
-  }
-}
-
-// on intial load fade in the menu
-@-webkit-keyframes firstFadeInAndDrop {
-  0%   {-webkit-transform: translate(0,-54px);}
-  100% {-webkit-transform: translate(0,0);}
-}
-
-@-moz-keyframes firstFadeInAndDrop {
-  0%   {-moz-transform: translate(0,-54px);}
-  100% {-moz-transform: translate(0,0);}
-}
-
-@keyframes firstFadeInAndDrop {
-  0%   {transform: translate(0,-54px);}
-  100% {transform: translate(0,0);}
-}
-
-// === TOP MENU LAYOUT ===
-// =======================
-
-#site-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: $size--site-nav-height;
-  z-index: 2;
-  overflow: hidden;
-
-  -webkit-transform: translate(0,0);
-  -moz-transform: translate(0,0);
-  -o-transform: translate(0,0);
-  transform: translate(0,0);
-
-  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
-  -moz-transition: -moz-transform .4s, height .3s, background .4s;
-  transition: transform .4s, height .3s, background .4s;
-/*
-  -webkit-animation: firstFadeInAndDrop .5s;
-  -moz-animation: firstFadeInAndDrop .5s;
-  animation: firstFadeInAndDrop .5s;
-*/
-  // when hidden it goes up
-  &.invisible {
-    -webkit-transform: translate(0,-64px);
-    -moz-transform: translate(0,-64px);
-    -o-transform: translate(0,-64px);
-    transform: translate(0,-64px);
-
-    -webkit-transition: -webkit-transform .3s;
-    -moz-transition: -moz-transform .3s;
-    -o-transition: -o-transform .3s;
-    transition: transform .3s;
-
-    opacity: 0;
-  }
-
-  // when shown & detached position is fixed
-  &.detached {
-    position: fixed;
-    background: $white;
-
-    -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-    -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-    -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-    transition: transform .3s, height .3s, background .4s, opacity .3s;
-
-    // small header
-    & .site-header {
-      padding-top: $grid-gutter-width/2;
-    }
-  }
-
-  // increases menu width & height
-  &.expanded {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    cursor: default;
-    background: $deep-koamaru;
-
-  // hide logo in menu-mobile
-    & .header-branding {
-      opacity: 0;
-    }
-  }
-}
-
 // === MENU NAVIGATION ===
 // positions navigation content
-#site-nav-mobile {
-  -webkit-transform: translate(0,-700px);
-  -moz-transform: translate(0,-700px);
-  -o-transform: translate(0,-700px);
-  transform: translate(0,-700px);
-
-  opacity: 0;
-  height: 100%;
+.site-nav-mobile-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
+  height: 100%;
   padding-top: $size--site-nav-height;
-
-  -webkit-transition: -webkit-transform .15s, opacity .7s;
-  -moz-transition: -moz-transform .15s, opacity .7s;
-  -o-transition: -o-transform .15s, opacity .7s;
-  transition: transform .15s, opacity .7s;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .5s;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  background: $deep-koamaru;
+  z-index: 4;
 }
 
 // shows navigation
-#site-nav.expanded #site-nav-mobile {
-  -webkit-transform: translate(0,0);
-  -moz-transform: translate(0,0);
-  -o-transform: translate(0,0);
-  transform: translate(0,0);
-
+.site-nav-mobile-wrapper.expanded {
   opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 // === MENU NAVIGATION CONTENT === */
 // =============================== */
-
 .site-nav-mobile {
   height: 100%;
-  margin-top: 2rem;
   padding-bottom: 2rem;
   //hidde scroll bar
   margin-right: -20px;
@@ -168,6 +64,7 @@ body.no_scroll {
       color: $color--branding-text;
       display: inline-block;
       padding-bottom: $space;
+      font-size: 2em;
     }
   }
 }
