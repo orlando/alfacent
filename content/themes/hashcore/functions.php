@@ -23,6 +23,7 @@ $hashcore_includes = [
 	'layouts/pre-layout-front-page.php', // Prebuilt layouts front page.
 	'layouts/pre-layout-work-us.php', // Prebuilt layouts work-us.
 	'layouts/pre-layout-services.php', // Prebuilt layouts services.
+	'layouts/pre-layout-technical.php', // Prebuilt layouts technical.
 ];
 
 foreach ( $hashcore_includes as $file ) {
