@@ -41,7 +41,188 @@ class HashCore_Widget_Editor_Widget extends HashCore_Widget {
 				'default' => true,
 				'label' => __('Automatically add paragraphs', 'hashcore-widgets-bundle'),
 			),
+
+			'fonts' => array(
+				'type' => 'section',
+				'label' => __( 'Fonts setting', 'hashcore-widgets-bundle' ),
+				'hide' => true,
+				'fields' => array(
+					'font' => array(
+						'type' => 'font',
+						'label' => __( 'Font', 'hashcore-widgets-bundle' ),
+						'default' => 'default',
+					),
+					'h1_options' => array(
+						'type' => 'section',
+						'label' => __( 'H1', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '2em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'h2_options' => array(
+						'type' => 'section',
+						'label' => __( 'H2', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '1.8em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'h3_options' => array(
+						'type' => 'section',
+						'label' => __( 'H3', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '1.6em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'h4_options' => array(
+						'type' => 'section',
+						'label' => __( 'H4', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '1.4em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'h5_options' => array(
+						'type' => 'section',
+						'label' => __( 'H5', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '1.2em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'h6_options' => array(
+						'type' => 'section',
+						'label' => __( 'h6', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '1em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+
+					'p_options' => array(
+						'type' => 'section',
+						'label' => __( 'Paragraphs', 'hashcore-widgets-bundle' ),
+						'hide' => true,
+						'fields' => array(
+							'size' => array(
+								'type' => 'measurement',
+								'label' => __( 'Size', 'hashcore-widgets-bundle' ),
+								'default' => '.9em',
+							),
+							'weight' => array(
+								'type' => 'select',
+								'label' => __( 'Text type', 'hashcore-widgets-bundle' ),
+								'default' => '400',
+								'options' => array(
+									'300' => __( 'lighter', 'hashcore-widgets-bundle' ),
+									'400' => __( 'Normal', 'hashcore-widgets-bundle' ),
+									'600' => __( 'Bold', 'hashcore-widgets-bundle' ),
+									'700' => __( 'Bolder', 'hashcore-widgets-bundle' ),
+								),
+							),
+						),
+					),
+				),
+			),
 		);
+
 	}
 
 	function unwpautop($string) {
@@ -84,8 +265,31 @@ class HashCore_Widget_Editor_Widget extends HashCore_Widget {
 	}
 
 	function get_style_name($instance) {
-		// We're not using a style
-		return false;
+
+		return 'editor';
+	}
+
+	function get_less_variables( $instance ) {
+		$less_vars = array();
+
+		$fonts = $instance['fonts'];
+		$styleable_text_fields = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p' );
+
+		if ( ! empty( $fonts['font'] ) ) {
+			$font = hashcore_widget_get_font( $fonts['font'] );
+			$less_vars['font'] = $font['family'];
+		}
+
+		foreach ( $styleable_text_fields as $field_name ) {
+
+			if ( ! empty( $fonts[$field_name.'_options'] ) ) {
+				$styles = $fonts[$field_name.'_options'];
+				$less_vars[$field_name.'_size'] = $styles['size'];
+				$less_vars[$field_name.'_font_weight'] = $styles['weight'];
+			}
+		}
+
+		return $less_vars;
 	}
 }
 
