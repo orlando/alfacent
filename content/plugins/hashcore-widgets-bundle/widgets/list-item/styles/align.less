@@ -1,0 +1,27 @@
+.align (@a) when (@align = left) {
+  text-align: left;
+}
+
+.align (@a) when (@align = left-center) {
+  text-align: left;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.align (@a) when (@align = right) {
+  text-align: right;
+}
+
+.align (@a) when (@align = right-center) {
+  text-align: right;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.align (@a) when (@align = center) {
+  text-align: center;
+}
