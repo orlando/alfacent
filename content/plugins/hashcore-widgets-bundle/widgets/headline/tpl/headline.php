@@ -10,8 +10,7 @@
 		</div>
 	<?php endif; ?>
 
-	<?php if ( !empty( $sub_headline ) ) : ?>
-		<br/>
+	<?php if ( !empty( $sub_headline ) ) : ?>		
 		<h2 class="sub-headline"><?php echo $sub_headline ?></h2>
 	<?php endif; ?>
 

@@ -31,8 +31,8 @@ if ( ! function_exists( 'hashcore_setup' ) ) :
 		 * Enable support for custom logo.
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 100,
-			'width'       => 255,
+			'height'			=> 100,
+			'width'			 => 255,
 			'flex-height' => false,
 		) );
 
@@ -110,24 +110,34 @@ function hashcore_widgets_init() {
 	register_sidebar( array(
 		'name'					=> esc_html__( 'Sidebar', 'hashcore' ),
 		'id'						=> 'sidebar-1',
-		'description'	  => '',
+		'description'		=> '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'	=> '</section>',
 		'before_title'	=> '<h2 class="widget-title">',
-		'after_title'	  => '</h2>',
+		'after_title'		=> '</h2>',
 	) );
 
 	register_sidebar( array(
 		'name'					=> esc_html__( 'footer Sidebar', 'hashcore' ),
 		'id'						=> 'footer-social',
-		'description'	  => '',
+		'description'		=> '',
 		'before_widget' => '<section id="%1$s" class="site-footer-social %2$s">',
 		'after_widget'	=> '</section>',
 		'before_title'	=> '',
-		'after_title'	  => '',
+		'after_title'		=> '',
 	) );
 }
 add_action( 'widgets_init', 'hashcore_widgets_init' );
+
+/**
+ * Register new thumbnails size.
+ */
+function hashcore_setup_thumbnails() {
+	add_image_size( 'image', 240, 240 );
+	add_image_size( 'image-2x', 480, 480 );
+	add_image_size( 'image-3x', 620, 620 );
+}
+add_action( 'after_setup_theme', 'hashcore_setup_thumbnails' );
 
 /**
  * Enqueue scripts and styles.

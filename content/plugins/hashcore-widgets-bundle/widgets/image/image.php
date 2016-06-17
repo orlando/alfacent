@@ -115,7 +115,29 @@ class HashCore_Widget_Image_Widget extends HashCore_Widget {
 				'label' => __('Full Width', 'hashcore-widgets-bundle'),
 				'description' => __("Resize image to fit its container.", 'hashcore-widgets-bundle'),
 			),
-
+			'object_fit_check' => array(
+				'type' => 'checkbox',
+				'default' => false,
+				'label' => __( 'Use object fit', 'hashcore-widgets-bundle' ),
+				'description' => __( 'The object-fit property defines how an element responds to the height and width of its content box.', 'hashcore-widgets-bundle' ),
+			),
+			'object_fit' => array(
+				'type' => 'select',
+				'label' => __( 'Option of object_fit', 'hashcore-widgets-bundle' ),
+				'default' => 'cover',
+				'options' => array(
+					'fill' => __( 'fill', 'hashcore-widgets-bundle' ),
+					'contain' => __( 'contain', 'hashcore-widgets-bundle' ),
+					'cover' => __( 'cover', 'hashcore-widgets-bundle' ),
+					'none' => __( 'none', 'hashcore-widgets-bundle' ),
+					'scale-down' => __( 'scale-down', 'hashcore-widgets-bundle' ),
+				),
+			),
+			'max_height' => array(
+				'type' => 'measurement',
+				'label' => __( 'Max Size for image continer', 'hashcore-widgets-bundle' ),
+				'default' => '20em',
+			),
 		);
 	}
 
@@ -152,6 +174,9 @@ class HashCore_Widget_Image_Widget extends HashCore_Widget {
 			'image_height' => ! empty( $instance['bound'] ) ? 'auto' : '',
 			'image_width' => ! empty( $instance['full_width'] ) ? '100%' : '',
 			'center_mobile' => ! empty( $instance['center_mobile'] ) ? '1' : '0',
+			'object_fit_check' => $instance['object_fit_check'],
+			'object_fit' => $instance['object_fit'],
+			'max_height' => $instance['max_height'],
 		);
 	}
 }

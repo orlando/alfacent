@@ -24,6 +24,9 @@ $hashcore_includes = [
 	'layouts/pre-layout-work-us.php', // Prebuilt layouts work-us.
 	'layouts/pre-layout-services.php', // Prebuilt layouts services.
 	'layouts/pre-layout-technical.php', // Prebuilt layouts technical.
+	'/inc/type-projects.php', // New type of post, projects.
+	'layouts/pre-layout-post-project.php', // Prebuilt layouts post project.
+
 ];
 
 foreach ( $hashcore_includes as $file ) {
