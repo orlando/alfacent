@@ -1,0 +1,17 @@
+.service-list {
+  margin: 0;
+  padding-left: $pad-double;
+
+  li {
+    color: $color--tertiary;
+    line-height: $space*3;
+
+    span {
+      color: $color--text;
+    }
+
+    @media #{$from-small-resolutions} {
+      line-height: $space*4;
+    }
+  }
+}

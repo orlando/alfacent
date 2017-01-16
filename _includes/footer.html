@@ -14,18 +14,7 @@
         <div class="site-footer-menu-wrapper">
           <div class="menu-navbar-container">
             <ul class="site-footer-menu">
-              <li class="menu-item">
-                <a href="http://localhost:8888/alfacent/wp/servicios/">Servicios</a>
-              </li>
-              <li class="menu-item">
-                <a href="http://localhost:8888/alfacent/wp/servicios/">Servicios</a>
-              </li>
-              <li class="menu-item">
-                <a href="http://localhost:8888/alfacent/wp/servicios/">Servicios</a>
-              </li>
-              <li class="menu-item">
-                <a href="http://localhost:8888/alfacent/wp/servicios/">Servicios</a>
-              </li>
+              {% include navigation_links.html %}
             </ul>
           </div>
         </div>
@@ -41,5 +30,5 @@
         <span class="site-footer-copy">{{ 'now' | date: "%Y" }}<i class="fa fa-copyright" aria-hidden="true"></i>  Alfacent By Hash Labs </span>
       </div>
     </div>
-  </div> <!-- .container footer-->
+  </div>
 </footer>
