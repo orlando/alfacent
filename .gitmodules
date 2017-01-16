@@ -1,3 +1,0 @@
-[submodule "wp"]
-	path = wp
-	url = git@git.hashlabs.com:delbit/wordpress.git

@@ -1,0 +1,55 @@
+$size--font-btn-xs:                 2.4rem;
+$size--font-btn-sm:                 1.8rem;
+$size--font-btn-md:                 2.2rem;
+$color--btn-secondary:              $color--accent;
+$color--btn-primary:                $color--base;
+$color--background-btn-primary:     $color--accent;
+$color--background-btn-secondary:   $color--tertiary;
+$size--padding-btn:                 $pad*2;
+$size--padding-btn-normal:          $pad*4;
+
+.alfacent-btn {
+  border-radius: 6px;
+  padding-left: $size--padding-btn;
+  padding-right: $size--padding-btn;
+  font-size: $size--font-btn-xs;
+  @include material-layer(1);
+
+  @media #{$from-small-resolutions} {
+    padding-left: $size--padding-btn-normal;
+    padding-right: $size--padding-btn-normal;
+    font-size: $size--font-btn-sm;
+  }
+
+  @media #{$from-medium-resolutions} {
+    font-size: $size--font-btn-md;
+  }
+
+  &-primary {
+    background-color: $color--background-btn-primary;
+
+    &:hover {
+      background-color: lighten($color--background-btn-primary, 5);
+    }
+
+    &,
+    &:hover,
+    &:focus {
+      color: $color--btn-primary;
+    }
+  }
+
+  &-secondary {
+    background-color: $color--background-btn-secondary;
+
+    &:hover {
+      background-color: lighten($color--background-btn-secondary, 5);
+    }
+
+    &,
+    &:hover,
+    &:focus {
+      color: $color--btn-secondary;
+    }
+  }
+}

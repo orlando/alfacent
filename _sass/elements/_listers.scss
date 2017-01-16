@@ -1,0 +1,29 @@
+.allies-lister {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+
+  .allies-item {
+    $items-per-row: 1;
+
+    padding: $pad;
+    width: 100%/$items-per-row;
+    float: left;
+
+    img {
+      max-width: 100%;
+      width: 60%;
+    }
+
+    @media #{$from-small-resolutions} {
+      $items-per-row: 4;
+      width: 100%/$items-per-row;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

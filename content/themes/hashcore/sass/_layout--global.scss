@@ -1,6 +1,0 @@
-// change font size units base
-body {
-  @media #{$just-small-resolutions} {font-size: 12px;}
-  @media #{$from-small-resolutions} {font-size: 16px;}
-  @media #{$from-large-resolutions} {font-size: 22px;}
-}
