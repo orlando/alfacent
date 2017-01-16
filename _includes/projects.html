@@ -1,0 +1,37 @@
+<section class="content-section content-section-full projects-section">
+  <div class="container">
+    <div class="content-section-container">
+      <div class="row">
+        <div class="content-section-lead">
+          <h1>Proyectos</h1>
+        </div>
+        <div class="projects-list">
+          <div class="row">
+            {% for project in site.projects %}
+              <div class="col-sm-6 col-md-4">
+                <div class="hoverable-panel hoverable-panel-small">
+                  <div class="hoverable-panel-img">
+                    <a href="{{ project.url }}">
+                      <img src="{{ project.preview_image }}" alt="{{ project.title }}" />
+                    </a>
+                  </div>
+                  <div class="hoverable-panel-overlay-mobile">
+                    <a href="{{ project.url }}">
+                      <p>{{ project.title }}</p>
+                    </a>
+                  </div>
+                  <div class="hoverable-panel-overlay-desktop hidden-xs">
+                    <a href="{{ project.url }}">
+                      <p class="header" title="{{ project.title }}">{{ project.title | truncate: 26 }}</p>
+                      <p class="text">{{ project.content | strip_html | truncatewords: 12 }}</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -8,7 +8,16 @@ collections:
   uploads:
     title: Uploads
     output: true
+  projects:
+    title: Projects
+    output: true
 defaults:
+- scope:
+    path: ''
+    type: projects
+  values:
+    preview_image:
+    permalink: "/projects/:title/"
 - scope:
     path: ''
     type: posts

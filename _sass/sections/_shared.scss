@@ -10,6 +10,10 @@ $color--section-full:           $antiflash-white;
     padding: $pad*5 0;
   }
 
+  &-container {
+    padding: $pad*4 $pad*2;
+  }
+
   &-lead {
     text-align: center;
 
