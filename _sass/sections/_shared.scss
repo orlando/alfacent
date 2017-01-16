@@ -1,0 +1,29 @@
+$size--font-headline:           3.6rem;
+
+.content-section {
+  padding: $pad*6 0;
+
+  @media #{$from-small-resolutions} {
+    padding: $pad*5 0;
+  }
+
+  .header-text {
+    font-size: $size--font-headline;
+    color: $color--accent;
+    padding-top: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &-secondary {
+    background-color: $color--accent;
+
+    .header-text {
+      color: $color--tertiary;
+    }
+  }
+
+  &-tertiary {
+    background-color: $color--tertiary;
+  }
+}

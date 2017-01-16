@@ -1,25 +1,25 @@
 {
-  "name": "hashcore.dev",
+  "name": "alfacent",
   "version": "1.0.0",
-  "description": "sass compiler",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "node-sass": "^3.4.2",
-    "nodemon": "^1.9.1"
-  },
+  "description": "## How to use",
+  "main": "js/main.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss content/themes/hashcore/sass/main.scss   content/themes/hashcore/assets/styles/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.hashlabs.com:delbit/hashcore.git"
+    "url": "git@github.com:hashlabshq/alfacent.git"
   },
-  "keywords": [
-    "theme",
-    "wordpress"
-  ],
-  "author": "hashlabs",
-  "license": "SEE LICENSE IN <filename>"
+  "author": "Hash Labs LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hashlabshq/alfacent/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11"
+  }
 }

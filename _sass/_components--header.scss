@@ -1,0 +1,108 @@
+$size--site-nav-height:                          $size--header-height;
+$size--header-font:                              2.2rem;
+$color--branding-text:                           white;
+$size--strip-margin-top:                         6px;
+$size--strip-height:                             4px;
+$size--strip-width-base:                         32px;
+$size--strip-width-step:                         6px;
+$size--strip-margin-left:                        $size--strip-width-step;
+$color--menu-item-border-bottom:                 $color--accent;
+$color--header-detached-background:     $white;
+
+.site-nav {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 100%;
+  // to keep height with no mofidication box-border need space for padding.
+  height: $size--site-nav-height + $space*2;
+  padding-bottom: $space;
+  padding-top: $space;
+  background: $color--header-detached-background;
+  font-size: $size--header-font;
+  z-index: 4;
+  transition: background .15s linear;
+}
+
+.header-branding {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  transition: all ease-out .216s;
+
+  img {
+    height: $size--header-height;
+    width: auto;
+  }
+}
+
+.bottom-aligner {
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  width: 0;
+}
+
+.header-search-toggle{
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+  @include simple-transition();
+
+  &-icon:hover,
+  &-icon:focus {
+    color: $color--menu-item-border-bottom;
+  }
+
+  &:hover {
+    border-bottom: 4px solid $color--menu-item-border-bottom;
+  }
+}
+
+.header-search-wrapper {
+  height: $size--header-height;
+  text-align: right;
+}
+
+.header-menu-wrapper {
+  margin: 0 (- $grid-gutter-width-half);
+}
+
+#menu-desktop {
+  height: $size--header-height;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & .menu-item {
+    display: table;
+    font-size: $size--header-font;
+    font-weight: lighter;
+    float: left;
+    height: 100%;
+    border-bottom: 4px solid transparent;
+    @include simple-transition();
+
+    & + .menu-item {
+      margin-left: 2rem;
+    }
+
+    > a {
+      display: table-cell;
+      vertical-align: bottom;
+
+      &:hover {
+        color: $color--menu-item-border-bottom;
+      }
+    }
+
+    &:hover {
+      border-bottom: 4px solid $color--menu-item-border-bottom;
+    }
+  }
+
+  & .current-menu-item {
+    border-bottom: 4px solid $color--menu-item-border-bottom;
+  }
+}

@@ -1,0 +1,39 @@
+$size--font-header-text-xs:      4.4rem;
+$size--font-header-text-sm:      2.2rem;
+$size--font-header-text-md:      2.8rem;
+
+.workwithus-section {
+  background-image: url('/images/work-with-us-bg.png');
+  background-size: cover;
+
+  &-btn-container {
+    text-align: center;
+  }
+
+  h4 {
+    color: $color--text-primary;
+    font-size: $size--font-header-text-xs;
+    text-align: center;
+    font-weight: bold;
+
+    @media #{$just-small-resolutions} { padding-top: 0; }
+  }
+
+  @media #{$from-small-resolutions} {
+    h4 {
+      font-size: $size--font-header-text-sm;
+    }
+  }
+
+  @media #{$from-medium-resolutions} {
+    &-btn-container {
+      padding-top: 2.0rem;
+      text-align: right;
+    }
+
+    h4 {
+      font-size: $size--font-header-text-md;
+      text-align: left;
+    }
+  }
+}

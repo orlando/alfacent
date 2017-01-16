@@ -1,0 +1,7 @@
+.testimony-section {
+  padding: $pad*2 0;
+
+  @media #{$from-small-resolutions} {
+    padding: $pad*6 0;
+  }
+}
