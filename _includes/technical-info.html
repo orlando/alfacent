@@ -1,0 +1,38 @@
+<section class="content-section content-section-full technical-info-section">
+  <div class="container">
+    <div class="content-section-container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content-section-lead">
+            <h1>Información Técnica</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="technical-info-list">
+            {% for group in page.information %}
+              <div class="technical-info-group">
+                <h4 class="technical-info-header">{{ group.category }}</h4>
+                <div class="technical-info-items">
+                  {% for item in group.items %}
+                    <div class="technical-info-item">
+                      <div class="technical-info-item-title">{{ item.title }}</div>
+                      <div class="technical-info-item-links">
+                        <span class="technical-info-item-download">
+                          <a href="{{ item.file_url }}" download><i class="fa fa-download" aria-hidden="true"></i></a>
+                        </span>
+                        <span class="technical-info-item-separator"></span>
+                        <span class="technical-info-item-view">
+                          <a href="{{ item.file_url }}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        </span>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
