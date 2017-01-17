@@ -1,6 +1,7 @@
 $color--overlay-transparent:            transparentize($color--accent, 0.21);
 $size--font-overlay-mobile:             3.8rem;
 $size--font-overlay-desktop-header:     3.0rem;
+$size--font-panel-small:                2.0rem;
 $size--font-overlay-desktop-text:       1.6rem;
 
 .hoverable-panel {
@@ -23,6 +24,52 @@ $size--font-overlay-desktop-text:       1.6rem;
     }
   }
 
+  &.hoverable-panel-small {
+
+    &:hover {
+      .hoverable-panel-overlay-desktop {
+        top: 50%;
+      }
+    }
+
+    .hoverable-panel-overlay-desktop {
+      top: 80%;
+
+      .header {
+        font-size: $size--font-panel-small;
+      }
+    }
+  }
+
+  @media #{$from-medium-resolutions} {
+    &.hoverable-panel-small {
+      &:hover {
+        .hoverable-panel-overlay-desktop {
+          top: 40%;
+        }
+      }
+
+      .hoverable-panel-overlay-desktop {
+        top: 75%;
+      }
+    }
+  }
+
+  @media #{$from-large-resolutions} {
+    &.hoverable-panel-small {
+      &:hover {
+        .hoverable-panel-overlay-desktop {
+          top: 55%;
+        }
+      }
+
+      .hoverable-panel-overlay-desktop {
+        top: 80%;
+      }
+    }
+  }
+
+
   &-overlay-desktop {
     @include simple-transition();
     background-color: $color--overlay-transparent;
@@ -31,6 +78,8 @@ $size--font-overlay-desktop-text:       1.6rem;
     padding-bottom: $pad * 4;
     top: 73%;
     overflow: hidden;
+    width: 100%;
+    height: $space*20;
 
     .header, .text {
       color: $white;
@@ -76,6 +125,8 @@ $size--font-overlay-desktop-text:       1.6rem;
 
   &-overlay-mobile {
     background-color: $color--overlay-transparent;
+    text-align: center;
+    padding: 0 $pad-double;
     position: absolute;
     top: 0;
     left: 0;
