@@ -5,6 +5,7 @@
 * Front page
 * Services page
 * Navbar lists pages dinamically
+* Project detail page
 
 ## Changed
 

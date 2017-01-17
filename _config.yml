@@ -16,6 +16,7 @@ defaults:
     path: ''
     type: projects
   values:
+    layout: project
     preview_image:
     permalink: "/projects/:title/"
 - scope:
