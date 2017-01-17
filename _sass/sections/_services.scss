@@ -1,0 +1,40 @@
+$size--font-services:             1.8rem;
+$size--font-services-normal:      2.0rem;
+$color--service-title:            $color--accent;
+
+.services {
+
+  &-section-container {
+    padding: $pad*4 $pad*2;
+  }
+
+  &-list-container {
+    font-size: $size--font-services;
+
+    @media #{$from-small-resolutions} {
+      font-size: $size--font-services-normal;
+    }
+  }
+}
+
+.service {
+
+  &-title {
+    text-align: center;
+    color: $color--service-title;
+    margin: $space-double 0;
+    font-weight: bold;
+
+    @media #{$from-small-resolutions} {
+      margin: $space*3 0;
+    }
+  }
+
+  &-list {
+    font-weight: lighter;
+
+    li {
+      margin: $space 0;
+    }
+  }
+}

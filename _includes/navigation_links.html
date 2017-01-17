@@ -1,0 +1,13 @@
+{% for node in site.pages %}
+  {% if node.is_navbar_link == true %}
+    {% if page.url == node.url %}
+      <li class="menu-item current-menu-item">
+        <a href="{{ node.url }}">{{ node.title }}</a>
+      </li>
+    {% else %}
+      <li class="menu-item">
+        <a href="{{ node.url }}">{{ node.title }}</a>
+      </li>
+    {% endif %}
+  {% endif %}
+{% endfor %}

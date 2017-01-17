@@ -1,5 +1,6 @@
 ---
 title: Home
+is_navbar_link: false
 lead-section:
   headline: "¿Tu empresa necesita"
   subheadline: Instalaciones Eléctricas?

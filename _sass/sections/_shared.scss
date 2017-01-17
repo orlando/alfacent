@@ -1,4 +1,7 @@
 $size--font-headline:           3.6rem;
+$size--font-lead-content:       3.8rem;
+$color--lead-content:           $color--accent;
+$color--section-full:           $antiflash-white;
 
 .content-section {
   padding: $pad*6 0;
@@ -7,12 +10,27 @@ $size--font-headline:           3.6rem;
     padding: $pad*5 0;
   }
 
+  &-lead {
+    text-align: center;
+
+    h1 {
+      padding-top: 0;
+      padding-bottom: $pad*2;
+      font-size: $size--font-lead-content;
+      color: $color--lead-content;
+    }
+  }
+
   .header-text {
     font-size: $size--font-headline;
     color: $color--accent;
     padding-top: 0;
     font-weight: bold;
     text-align: center;
+  }
+
+  &-full {
+    background-color: $color--section-full;
   }
 
   &-secondary {
