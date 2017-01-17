@@ -1,0 +1,75 @@
+$size--font-overlay-desktop-header:             1.2rem;
+
+.static-panel {
+  @include material-layer(2);
+  position: relative;
+  margin: $space*3 0;
+  overflow: hidden;
+
+  &-img {
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &-overlay-desktop {
+    @include simple-transition();
+    background-color: $color--overlay-transparent;
+    position: absolute;
+    padding: $pad-double;
+    padding-bottom: $pad * 4;
+    top: 73%;
+    overflow: hidden;
+    width: 100%;
+    height: $space*20;
+
+    .header, .text {
+      color: $white;
+      margin: 0;
+      text-align: center;
+    }
+
+    .header {
+      padding-top: 0;
+      margin-bottom: $space-and-half;
+      font-size: $size--font-overlay-desktop-header;
+    }
+
+    .text {
+      font-size: $size--font-overlay-desktop-text;
+      overflow: hidden;
+    }
+
+    @media #{$from-large-resolutions} {
+      padding: 1.2rem;
+    }
+  }
+
+  &-overlay-mobile {
+    background-color: $color--overlay-transparent;
+    text-align: center;
+    padding: 0 $pad-double;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    p {
+      color: $white;
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: $size--font-overlay-mobile;
+    }
+
+    @media #{$from-small-resolutions} {
+      display: none;
+    }
+  }
+}
