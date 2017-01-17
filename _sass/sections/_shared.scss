@@ -35,6 +35,7 @@ $color--section-full:           $antiflash-white;
 
   &-full {
     background-color: $color--section-full;
+    padding: $pad-double 0;
   }
 
   &-secondary {

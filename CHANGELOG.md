@@ -6,6 +6,7 @@
 * Services page
 * Navbar lists pages dinamically
 * Project detail page
+* Technical info page
 
 ## Changed
 
