@@ -1,5 +1,6 @@
 ---
 title: Servicios
+identifier: servicios
 is_navbar_link: true
 services:
   - title: "Instalaciones Electricas en Alta y Baja Tensión"

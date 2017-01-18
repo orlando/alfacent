@@ -1,5 +1,6 @@
 ---
 title: Información Técnica
+identifier: informacion
 is_navbar_link: true
 layout: information
 information:

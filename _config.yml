@@ -3,6 +3,8 @@ title: alfacent-staging
 timezone: UTC
 url: "http://alfacent-staging.siteleaf.net/"
 disqus_shortname: "alfacent-staging"
+paginate: 5
+paginate_path: "/blog/:num/"
 collections:
   posts:
     title: Posts
@@ -37,5 +39,8 @@ permalink: pretty
 sass:
   style: compressed
   sass_dir: _sass
+
+gems:
+  - 'jekyll-paginate'
 
 exclude: ['Gemfile', 'Gemfile.lock']

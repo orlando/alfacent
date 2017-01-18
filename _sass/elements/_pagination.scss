@@ -1,0 +1,12 @@
+$size--font-pagination:         1.6rem;
+
+.pager {
+  font-size: $size--font-pagination;
+  margin: $space;
+}
+
+.pagination-count {
+  text-align: center;
+  font-size: $size--font-pagination;
+  color: $color--accent;
+}
