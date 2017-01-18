@@ -61,7 +61,14 @@ $color--header-detached-background:     $white;
 
 .header-search-wrapper {
   height: $size--header-height;
-  text-align: right;
+}
+
+.header-search-input {
+  position: absolute;
+  width: 100%;
+  height: $size--header-height;
+  top: 0;
+  right: $grid-gutter-width-half;
 }
 
 .header-menu-wrapper {

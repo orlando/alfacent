@@ -1,15 +1,30 @@
 (function () {
   $(document).ready(function () {
-    var navbarHeader = $("#site-nav");
+    var navbarHeader = $('#site-nav');
     var teehanNav = new TeehanLax(navbarHeader, {
       menuOffset: 100,
       hideShowOffset: 6,
       detachPoint: 500,
       classes: {
-        detached: "header-detached",
-        hidden: "header-hidden"
+        detached: 'header-detached',
+        hidden: 'header-hidden'
       }
     });
+
+    if (window.postsStore) {
+      new SearchResults({
+        items: window.postsStore,
+        inputElement: '#searchInput',
+        contentElement: '#searchResults',
+        countElement: '#searchResultsCount'
+      }).init();
+    }
+
+    new SearchBar({
+      triggerElement: '#searchIcon',
+      inputElement: '#searchInput',
+      navbarLinksWrapper: '.header-menu-wrapper'
+    }).init();
 
     teehanNav.init();
     tabbableContent.init();
@@ -21,7 +36,7 @@
       event.preventDefault();
     });
 
-    $('#site-nav-mobile').on('click touchstart', function (event){
+    $('#site-nav-mobile').on('click touchstart', function (event) {
       event.stopPropagation();
     });
 
@@ -45,4 +60,4 @@
       $('body').removeClass('no_scroll');
     }
   });
-} ());
+}());

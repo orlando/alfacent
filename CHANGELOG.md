@@ -13,6 +13,7 @@
 * Contact page
 * Blog page
 * Nosotros page
+* Added Search for blog posts
 
 ## Changed
 
