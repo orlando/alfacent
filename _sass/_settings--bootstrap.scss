@@ -31,19 +31,27 @@ $grid-gutter-width-half:          $grid-gutter-width/2;
 $border-radius-base:              3px;
 $border-radius-small:             3px;
 $border-radius-large:             4px;
+$padding-base-horizontal:         20px;
 $padding-large-vertical:          20px;
-$padding-large-horizontal:        30px;
+$padding-large-horizontal:        40px;
 
 // Buttons
 
 $btn-primary-border:              $brand-secondary;
+$btn-primary-bg:                  $color--accent;
+
+$btn-info-bg:                     $color--tertiary;
+$btn-info-color:                  $color--accent;
+
+$btn-border-radius-base:          6px;
+$btn-font-weight:                 bold;
 
 // Forms
 
-$input-border:                    $aluminium;
+$input-border:                    $iron;
 $input-color:                     $aluminium;
-$input-color-placeholder:         $aluminium;
+$input-color-placeholder:         $iron;
 $input-border-focus:              $color--accent;
-$input-bg:                        transparent;
+$input-bg:                        $white;
 $form-group-margin-bottom:        30px;
 $input-height-small:              75px;

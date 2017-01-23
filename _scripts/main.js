@@ -14,6 +14,8 @@
     teehanNav.init();
     tabbableContent.init();
 
+    autosize($('textarea'));
+
     $('.mobile-toggle').on('click touchstart', function (event) {
       showHideNav();
       event.preventDefault();

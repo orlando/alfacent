@@ -10,6 +10,7 @@
 * Post page
 * Disqus comments
 * 404 page
+* Contact page
 
 ## Changed
 
