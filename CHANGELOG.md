@@ -9,6 +9,7 @@
 * Technical info page
 * Post page
 * Disqus comments
+* 404 page
 
 ## Changed
 
