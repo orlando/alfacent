@@ -11,7 +11,10 @@
 * Disqus comments
 * 404 page
 * Contact page
+* Blog page
 
 ## Changed
 
 * Migrated from wordpress to Jekyll
+* Header links are now being ordered with the order specified in
+  navbar-links.yml

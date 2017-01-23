@@ -1,13 +1,20 @@
+{% if include.primary == true %}
+<section class="post-preview">
+{% else %}
 <section class="post-preview post-preview-secondary">
+{% endif %}
+  {% include posts/postdate.html date=post.date %}
   <div class="post-preview-date">
-    <p>{% include posts/postdate.html date=post.date %} <span class="circle">&#9679;</span> Por Alfacent</p>
+    <p>{{ day }} de {{ locatedMonth }} de {{ year }} <span class="circle">&#9679;</span> Por Alfacent</p>
   </div>
   <div class="post-preview-title">
-    <h4>{{ post.title }}</h4>
+    <a href="{{ post.url }}">
+      <h4>{{ post.title }}</h4>
+    </a>
   </div>
   <div class="post-preview-separator"></div>
   <div class="post-preview-excerpt">
-    <p>{{ post.excerpt }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 120 }}</p>
   </div>
   <div class="post-preview-link">
     <a href="{{ post.url }}">Continua leyendo &#9656;</a>

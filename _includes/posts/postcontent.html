@@ -1,10 +1,11 @@
+{% include posts/postdate.html date=page.date %}
 <section class="content-section content-section-full blog-post-section">
-  <div class="container blog-post-section-container">
+  <div class="container content-section-white">
     <div class="row">
       <div class="col-xs-12">
         <div class="post">
           <div class="post-metadata-details">
-            <p>Publicado el {% include posts/postdate.html date=page.date %}</p>
+            <p>Publicado el <span>{{ day }} de {{ locatedMonth }} de {{ year }}</span></p>
             <p>Por Alfacent</p>
           </div>
           <div class="post-title">

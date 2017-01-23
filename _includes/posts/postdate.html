@@ -2,4 +2,3 @@
 {% assign month = include.date | date: "%-m" | minus: 1 %}
 {% assign locatedMonth = site.data.es.months[month] %}
 {% assign year = include.date | date: "%Y" %}
-<span>{{ day }} de {{ locatedMonth }} de {{ year }}</span>
