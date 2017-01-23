@@ -1,0 +1,48 @@
+{% assign information = site.aboutus.first %}
+<section class="content-section content-section-full nosotros-section">
+  <div class="container">
+    <div class="content-section-container">
+      <div class="row">
+        <div class="content-section-lead">
+          <h1>Acerca de Nosotros</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="content-section-sublead">
+          <h1>{{ information.first-tab.header }}</h1>
+        </div>
+        <div class="nosotros-section-info">
+        {% for text in information.first-tab.paragraphs %}
+          <p>{{ text }}</p>
+        {% endfor %}
+        </div>
+      </div>
+      <div class="row" id="valores">
+        <div class="content-section-sublead">
+          <h1>{{ information.second-tab.header }}</h1>
+        </div>
+        <div class="nosotros-section-elements">
+        <h4>Misión</h4>
+        <p>{{ information.second-tab.mision }}</p>
+        <h4>Visión</h4>
+        <p>{{ information.second-tab.vision }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="content-section-sublead">
+          <h1 id="junta">{{ information.third-tab.header }}</h1>
+        </div>
+        <div class="nosotros-section-elements">
+        {% for item in information.third-tab.items %}
+          <div class="tab-item-with-header">
+            <h4>{{ item.name }}</h4>
+            {% for member in item.members %}
+              <p><b>{{ member.title }}:</b> {{ member.name }}</p>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

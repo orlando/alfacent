@@ -1,0 +1,25 @@
+$size--font-content:                1.6rem;
+$size--font-content-large:          2.0rem;
+$size--font-valores-header:         2.4rem;
+.nosotros-section {
+  font-size: $size--font-content;
+
+  &-info {
+    margin-top: $space-double;
+    text-align: justify;
+  }
+
+  &-elements {
+    text-align: justify;
+
+    h4 {
+      text-align: justify;
+      font-size: $size--font-valores-header;
+      color: $color--accent;
+    }
+  }
+
+  @media #{$from-small-resolutions} {
+    font-size: $size--font-content-large;
+  }
+}
