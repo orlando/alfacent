@@ -1,6 +1,8 @@
 ---
 title: alfacent-staging
 timezone: UTC
+url: "http://alfacent-staging.siteleaf.net/"
+disqus_shortname: "alfacent-staging"
 collections:
   posts:
     title: Posts

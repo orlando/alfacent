@@ -7,6 +7,8 @@
 * Navbar lists pages dinamically
 * Project detail page
 * Technical info page
+* Post page
+* Disqus comments
 
 ## Changed
 

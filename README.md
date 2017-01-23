@@ -22,7 +22,21 @@ Watch for javascript changes and automatically build them running:
 gulp watch-js
 ```
 
-Be sure to install the npm dependencies before running `npm install`.
+Be sure to install the npm dependencies before, by running `npm install`.
+
+## Comments
+
+We're using Disqus to add comments to the blog, to configure it you need
+to register a new disqus account, and configure the following variables
+in the `_config.yml`:
+
+```
+url: {{ site url, including protocol, e.g: "http://alfacent-staging.siteleaf.net/" }}
+disqus_shortname: {{ the shortname registered for the disqus site }}
+```
+
+It is also needed to add the domain to the `trusted domains` section in
+disqus > advanced > trusted domains.
 
 # About
 
