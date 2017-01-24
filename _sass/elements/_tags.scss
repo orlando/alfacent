@@ -1,0 +1,36 @@
+$size--font-tags:             1.4rem;
+
+.post-tags {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+
+  @media #{$from-small-resolutions} {
+    width: 70%;
+  }
+
+  @media #{$from-medium-resolutions} {
+    width: 50%;
+  }
+}
+
+.post-tag {
+  background-color: $color--accent;
+  display: inline-block;
+  border-radius: 2px;
+  padding: $half-pad;
+  font-size: $size--font-tags;
+  margin: $space-half 2px;
+
+  a {
+    color: $antiflash-white;
+  }
+
+  &--transparent {
+    background-color: transparent;
+
+    a {
+      color: $color--accent;
+    }
+  }
+}

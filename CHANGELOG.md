@@ -14,6 +14,7 @@
 * Blog page
 * Nosotros page
 * Added Search for blog posts
+* Post tags
 
 ## Changed
 

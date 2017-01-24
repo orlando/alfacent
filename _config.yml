@@ -18,6 +18,9 @@ collections:
   aboutus:
     title: Information
     output: false
+  blog_tags:
+    title: Tags
+    output: true
 defaults:
 - scope:
     path: ''
@@ -32,11 +35,18 @@ defaults:
   values:
     layout: post
     permalink: "/posts/:title/"
+    tags:
 - scope:
     path: ''
     type: pages
   values:
     layout: page
+- scope:
+    path: ''
+    type: blog_tags
+  values:
+    layout: tag
+    permalink: "/blog/tags/:title/"
 permalink: pretty
 
 sass:
