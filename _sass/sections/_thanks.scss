@@ -1,0 +1,20 @@
+$size--font-lead-text:            3.6rem;
+$size--font-sublead-text:         2.6rem;
+
+.thanks-section {
+  background-color: $color--section-full;
+  padding: $pad*10 0;
+  color: $color--accent;
+
+  h1 {
+    font-size: $size--font-lead-text;
+    color: $color--lead-content;
+    padding: 0;
+  }
+
+  h4 {
+    font-size: $size--font-sublead-text;
+    color: $color--lead-content;
+    padding-bottom: $pad*4;
+  }
+}

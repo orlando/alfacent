@@ -15,6 +15,7 @@
 * Nosotros page
 * Added Search for blog posts
 * Post tags
+* Thanks page
 
 ## Changed
 
