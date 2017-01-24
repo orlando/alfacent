@@ -13,6 +13,13 @@
     </a>
   </div>
   <div class="post-preview-separator"></div>
+  <div class="post-tags">
+    {% for tag in post.tags %}
+      <div class="post-tag post-tag--transparent">
+        <a href="/blog/tags/{{ tag | slugify }}"><i class="fa fa-tag" aria-hidden="true"></i> {{ tag }}</a>
+      </div>
+    {% endfor %}
+  </div>
   <div class="post-preview-excerpt">
     <p>{{ post.excerpt | strip_html | truncatewords: 120 }}</p>
   </div>

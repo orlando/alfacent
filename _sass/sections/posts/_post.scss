@@ -4,11 +4,13 @@ $color--headings-post:                  $color--accent;
 $size--font-post-content:               1.6rem;
 $size--blockquote-font:                 2.0rem;
 $size--blockquote-font-big:             3.0rem;
-$size--font-tags:                       1.4rem;
 
 .blog-post-section {
   padding: 0;
 
+  .post-tags {
+    margin-top: $space*6;
+  }
 
   .content-section-white {
     padding: $pad*6 $pad*4;
@@ -19,31 +21,6 @@ $size--font-tags:                       1.4rem;
 
   &-comments {
     margin-top: $space*6;
-  }
-
-  &-tags {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: $space*6;
-
-    @media #{$from-small-resolutions} {
-      width: 70%;
-    }
-
-    @media #{$from-medium-resolutions} {
-      width: 50%;
-    }
-  }
-
-  &-tag {
-    background-color: $color--accent;
-    display: inline-block;
-    border-radius: 2px;
-    color: $antiflash-white;
-    padding: $half-pad;
-    font-size: $size--font-tags;
-    margin: $space-half 2px;
   }
 
   &-content {

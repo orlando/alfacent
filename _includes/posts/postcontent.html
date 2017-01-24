@@ -16,7 +16,9 @@
           </div>
           <div class="post-tags">
             {% for tag in page.tags %}
-              <div class="post-tag"><i class="fa fa-tag" aria-hidden="true"></i> {{ tag }}</div>
+              <div class="post-tag">
+                <a href="/blog/tags/{{ tag | slugify }}"><i class="fa fa-tag" aria-hidden="true"></i> {{ tag }}</a>
+              </div>
             {% endfor %}
           </div>
           <div class="post-comments">
