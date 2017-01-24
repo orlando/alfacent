@@ -16,6 +16,7 @@
 * Added Search for blog posts
 * Post tags
 * Thanks page
+* Related posts
 
 ## Changed
 

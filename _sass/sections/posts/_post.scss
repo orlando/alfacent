@@ -4,6 +4,7 @@ $color--headings-post:                  $color--accent;
 $size--font-post-content:               1.6rem;
 $size--blockquote-font:                 2.0rem;
 $size--blockquote-font-big:             3.0rem;
+$size--font-post-related-heading:       2.0rem;
 
 .blog-post-section {
   padding: 0;
@@ -19,12 +20,32 @@ $size--blockquote-font-big:             3.0rem;
 
 .post {
 
+  &-related {
+    margin-top: $space-double;
+
+    h4 {
+      color: $color--headings-post;
+      font-size: $size--font-post-related-heading;
+    }
+
+    li {
+      font-size: $size--font-post-content;
+    }
+  }
+
   &-comments {
     margin-top: $space*6;
   }
 
   &-content {
     font-size: $size--font-post-content;
+
+    h1, h2, h3 {
+      padding-top: $space-double;
+      padding-bottom: $space-double;
+      color: $color--accent;
+      font-weight: bold;
+    }
 
     img {
       max-width: 100%;
@@ -59,6 +80,7 @@ $size--blockquote-font-big:             3.0rem;
   &-title {
     h1 {
       padding-top: $pad-double;
+      padding-bottom: $pad-double;
       font-size: $size--font-title-post;
       color: $color--headings-post;
       font-weight: bold;
