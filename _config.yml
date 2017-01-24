@@ -15,6 +15,9 @@ collections:
   projects:
     title: Projects
     output: true
+  aboutus:
+    title: Information
+    output: false
 defaults:
 - scope:
     path: ''

@@ -12,6 +12,7 @@
 * 404 page
 * Contact page
 * Blog page
+* Nosotros page
 
 ## Changed
 

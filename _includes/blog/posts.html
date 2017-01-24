@@ -14,14 +14,14 @@
         <div>
           <ul class="pager">
           {% if paginator.previous_page %}
-            <li><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
+            <li><a href="{{ paginator.previous_page_path }}" class="previous">Anterior</a></li>
           {% else %}
-            <li class="disabled"><span>Previous</span></li>
+            <li class="disabled"><span>Anterior</span></li>
           {% endif %}
           {% if paginator.next_page %}
-            <li><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
+            <li><a href="{{ paginator.next_page_path }}" class="next">Siguiente</a></li>
           {% else %}
-            <li class="disabled"><span>Next</span></li>
+            <li class="disabled"><span>Siguiente</span></li>
           {% endif %}
           </ul>
         </div>
