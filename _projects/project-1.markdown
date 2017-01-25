@@ -1,5 +1,6 @@
 ---
 title: "Instalacion de Pararrayos"
+preview_title: "Instalacion de Pararrayos"
 preview_image: "/uploads/proyecto01.jpg"
 summary: "Alfa Centauro Electric C.A., gano la licitación efectuada por la Cía. c.a. Dana de Venezuela, para la instalación de 06 Pararrayos con la tecnología PDC, pararrayos con dispositivo de cebado. En su Planta Ejes y Cardanes de la ciudad de Valencia, Venezuela."
 project_details:
