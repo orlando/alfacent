@@ -17,6 +17,7 @@
 * Post tags
 * Thanks page
 * Related posts
+* Add documentation and default description fields for pages
 
 ## Changed
 
