@@ -1,5 +1,5 @@
 ---
-title: alfacent-staging
+title: Alfacent
 timezone: UTC
 url: "http://alfacent-staging.siteleaf.net/"
 disqus_shortname: "alfacent-staging"
@@ -28,7 +28,10 @@ defaults:
     type: projects
   values:
     layout: project
+    preview_title:
     preview_image:
+    project_details:
+    summary:
     permalink: "/projects/:title/"
 - scope:
     path: ''
@@ -56,5 +59,7 @@ sass:
 
 gems:
   - 'jekyll-paginate'
+  - 'jekyll-sitemap'
+  - 'jekyll-seo-tag'
 
 exclude: ['Gemfile', 'Gemfile.lock']

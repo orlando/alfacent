@@ -72,6 +72,10 @@ $color--font-post-preview-headings:         $color--accent;
     background-color: $color--post-preview-secondary;
     color: $color--font-post-preview-secondary;
 
+    .post-tag a {
+      color: $antiflash-white;
+    }
+
     .post-preview-link a {
       color: $color--post-preview-accent;
     }

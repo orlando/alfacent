@@ -17,12 +17,12 @@
                   </div>
                   <div class="hoverable-panel-overlay-mobile">
                     <a href="{{ project.url }}">
-                      <p>{{ project.title }}</p>
+                      <p>{{ project.preivew_title }}</p>
                     </a>
                   </div>
                   <div class="hoverable-panel-overlay-desktop hidden-xs">
                     <a href="{{ project.url }}">
-                      <p class="header" title="{{ project.title }}">{{ project.title | truncate: 26 }}</p>
+                      <p class="header" title="{{ project.title }}">{{ project.preview_title | truncate: 26 }}</p>
                       <p class="text">{{ project.content | strip_html | truncatewords: 12 }}</p>
                     </a>
                   </div>
