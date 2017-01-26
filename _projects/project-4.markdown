@@ -2,7 +2,7 @@
 title: "Instalacion de Plantas de Emergencia"
 preview_title: "Instalacion de Plantas"
 preview_image: "/uploads/instalacion-plantas-preview.png"
-summary: "Alfa Centauro Electric C.A., a estado instalando plantas de emergencia en Valencia, Venezuela. Debido a los cortes inesperados de luz"
+description: "Alfa Centauro Electric C.A., a estado instalando plantas de emergencia en Valencia, Venezuela. Debido a los cortes inesperados de luz"
 project_details:
 - "Locacion: Venezuela"
 - "Categoria: Plantas de Emergencia"
