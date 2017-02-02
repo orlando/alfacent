@@ -1,13 +1,13 @@
 ---
-title: "Iluminacion de Estadio de Atletismo"
-preview_title: "Iluminacion de Estadio"
+title: Iluminacion de Estadio de Atletismo
+preview_title: Iluminacion de Estadio
 preview_image: "/uploads/iluminacion-estadio-preview.png"
-description: "Alfa Centauro Electric C.A., ilumino el nuevo Estadio 
-de atletismo de Maracay, Edo. Aragua, Venezuela."
+description: Alfa Centauro Electric C.A., ilumino el nuevo Estadio de atletismo de
+  Maracay, Edo. Aragua, Venezuela.
 project_details:
-- "Iniciado: 2012"
-- "Locacion: Venezuela"
-- "Categoria: Iluminacion"
+- 'Iniciado: 2012'
+- 'Locacion: Venezuela'
+- 'Categoria: Iluminacion'
 ---
 
 ![primary-img](/uploads/estadio-atletismo-1.png)

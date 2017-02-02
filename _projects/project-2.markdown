@@ -1,13 +1,14 @@
 ---
-title: "Iluminacion de Estadio Deportivo"
-preview_title: "Iluminacion de Estadio"
+title: Iluminacion de Estadio Deportivo
+preview_title: Iluminacion de Estadio
 preview_image: "/uploads/iluminacion-estadio-deportivo-preview.png"
-description: "Alfa Centauro Electric C.A., realizo la Iluminación del Estadio  de  Atletismo  y sus tres coliseos: Polideportivo, Gimnasio y gimnasio de gimnasia."
+description: 'Alfa Centauro Electric C.A., realizo la Iluminación del Estadio  de  Atletismo  y
+  sus tres coliseos: Polideportivo, Gimnasio y gimnasio de gimnasia.'
 project_details:
-- "Iniciado: 2013"
-- "Finalizado: 2013"
-- "Locación: Venezuela"
-- "Categoria: Iluminación"
+- 'Iniciado: 2013'
+- 'Finalizado: 2013'
+- 'Locación: Venezuela'
+- 'Categoria: Iluminación'
 ---
 
 ![primary-img](/uploads/estadio-deportivo-1.png)
