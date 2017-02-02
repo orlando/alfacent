@@ -49,10 +49,10 @@ defaults:
     layout: tag
     description: 
     permalink: "/blog/tags/:title/"
-url: http://alfacent-staging.siteleaf.net/
+url: http://alfacent.siteleaf.net/
 description: 
-disqus_shortname: alfacent-staging
-paginate: 5
+disqus_shortname: alfacent
+paginate: 10
 paginate_path: "/blog/:num/"
 contact_email: test@example.com
 permalink: pretty
