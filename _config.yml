@@ -54,7 +54,7 @@ description:
 disqus_shortname: alfacent
 paginate: 10
 paginate_path: "/blog/:num/"
-contact_email: test@example.com
+contact_email: tadeo@alfacent.com
 permalink: pretty
 sass:
   style: compressed
