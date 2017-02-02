@@ -1,0 +1,56 @@
+{% assign information = site.aboutus.first %}
+<section class="content-section aboutus-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h4 class="header-text">Nosotros</h4>
+        <div class="aboutus-section-mobile visible-xs">
+          <a class="btn btn-block btn-primary" href="/nosotros">
+            <span>{{ information.first-tab.header }}</span>
+          </a>
+          <a class="btn btn-block btn-primary" href="/nosotros#valores">
+            <span>{{ information.second-tab.header }}</span>
+          </a>
+          <a class="btn btn-block btn-primary" href="/nosotros#junta">
+            <span>{{ information.third-tab.header }}</span>
+          </a>
+        </div>
+        <div class="aboutus-section-desktop hidden-xs">
+          <ul class="tabs">
+            <li class="active">{{ information.first-tab.header }}</li>
+            <li>{{ information.second-tab.header }}</li>
+            <li>{{ information.third-tab.header }}</li>
+          </ul>
+          <ul class="tab-containers">
+            <li class="active-tab">
+              {% for text in information.first-tab.paragraphs %}
+                <p>{{ text }}</p>
+              {% endfor %}
+            </li>
+            <li>
+              <div class="tab-item-with-header">
+                <h4>Misión</h4>
+                <p>{{ information.second-tab.mision }}</p>
+              </div>
+              <div class="tab-item-with-header">
+                <h4>Visión</h4>
+                <p>{{ information.second-tab.vision }}</p>
+              </div>
+            </li>
+            <li>
+              {% for item in information.third-tab.items %}
+                <div class="tab-item-with-header">
+                  <h4>{{ item.name }}</h4>
+                  {% for member in item.members %}
+                    <p><b>{{ member.title }}:</b> {{ member.name }}</p>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

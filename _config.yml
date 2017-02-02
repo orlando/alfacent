@@ -1,0 +1,69 @@
+---
+title: Alfacent
+timezone: America/Mexico_City
+collections:
+  aboutus:
+    title: Information
+    output: false
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+  blog_tags:
+    title: Tags
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+    description: 
+    preview_title: 
+    preview_image: 
+    project_details: 
+    permalink: "/projects/:title/"
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    description: 
+    permalink: "/posts/:title/"
+    tags: 
+- scope:
+    path: ''
+    type: pages
+  values:
+    description: 
+    layout: page
+- scope:
+    path: ''
+    type: blog_tags
+  values:
+    layout: tag
+    description: 
+    permalink: "/blog/tags/:title/"
+url: http://alfacent-staging.siteleaf.net/
+description: 
+disqus_shortname: alfacent-staging
+paginate: 5
+paginate_path: "/blog/:num/"
+contact_email: test@example.com
+permalink: pretty
+sass:
+  style: compressed
+  sass_dir: _sass
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-seo-tag
+exclude:
+- Gemfile
+- Gemfile.lock
+- docs

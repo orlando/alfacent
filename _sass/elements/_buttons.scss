@@ -1,0 +1,19 @@
+$size--font-btn-xs:                 2.4rem;
+$size--font-btn-sm:                 1.8rem;
+$size--font-btn-md:                 2.2rem;
+$color--btn-secondary:              $color--accent;
+$color--btn-primary:                $color--base;
+$color--background-btn-secondary:   $color--tertiary;
+
+.btn {
+  font-size: $size--font-btn-xs;
+  @include material-layer(1);
+
+  @media #{$from-small-resolutions} {
+    font-size: $size--font-btn-sm;
+  }
+
+  @media #{$from-medium-resolutions} {
+    font-size: $size--font-btn-md;
+  }
+}

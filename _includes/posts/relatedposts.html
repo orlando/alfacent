@@ -1,0 +1,35 @@
+{% assign POSTS_TO_RENDER = 5 %}
+{% assign posts_count = 0 %}
+
+<ul>
+  {% for post in site.related_posts %}
+    {% if posts_count >= POSTS_TO_RENDER %}
+      {% break %}
+    {% endif %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag %}
+        <li><a href="{{ post.url }}">{{ post.title }} - <span>{{ post.date | date: "%d/%m/%y" }}</span></a></li>
+        {% assign posts_count = posts_count | plus: 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% for post in site.related_posts %}
+    {% if posts_count >= POSTS_TO_RENDER %}
+      {% break %}
+    {% endif %}
+
+    {% assign already_rendered = false %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag %}
+        {% assign already_rendered = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% unless already_rendered %}
+      <li><a href="{{ post.url }}">{{ post.title }} - <span>{{ post.date | date: "%d/%m/%y" }}</span></a></li>
+      {% assign posts_count = posts_count | plus: 1 %}
+    {% endunless %}
+  {% endfor %}
+</ul>

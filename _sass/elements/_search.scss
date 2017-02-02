@@ -1,0 +1,43 @@
+$color--search-input:             $color--accent;
+$size--font-results-count:        2.0rem;
+
+.search-input {
+  border: none;
+  border-bottom: 4px solid $color--search-input;
+  box-shadow: none;
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  z-index: 5;
+  padding-right: $pad-double + $pad-half;
+  margin-top: $space*2;
+  transition: all .5s ease;
+  width: $space-double;
+  opacity: 0;
+  color: $color--search-input;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.active {
+    opacity: 1;
+    width: 500px;
+    border-bottom: 4px solid $color--search-input;
+  }
+}
+
+.header-search-toggle {
+  margin-top: $space*3;
+}
+
+.header-search-toggle-icon {
+  z-index: 10;
+  position: relative;
+}
+
+.results-count {
+  color: $color--accent;
+  font-size: $size--font-results-count;
+}

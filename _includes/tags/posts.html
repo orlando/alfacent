@@ -1,0 +1,18 @@
+<section class="content-section content-section-full posts-section">
+  <div class="container content-section-white">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="results-count text-right">Posts tagged: "{{ page.title }}"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="postsList">
+          {% for post in tag_posts %}
+            {% include postpreview.html primary=true %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

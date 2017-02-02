@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="475px" height="457px" viewBox="0 0 475 457" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Error-404" transform="translate(-463.000000, -267.000000)">
+            <g id="Group" transform="translate(463.000000, 267.000000)">
+                <path d="M387.362809,99.9842258 C419.156174,134.15535 438.489385,179.28514 438.489385,228.759988 C438.489385,335.423358 348.629545,421.891103 237.781813,421.891103 C189.141682,421.891103 144.542698,405.242033 109.803831,377.543203 L387.362809,99.9842258 Z M352.351089,70.1649566 C319.86411,48.3939349 280.372162,35.6288734 237.781813,35.6288734 C126.934082,35.6288734 37.0742417,122.096619 37.0742417,228.759988 C37.0742417,272.408407 52.1220091,312.674902 77.4979783,345.018067 L352.351089,70.1649566 Z M237.487952,456.954439 C368.622603,456.954439 474.928242,354.661704 474.928242,228.47722 C474.928242,102.292736 368.622603,0 237.487952,0 C106.353301,0 0.0476618485,102.292736 0.0476618485,228.47722 C0.0476618485,354.661704 106.353301,456.954439 237.487952,456.954439 Z" id="Oval-4" fill="#6B6B6B" opacity="0.0746268657"></path>
+                <rect id="Rectangle-26" fill="#F8D21C" x="96.4901549" y="285.73265" width="281.995594" height="2.17080494"></rect>
+                <text id="Found" font-family="Lato-Regular, Lato" font-size="36" font-weight="normal" fill="#1C1A7E">
+                    <tspan x="151" y="404">Not</tspan>
+                    <tspan x="210.922" y="404" font-family="Lato-Light, Lato" font-weight="300"> </tspan>
+                </text>
+                <text id="Not" font-family="Lato-Light, Lato" font-size="36" font-weight="300" fill="#1C1A7E">
+                    <tspan x="226" y="404">Found</tspan>
+                </text>
+                <text id="Sorry!" font-family="Lato-Regular, Lato" font-size="38.1468615" font-weight="normal" fill="#1C1A7E">
+                    <tspan x="180.413736" y="349.111532">Sorry!</tspan>
+                </text>
+                <text id="404-" font-family="Lato-Bold, Lato" font-size="152.587446" font-weight="bold">
+                    <tspan x="103.913007" y="265.037592" fill="#1C1A7E">404</tspan>
+                    <tspan x="369.415162" y="265.037592" fill="#F6A623"> </tspan>
+                </text>
+                <text id="Error" font-family="Lato-Regular, Lato" font-size="76.294" font-weight="normal" fill="#1C1A7E">
+                    <tspan x="153.500306" y="134">Error</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

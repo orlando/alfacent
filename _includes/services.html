@@ -1,0 +1,25 @@
+<section class="content-section content-section-full services-section">
+  <div class="container">
+    <div class="content-section-container">
+      <div class="row">
+        <div class="content-section-lead">
+          <h1>Servicios</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="services-list-container">
+          {% for service in page.services %}
+            <div class="service">
+              <div class="service-title">{{ service.title %}}</div>
+              <ul class="items-list">
+                {% for item in service.items %}
+                  <li><span>{{ item }}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+.notfound-section {
+  padding: $pad*10 0;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+
+    @media #{$from-small-resolutions} {
+      width: 60%;
+    }
+
+    @media #{$from-medium-resolutions} {
+      width: 50%;
+    }
+  }
+}

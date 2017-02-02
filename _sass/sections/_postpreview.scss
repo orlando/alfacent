@@ -1,0 +1,97 @@
+$color--post-preview-secondary:             $color--accent;
+$size--post-preview-font:                   1.2rem;
+$size--title-post-preview:                  2.8rem;
+$size--excerpt-post-preview:                1.8rem;
+$color--font-post-preview:                  $color--text;
+$color--font-post-preview-secondary:        $white;
+$color--post-preview-accent:                $color--tertiary;
+$size--font-link-post-preview:              1.6rem;
+$color--font-post-preview-headings:         $color--accent;
+
+.post-preview {
+  font-size: $size--post-preview-font;
+  color: $color--font-post-preview;
+  text-align: center;
+  padding: $pad*4 $pad-double;
+  border-radius: 2px;
+
+  &-date {
+    margin-bottom: $space;
+
+    p {
+      color: $color--font-post-preview-headings;
+      margin: 0;
+    }
+
+    .circle {
+      color: $color--post-preview-accent;
+    }
+  }
+
+  &-separator {
+    background-color: $color--post-preview-accent;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+
+    @media #{$from-small-resolutions} {
+      max-width: 300px;
+      width: 40%;
+    }
+  }
+
+  &-title {
+    margin-bottom: $space-and-half;
+
+    h4 {
+      padding: 0;
+      font-size: $size--title-post-preview;
+      color: $color--font-post-preview-headings;
+      font-weight: bold;
+    }
+  }
+
+  &-excerpt {
+    font-size: $size--excerpt-post-preview;
+    font-weight: lighter;
+    margin-top: $space-double;
+  }
+
+  &-link {
+
+    a {
+      color: $color--font-post-preview-headings;
+      cursor: pointer;
+      font-size: $size--font-link-post-preview;
+      font-weight: bold;
+    }
+  }
+
+  &-secondary {
+    @include material-layer(2);
+    background-color: $color--post-preview-secondary;
+    color: $color--font-post-preview-secondary;
+
+    .post-tag a {
+      color: $antiflash-white;
+    }
+
+    .post-preview-link a {
+      color: $color--post-preview-accent;
+    }
+
+    .post-preview-title {
+
+      h4 {
+        color: $color--font-post-preview-secondary;
+      }
+    }
+
+    .post-preview-date {
+
+      p {
+        color: $color--font-post-preview-secondary;
+      }
+    }
+  }
+}

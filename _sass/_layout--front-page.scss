@@ -1,0 +1,10 @@
+$size--site-footer-height-mobile:            $size--site-footer-height-mobile;
+$size--site-footer-height-desktop:           $size--site-footer-height-desktop;
+$size--site-wrapper--padding-top: 					 $size--header-height + 3rem;
+
+.site-container {
+	padding-top: $size--site-wrapper--padding-top;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}

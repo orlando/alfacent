@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% assign tag = page.title %}
+{% assign tag_posts = site.tags[tag] %}
+{% include tags/posts.html %}

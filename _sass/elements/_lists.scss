@@ -1,0 +1,60 @@
+$size--font-technical-list-header:                2.4rem;
+$size--font-technical-list-item:                  1.6rem;
+
+.items-list {
+  margin: 0;
+  padding-left: $pad-double;
+
+  li {
+    color: $color--tertiary;
+    line-height: $space*3;
+
+    span {
+      color: $color--text;
+    }
+
+    @media #{$from-small-resolutions} {
+      line-height: $space*4;
+    }
+  }
+}
+
+.technical-info {
+
+  &-header {
+    font-size: $size--font-technical-list-header;
+    color: $color--accent;
+  }
+
+  &-item {
+    font-size: $size--font-technical-list-item;
+    margin: $space-double 0;
+
+    &-links {
+      float: right;
+    }
+
+    &-download, &-view {
+      cursor: pointer;
+    }
+
+    &-view {
+      position: relative;
+      top: -3px;
+      vertical-align: middle;
+    }
+
+    &-separator {
+      display: inline-block;
+      margin: 0 $space-half;
+      height: 14px;
+      width: 1px;
+      background-color: $color--accent;
+    }
+
+    &-title {
+      display: inline-block;
+      max-width: 80%;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Add into this file the variables that are going
+ * to be used by Bootstrap to delivery its grid and
+ * overall styles. A complete list of variables
+ * can be found at: (http://getbootstrap.com/customize/#less-variables)
+ */
+
+// Colors
+
+$brand-primary:                   $color--base;
+$brand-secondary:                 $color--accent;
+
+// Scaffolding
+
+$body-bg-transparent:             false;
+
+$body-bg:                         null;
+$text-color:                      $armadillo;
+$link-color:                      $brand-secondary;
+$link-hover-color:                null;
+$link-hover-decoration:           none;
+
+// Grid system
+
+$grid-gutter-width:               30px;
+$grid-gutter-width-half:          $grid-gutter-width/2;
+
+// Components
+
+$border-radius-base:              3px;
+$border-radius-small:             3px;
+$border-radius-large:             4px;
+$padding-base-horizontal:         20px;
+$padding-large-vertical:          20px;
+$padding-large-horizontal:        40px;
+
+// Buttons
+
+$btn-primary-border:              $brand-secondary;
+$btn-primary-bg:                  $color--accent;
+
+$btn-info-bg:                     $color--tertiary;
+$btn-info-color:                  $color--accent;
+
+$btn-border-radius-base:          6px;
+$btn-font-weight:                 bold;
+
+// Forms
+
+$input-border:                    $iron;
+$input-color:                     $aluminium;
+$input-color-placeholder:         $iron;
+$input-border-focus:              $color--accent;
+$input-bg:                        $white;
+$form-group-margin-bottom:        30px;
+$input-height-small:              75px;
+
+// Pagination
+
+$pager-border-radius:             4px;
+$pager-border:                    transparent;

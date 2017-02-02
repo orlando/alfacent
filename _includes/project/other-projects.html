@@ -1,0 +1,37 @@
+<div class="section-separator"></div>
+<section class="content-section other-projects-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h4 class="header-text">Otros Proyectos</h4>
+        <div class="other-projects-list">
+          <div class="row">
+            {% for project in site.projects %}
+              {% if project.url != page.url %}
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                  <div class="static-panel">
+                    <div class="static-panel-img">
+                      <a href="{{ project.url }}">
+                        <img src="{{ project.preview_image }}" alt="{{ project.title }}" />
+                      </a>
+                    </div>
+                    <div class="static-panel-overlay-mobile">
+                      <a href="{{ project.url }}">
+                        <p>{{ project.preview_title }}</p>
+                      </a>
+                    </div>
+                    <div class="static-panel-overlay-desktop hidden-xs">
+                      <a href="{{ project.url }}">
+                        <p class="header" title="{{ project.title }}">{{ project.preview_title | truncate: 26 }}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

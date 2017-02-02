@@ -1,0 +1,35 @@
+{% include posts/postdate.html date=page.date %}
+<section class="content-section content-section-full blog-post-section">
+  <div class="container content-section-white">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="post">
+          <div class="post-metadata-details">
+            <p>Publicado el <span>{{ day }} de {{ locatedMonth }} de {{ year }}</span></p>
+            <p>Por Alfacent</p>
+          </div>
+          <div class="post-title">
+            <h1>{{ page.title }}</h1>
+          </div>
+          <div class="post-content">
+            {{ page.content }}
+          </div>
+          <div class="post-tags">
+            {% for tag in page.tags %}
+              <div class="post-tag">
+                <a href="/blog/tags/{{ tag | slugify }}"><i class="fa fa-tag" aria-hidden="true"></i> {{ tag }}</a>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="post-related">
+            <h4>Articulos relacionados</h4>
+            {% include posts/relatedposts.html %}
+          </div>
+          <div class="post-comments">
+            {% include posts/comments.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

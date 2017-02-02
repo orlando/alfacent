@@ -1,0 +1,103 @@
+<section class="content-section content-section-full contact-form-section">
+  <div class="container">
+    <div class="content-section-container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="content-section-lead">
+            <h1>Contacto</h1>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="contact-form-container">
+                <form action="https://formspree.io/{{ site.contact_email }}" method="POST">
+                  <input type="hidden" name="_next" value="{{ site.url }}thanks" />
+                  <div class="col-xs-12 form-group">
+                    <input name="name" class="form-control" placeholder="Nombre" />
+                  </div>
+                  <div class="col-xs-12 form-group">
+                    <input name="subject" class="form-control" placeholder="Asunto" />
+                  </div>
+                  <div class="col-xs-12 form-group">
+                    <input name="email" class="form-control" placeholder="Email" />
+                  </div>
+                  <div class="col-xs-12 form-group">
+                    <textarea name="message" class="form-control" placeholder="Mensaje" rows="4"></textarea>
+                  </div>
+                  <div class="col-xs-12 col-md-offset-4 col-md-8 col-lg-offset-6 col-lg-6">
+                    <button class="btn btn-info btn-block" type="submit">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="contact-form-details">
+                <div class="row social-icons">
+                  <div class="col-xs-3 col-lg-2 text-center">
+                    <a href="{{ page.social.facebook-url }}">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-lg-2 text-center">
+                    <a href="{{ page.social.twitter-url }}">
+                      <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-lg-2 text-center">
+                    <a href="{{ page.social.instagram-url }}">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <div class="col-xs-3 col-lg-2 text-center">
+                    <a href="{{ page.social.google-url }}">
+                      <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="contact-details-container">
+                    <div class="row">
+                      <div class="contact-details-ubication col-xs-12 col-sm-6">
+                        <div class="contact-details-pais">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i> {{ page.ubication1.pais }}
+                        </div>
+                        <div class="contact-details-address">
+                          <p>{{ page.ubication1.address }}</p>
+                        </div>
+                        <div class="contact-details-phones">
+                          {% for phone in page.ubication1.phones %}
+                            <p>{{ phone }}</p>
+                          {% endfor %}
+                        </div>
+                        <div class="contact-details-email">
+                          <p>{{ page.ubication1.email }}</p>
+                        </div>
+                      </div>
+                      <div class="contact-details-ubication col-xs-12 col-sm-6">
+                        <div class="vertical-separator"></div>
+                        <div class="contact-details-pais">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i> {{ page.ubication2.pais }}
+                        </div>
+                        <div class="contact-details-address">
+                          <p>{{ page.ubication2.address }}</p>
+                        </div>
+                        <div class="contact-details-phones">
+                          {% for phone in page.ubication2.phones %}
+                            <p>{{ phone }}</p>
+                          {% endfor %}
+                        </div>
+                        <div class="contact-details-email">
+                          <p>{{ page.ubication2.email }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

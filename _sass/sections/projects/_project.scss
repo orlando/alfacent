@@ -1,0 +1,90 @@
+$size--font-project-page:               1.8rem;
+$size--font-details-header:             2.6rem;
+$size--li-medium-resolutions:           1.6rem;
+$size--font-header-other-projects:      2.6rem;
+.project-section {
+  font-size: $size--font-project-page;
+
+  .content-section-container {
+    padding: 0 $pad-double;
+  }
+
+  .calltoaction-btn .workwithus-section-btn-container {
+    text-align: center;
+
+    @media #{$from-medium-resolutions} {
+      text-align: left;
+    }
+  }
+}
+
+.other-projects-section {
+
+  .header-text {
+    text-align: left;
+    font-size: $size--font-header-other-projects;
+  }
+}
+
+.project {
+
+  &-content {
+    text-align: center;
+    word-wrap: break-word;
+
+    img {
+      @include material-layer(1);
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &-title-heading {
+    font-size: $size--font-headline;
+    color: $color--lead-content;
+    padding-top: 0;
+    padding-bottom: $pad;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &-summary {
+    text-align: center;
+    margin: $space*2 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-details {
+    padding: $space*4 0;
+
+    &-header {
+      font-size: $size--font-details-header;
+      color: $color--lead-content;
+      padding-top: 0;
+      text-align: center;
+    }
+
+    .items-list {
+
+      li {
+        font-size: $size--li-medium-resolutions;
+        margin: 0;
+      }
+    }
+
+  }
+
+  @media #{$from-medium-resolutions} {
+    &-title-heading, &-details-header, &-summary {
+      text-align: left;
+    }
+
+    &-content {
+      text-align: justify;
+    }
+
+  }
+}
