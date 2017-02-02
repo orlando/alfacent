@@ -49,7 +49,7 @@ defaults:
     layout: tag
     description: 
     permalink: "/blog/tags/:title/"
-url: http://alfacent.siteleaf.net/
+url: https://www.alfacent.com
 description: 
 disqus_shortname: alfacent
 paginate: 10
