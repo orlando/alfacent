@@ -20,8 +20,8 @@ services:
   items:
   - 'En alianza estratégica con **Industrias Meier C.A.** (web: [www.Industriasmeier.com](http://www.Industriasmeier.com)),
     realizamos instalaciones eléctricas e iluminación en complejos deportivos, utilizando
-    los equipos de la reconocida marca Italiana **Fael Luce** (web: [www.faelluce.com](http://www.faelluce.com/)).
-    <a href="www.faelluce.com">www.faelluce.com</a>'
+    los equipos de la reconocida marca Italiana <strong>Fael Luce</strong> (web: <a
+    href="www.faelluce.com">http://www.faelluce.com</a>).'
   - Repotenciación de alumbrados existentes, utilizando tecnología led, logrando el
     ahorro de energía.
 - title: Pararrayos y puesta a Tierra
