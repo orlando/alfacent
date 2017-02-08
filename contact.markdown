@@ -12,8 +12,8 @@ ubication1:
   address: Av. Henry Ford, Edif. Orion, 2do Piso, Ofic. 07, Zona Industrial Sur Valencia
     - Edo. Carabobo
   phones:
-  - 'Telfax: 0241-8344381'
-  - Cel. 0416-5401430
+  - 'Telèfono: 0241-8344381'
+  - 'Celular: 0416-5401430'
   email: tadeo@alfacent.com
 ubication2:
   pais: Peru
@@ -21,7 +21,7 @@ ubication2:
   phones:
   - 'Telfax: 074203559'
   - Cel. 941835423
-  email: tadeo@alfacent.com
+  email: alfaperu@alfacent.com
 layout: contact
 ---
 
