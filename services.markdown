@@ -18,10 +18,10 @@ services:
     de filtros es imprescindible para el buen funcionamiento de los condensadores.)'
 - title: Iluminación
   items:
-  - 'En alianza estratégica con **Industrias Meier C.A.** (web: [www.Industriasmeier.com](http://www.Industriasmeier.com)),
+  - 'En alianza estratégica con  <b>Industrias Meier C.A.</b> (web: <a href="http://www.Industriasmeier.com">www.Industriasmeier.com</a>),
     realizamos instalaciones eléctricas e iluminación en complejos deportivos, utilizando
     los equipos de la reconocida marca Italiana <strong>Fael Luce</strong> (web: <a
-    href="www.faelluce.com">http://www.faelluce.com</a>).'
+    href="http://www.faelluce.com">www.faelluce.com</a>).'
   - Repotenciación de alumbrados existentes, utilizando tecnología led, logrando el
     ahorro de energía.
 - title: Pararrayos y puesta a Tierra
