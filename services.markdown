@@ -35,7 +35,7 @@ services:
 - title: Auditoria Energética
   items:
   - Registro de todos los parámetros eléctricos utilizando instrumentos digitales
-    de Amprobe DM-III, con sus pinzas amperimétricas tipo flex.
+    de <b>Amprobe</b>, como el DM-III, con sus pinzas amperimétricas tipo flex.
   - Análisis de los resultados obtenidos y presentación de informe con recomendaciones
     técnicas.
   - Medición de la resistividad del terreno y de la resistencia de puesta a tierra,
