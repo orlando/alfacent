@@ -7,8 +7,7 @@ lead-section:
   lead-btn: Tenemos la Respuesta
   layout: home
 services-section:
-  services: Conoce nuestros servicios en las distintas áreas de servicios en las que
-    somos especialistas
+  services: Conoce nuestros servicios en las distintas áreas en las que somos especialistas
   projects: Conoce nuestros proyectos en las distintas áreas de servicios en las que
     somos especialistas
 testimony-section:
