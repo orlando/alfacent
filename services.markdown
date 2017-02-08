@@ -21,26 +21,27 @@ services:
   - 'En alianza estratégica con **Industrias Meier C.A.** (web: [www.Industriasmeier.com](http://www.Industriasmeier.com)),
     realizamos instalaciones eléctricas e iluminación en complejos deportivos, utilizando
     los equipos de la reconocida marca Italiana **Fael Luce** (web: [www.faelluce.com](http://www.faelluce.com/)).'
-  - Repotenciación de alumbrados existentes, utilizando tecnología de punta, logrando
-    el ahorro de energía.
+  - Repotenciación de alumbrados existentes, utilizando tecnología led, logrando el
+    ahorro de energía.
 - title: Pararrayos y puesta a Tierra
   items:
-  - Puesta a tierra utilizando soldadura Exotérmica APLIWELD de Aplicaciones Tecnológicas
-    S.A.
-  - 'Instalación de pararrayos PDC: DAT Controler Plus y Flash Captor de Aplicaciones
-    Tecnológicas S.A. que cuentan con Certificados de Garantía de laboratorios Europeos
-    y Americanos que certifican su funcionamiento, inclusive en las peores condiciones:
-    descargas eléctricas en plena lluvia.'
+  - 'Puesta a tierra utilizando soldadura Exotérmica APLIWELD de **Aplicaciones Tecnológicas
+    S.A** (web: [http://at3w.com/](http://at3w.com/).'
+  - 'Instalación de pararrayos PDC DAT Controler Plus y Flash Captor de **Aplicaciones
+    Tecnológicas S.A**. que cuentan con Certificados de Garantía de laboratorios Europeos
+    y Americanos, los cuales certifican su funcionamiento, inclusive en las peores
+    condiciones: descargas eléctricas en plena lluvia.'
 - title: Auditoria Energética
   items:
   - Registro de todos los parámetros eléctricos utilizando instrumentos digitales
     de Amprobe DM-III, con sus pinzas amperimétricas tipo flex.
   - Análisis de los resultados obtenidos y presentación de informe con recomendaciones
     técnicas.
-  - Medición de resistencia a tierra utilizando el equipo de Amprobe GP-2 Geo Test.
-  - Termografías de los equipos eléctricos en las subestaciones eléctricas, utilizando
-    equipos de FLIR www.flir.com, para utilizarlos en el mantenimiento predictivo
-    y correctivo.
+  - Medición de la resistividad del terreno y de la resistencia de puesta a tierra,
+    utilizando el equipo de **Amprobe** GP-2 Geo Test.
+  - 'Termografías de los equipos eléctricos en las subestaciones eléctricas, utilizando
+    equipos de la marca FLIR (web: [www.flir.com](http://www.flir.com), para utilizarlos
+    en el mantenimiento preventivo y correctivo.'
 - title: Plantas de Emergencia y Transferencias Automaticas
   items:
   - Instalación de plantas de emergencia a diésel o gas. Con sus transferencias manual
