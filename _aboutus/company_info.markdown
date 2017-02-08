@@ -14,7 +14,7 @@ first-tab:
     S.A.C. en la ciudad de Chiclayo - Perú, iniciando operaciones en el mes de Septiembre
     del 2013, con los trabajos eléctricos de iluminación del Complejo Deportivo Chicago
     (Chan-Chan) en la ciudad de Trujillo.
-  - Nuestra principal actividad son las Instalaciones Eléctricas en <b>Alta y Baja
+  - Nuestra principal actividad son las Instalaciones Eléctricas en <b>Media y Baja
     Tensión</b> prestando nuestros servicios, a las Empresas Industriales y Comerciales.
     Gracias a la calidad, rapidez, honradez y precios equitativos, nos hemos consolidado
     en este mercado de alta competencia.
