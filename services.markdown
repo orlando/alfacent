@@ -18,7 +18,7 @@ services:
     de filtros es imprescindible para el buen funcionamiento de los condensadores.)'
 - title: Iluminación
   items:
-  - 'En alianza estratégica con  <b>Industrias Meier C.A.</b> (web: <a href="http://www.Industriasmeier.com">www.Industriasmeier.com</a>),
+  - 'En alianza estratégica con  <b>Industrias Meier C.A.</b> (web: <a href="http://www.industriasmeier.com">www.Industriasmeier.com</a>),
     realizamos instalaciones eléctricas e iluminación en complejos deportivos, utilizando
     los equipos de la reconocida marca Italiana <strong>Fael Luce</strong> (web: <a
     href="http://www.faelluce.com">www.faelluce.com</a>).'
@@ -26,12 +26,12 @@ services:
     ahorro de energía.
 - title: Pararrayos y puesta a Tierra
   items:
-  - 'Puesta a tierra utilizando soldadura Exotérmica APLIWELD de **Aplicaciones Tecnológicas
-    S.A** (web: [http://at3w.com/](http://at3w.com/).'
-  - 'Instalación de pararrayos PDC DAT Controler Plus y Flash Captor de **Aplicaciones
-    Tecnológicas S.A**. que cuentan con Certificados de Garantía de laboratorios Europeos
-    y Americanos, los cuales certifican su funcionamiento, inclusive en las peores
-    condiciones: descargas eléctricas en plena lluvia.'
+  - 'Puesta a tierra utilizando soldadura Exotérmica APLIWELD de <b>Aplicaciones Tecnológicas
+    S.A</b> (web: <a href="http://at3w.com/">http://at3w.com/</a>).'
+  - 'Instalación de pararrayos PDC DAT Controler Plus y Flash Captor de <b>Aplicaciones
+    Tecnológicas S.A</b>. que cuentan con Certificados de Garantía de laboratorios
+    Europeos y Americanos, los cuales certifican su funcionamiento, inclusive en las
+    peores condiciones: descargas eléctricas en plena lluvia.'
 - title: Auditoria Energética
   items:
   - Registro de todos los parámetros eléctricos utilizando instrumentos digitales
@@ -39,14 +39,14 @@ services:
   - Análisis de los resultados obtenidos y presentación de informe con recomendaciones
     técnicas.
   - Medición de la resistividad del terreno y de la resistencia de puesta a tierra,
-    utilizando el equipo de **Amprobe** GP-2 Geo Test.
+    utilizando el equipo de <b>Amprobe</b> GP-2 Geo Test.
   - 'Termografías de los equipos eléctricos en las subestaciones eléctricas, utilizando
-    equipos de la marca FLIR (web: [www.flir.com](http://www.flir.com), para utilizarlos
-    en el mantenimiento preventivo y correctivo.'
+    equipos de la marca <b>FLIR</b> (web: <a href="http://www.flir.com">www.flir.com</a>),
+    para utilizarlos en el mantenimiento preventivo y correctivo.'
 - title: Plantas de Emergencia y Transferencias Automaticas
   items:
-  - Instalación de plantas de emergencia a diésel o gas. Con sus transferencias manual
-    o automática.
+  - Instalación de plantas de emergencia a diésel o gas, con sus transferencias manuales
+    o automáticas.
   - Cuando la planta va a realizar un respaldo parcial de las instalaciones se realiza
     el estudio e implementación de un tablero de cargas preferenciales que será alimentado
     por la planta de emergencia.
