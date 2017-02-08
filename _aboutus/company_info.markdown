@@ -3,21 +3,21 @@ title: Company Information
 first-tab:
   header: Alfa Centauro
   paragraphs:
-  - ALFA CENTAURO ELECTRIC C.A. nace el 23 de abril de 1991 en la ciudad de Maturín,
+  - Alfa Centauro Electric, C.A. nace el 23 de abril de 1991 en la ciudad de Maturín,
     Edo. Monagas. El 07 de Octubre de 1997, es trasladada a la ciudad de Valencia,
-    Edo. Carabobo por su actual Presidente el Ingeniero Tadeo del Aguila Aliaga, Ingeniero
+    Edo. Carabobo por su actual Presidente el Ingeniero Tadeo Del Aguila Aliaga, Ingeniero
     Electricista egresado de la Universidad Nacional de Ingeniería (UNI) de Lima -
     Perú, con especialidad en Sistemas de Potencia.
   - Aprovechando los incentivos de retorno a nuestro país decretados por el Gobierno
     Nacional del Perú y dada el importante crecimiento económico experimentado en
-    estos últimos 10 años, es que hemos decidido constituir ALFA CENTAURO ELECTRIC
-    SAC, en la Ciudad de Chiclayo - Perú, iniciando operaciones en el mes de Setiembre
+    estos últimos 10 años, es que hemos decidido constituir Alfa Centauro Electric,
+    S.A.C. en la Ciudad de Chiclayo - Perú, iniciando operaciones en el mes de Septiembre
     del 2013, con los trabajos eléctricos de iluminación del Complejo Deportivo Chicago
-    (Chan-Chan) en la ciudad de Trujillo.
-  - Nuestra principal actividad son las Instalaciones Eléctricas en ALTA Y BAJA TENSION
-    prestando nuestros servicios, a las Empresas Industriales y Comerciales. Gracias
-    a la calidad, rapidez, honradez y precios equitativos, nos hemos consolidado en
-    este mercado de alta competencia.
+    (Chan-Chan) en la Ciudad de Trujillo.
+  - Nuestra principal actividad son las Instalaciones Eléctricas en <b>Alta y Baja
+    Tensión</b> prestando nuestros servicios, a las Empresas Industriales y Comerciales.
+    Gracias a la calidad, rapidez, honradez y precios equitativos, nos hemos consolidado
+    en este mercado de alta competencia.
 second-tab:
   header: Valores
   mision: 'Realizar instalaciones eléctricas en alta y baja tensión, cumpliendo las
@@ -31,17 +31,17 @@ second-tab:
 third-tab:
   header: Junta Directiva
   items:
-  - name: Alfa Centauro Electric C.A.
+  - name: Alfa Centauro Electric, C.A.
     members:
     - title: Presidente
       name: Ing. Tadeo Del Aguila Aliaga.
     - title: Administradora
       name: Lcda. Odilia Febres Pinto.
-    - title: Gte. de Operaciones
-      name: Ing. Alis Maldonado Ortiz.
-  - name: Alfa Centauro Electric S.A.C.
+    - title: Gerente de Operaciones
+      name: Ing. Miguel Mendez.
+  - name: Alfa Centauro Electric, S.A.C.
     members:
-    - title: Gte General
+    - title: Gerente General
       name: Ing. Tadeo Del Aguila Aliaga.
     - title: Director
       name: Dr. Angel Del Aguila Aliaga
