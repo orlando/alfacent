@@ -11,9 +11,9 @@ first-tab:
   - Aprovechando los incentivos de retorno a nuestro país decretados por el Gobierno
     Nacional del Perú y dada el importante crecimiento económico experimentado en
     estos últimos 10 años, es que hemos decidido constituir Alfa Centauro Electric,
-    S.A.C. en la Ciudad de Chiclayo - Perú, iniciando operaciones en el mes de Septiembre
+    S.A.C. en la ciudad de Chiclayo - Perú, iniciando operaciones en el mes de Septiembre
     del 2013, con los trabajos eléctricos de iluminación del Complejo Deportivo Chicago
-    (Chan-Chan) en la Ciudad de Trujillo.
+    (Chan-Chan) en la ciudad de Trujillo.
   - Nuestra principal actividad son las Instalaciones Eléctricas en <b>Alta y Baja
     Tensión</b> prestando nuestros servicios, a las Empresas Industriales y Comerciales.
     Gracias a la calidad, rapidez, honradez y precios equitativos, nos hemos consolidado
@@ -31,7 +31,7 @@ second-tab:
 third-tab:
   header: Junta Directiva
   items:
-  - name: Alfa Centauro Electric, C.A.
+  - name: "<b>Venezuela:</b> Alfa Centauro Electric, C.A."
     members:
     - title: Presidente
       name: Ing. Tadeo Del Aguila Aliaga.
@@ -39,7 +39,7 @@ third-tab:
       name: Lcda. Odilia Febres Pinto.
     - title: Gerente de Operaciones
       name: Ing. Miguel Mendez.
-  - name: Alfa Centauro Electric, S.A.C.
+  - name: "<b>Perú:</b> Alfa Centauro Electric, S.A.C."
     members:
     - title: Gerente General
       name: Ing. Tadeo Del Aguila Aliaga.
