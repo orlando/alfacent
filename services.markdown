@@ -18,8 +18,9 @@ services:
     de filtros es imprescindible para el buen funcionamiento de los condensadores.)'
 - title: Iluminación
   items:
-  - Instalaciones eléctricas en los complejos deportivos, utilizando los equipos de
-    la reconocida marca Italiana FAEL LUCE, www.faelluce.com.
+  - 'En alianza estratégica con **Industrias Meier C.A.** (web: [www.Industriasmeier.com](http://www.Industriasmeier.com)),
+    realizamos instalaciones eléctricas e iluminación en complejos deportivos, utilizando
+    los equipos de la reconocida marca Italiana **Fael Luce** (web: [www.faelluce.com](http://www.faelluce.com/)).'
   - Repotenciación de alumbrados existentes, utilizando tecnología de punta, logrando
     el ahorro de energía.
 - title: Pararrayos y puesta a Tierra
