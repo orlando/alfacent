@@ -21,14 +21,6 @@ testimony-section:
     de la Cia. Aplicaciones Tecnológicas. Por este motivo y muchos mas, los recomiendo
     totalmente.
   author: Ing. Manuel Ortiz, Presidente de Dana de Venezuela C.A.
-- paragraph: Conozco a ALFA CENTAURO ELECTRIC C.A. desde hace 23 años, cuando comenzaba
-    sus operaciones acá en Venezuela, en aquel entonces realizaban trabajos para corregir
-    el bajo factor de potencia y ahorrar energía. Desde entonces han realizado una
-    variedad de trabajos en las diferentes  del grupo Dana. Destacan las instalaciones
-    eléctricas de nuestro data center y la protección integral contra los rayos de
-    nuestra planta ejes y cardanes donde instalaron 06 pararrayos de aplicaciones
-    tecnologicas. Los recomiendo totalmente.
-  author: Ing. Manuel Ortiz, Presidente de Dana de Venezuela c.a.
 layout: home
 ---
 
