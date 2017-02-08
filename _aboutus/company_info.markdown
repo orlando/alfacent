@@ -5,9 +5,9 @@ first-tab:
   paragraphs:
   - Alfa Centauro Electric, C.A. nace el 23 de abril de 1991 en la ciudad de Maturín,
     Edo. Monagas. El 07 de Octubre de 1997, es trasladada a la ciudad de Valencia,
-    Edo. Carabobo por su actual Presidente el Ingeniero Tadeo Del Aguila Aliaga, Ingeniero
-    Electricista egresado de la Universidad Nacional de Ingeniería (UNI) de Lima -
-    Perú, con especialidad en Sistemas de Potencia.
+    Edo. Carabobo por su actual Presidente, el Ingeniero Tadeo Del Aguila Aliaga,
+    Ingeniero Electricista egresado de la Universidad Nacional de Ingeniería (UNI)
+    de Lima - Perú, con especialidad en Sistemas de Potencia.
   - Aprovechando los incentivos de retorno a nuestro país decretados por el Gobierno
     Nacional del Perú y dada el importante crecimiento económico experimentado en
     estos últimos 10 años, es que hemos decidido constituir Alfa Centauro Electric,
