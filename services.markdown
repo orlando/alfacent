@@ -16,15 +16,6 @@ services:
     que cuentan con equipos de armónicos tales como: hornos de inducción, rectificadores
     trifásicos, convertidores para electrólisis y baños, etc. (En estos casos la instalación
     de filtros es imprescindible para el buen funcionamiento de los condensadores.)'
-- title: Corrección del bajo Factor de Potencia
-  items:
-  - Estudio, diseño e instalación de banco de condensadores necesario  para la corrección
-    optima del factor de potencia.
-  - 'Estudio diseño e instalación de filtros de armónicos, en plantas  industriales
-    que cuentan con equipos generadores de armónicos  tales como: hornos de inducción,
-    rectificadores trifásicos,  convertidores para electrólisis y baños etc. (En estos
-    casos la  instalación de filtros es imprescindible para el buen  funcionamiento
-    de los condensadores.)'
 - title: Iluminación
   items:
   - Instalaciones eléctricas en los complejos deportivos, utilizando los equipos de
