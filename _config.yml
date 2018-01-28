@@ -50,7 +50,7 @@ defaults:
     description: 
     permalink: "/blog/tags/:title/"
 url: https://www.alfacent.com
-description: 
+description: Alfa Centauro Electric
 disqus_shortname: alfacent
 paginate: 10
 paginate_path: "/blog/:num/"
