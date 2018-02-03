@@ -8,9 +8,7 @@ date: 2018-02-03 10:08:00 -05:00
 ### Algunas de las actividades que se realizaron fueron:
 
 * Cambio total de el cableado eléctrico y de control.
-
 * Instalación de un nuevo UPS de 20 kVa.
-
 * Instalación de bandejas porta cables.
 
 > Modificación de tablero eléctrico.
