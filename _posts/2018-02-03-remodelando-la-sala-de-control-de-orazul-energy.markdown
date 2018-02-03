@@ -15,7 +15,7 @@ Algunas de las actividades que se realizaron fueron:
 
 > Modificación de tablero eléctrico.
 
-![Tablero eléctrico](/uploads/IMG_20170210_100351.jpg)
+![Tablero eléctrico](/uploads/IMG_20170210_100351.jpg){:height="50%" width="50%"}
 
 > Instalación de aire acondicionado compacto.
 
