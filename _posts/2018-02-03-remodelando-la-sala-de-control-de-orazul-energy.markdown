@@ -15,10 +15,10 @@ Algunas de las actividades que se realizaron fueron:
 
 > Modificación de tablero eléctrico.
 
-![Tablero eléctrico](/uploads/IMG_20170210_100351.jpg|width=100)
+![Tablero eléctrico](/uploads/IMG_20170210_100351.jpg)
 
 > Instalación de aire acondicionado compacto.
 
-![Aire acondicionado](/uploads/IMG_20170210_100429.jpg|width=100)
+![Aire acondicionado](/uploads/IMG_20170210_100429.jpg)
 
 El proyecto concluyó de forma exitosa en Agosto de 2017.
