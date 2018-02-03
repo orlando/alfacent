@@ -2,6 +2,7 @@
 title: Remodelando la sala de control de La Planta de Fraccionamiento de Orazul Energy
   Peru
 date: 2018-02-03 10:08:00 -05:00
+Key: 
 ---
 
 **Alfa Centauro Electric, S.A.C.** fue subcontratado por **Arpo Ingenieros S.A.C.** para realizar las obras electromecánicas de la remodelación de la sala de control de la Planta de Fraccionamiento de **Orazul Energy Peru ** en la localidad de Pucallpa, Departamento de Ucayali - Perú. Este proyecto se inició en Marzo de 2017.La ingenieria del proyecto fue realizada por Graña y Montero Ingenieros S.A.
