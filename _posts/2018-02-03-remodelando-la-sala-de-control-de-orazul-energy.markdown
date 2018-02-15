@@ -18,7 +18,7 @@ Key:
 * Interconexión de la sala de control con el Data Center.
 * Instalacion de extractor de Aire
 
-> Caceta Provisional.
+> Caseta Provisional.
 ![IMG_20170324_090959.jpg](/uploads/IMG_20170324_090959.jpg)
 
 > Protegiendo de la lluvia con un toldo.
