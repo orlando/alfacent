@@ -14,6 +14,9 @@ collections:
   blog_tags:
     title: Tags
     output: true
+  test:
+    title: Test
+    output: true
   uploads:
     title: Uploads
     output: true
