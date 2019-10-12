@@ -1,15 +1,17 @@
 .allies-lister {
+  align-items: center;
+  display: flex;
   list-style: none;
-  padding: 0;
   margin: 0;
-  width: 100%;
+  padding: 0;
   text-align: center;
+  width: 100%;
 
   .allies-item {
     $items-per-row: 1;
 
     padding: $pad;
-    width: 100%/$items-per-row;
+    width: 100% / $items-per-row;
     float: left;
 
     img {
@@ -19,7 +21,7 @@
 
     @media #{$from-small-resolutions} {
       $items-per-row: 4;
-      width: 100%/$items-per-row;
+      width: 100% / $items-per-row;
 
       img {
         width: 100%;
